@@ -1,0 +1,78 @@
+// @use "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@use "./colors" as *;
+
+
+
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
+   $font-family-sans-serif: "Poppins"#{","} sans);
+
+
+
+.carosello {
+   margin-top: 50px;
+   overflow: visible;
+   text-align: center;
+   width: 100%;
+   max-width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+}
+
+.slider-main {
+   overflow: hidden
+}
+
+.slider-card {
+   display: flex;
+   gap: 9px;
+   margin-top: 6vw;
+   width: max-content;
+   animation: slider 20s linear infinite;
+}
+
+.sliderCardDimensione {
+   width: 50rem;
+   border-radius: 1vw;
+}
+
+@keyframes slider {
+   from {
+      transform: translateX(0);
+   }
+
+   to {
+      transform: translateX(-50%);
+   }
+}
+
+.row {
+   --bs-gutter-x: 1.5rem;
+   --bs-gutter-y: 0;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   text-align: center;
+   margin-top: 2rem;
+   align-content: center;
+   justify-content: center;
+   align-items: baseline;
+}
+
+.btn-secondary {
+   --bs-btn-color: #ffffff;
+   --bs-btn-bg: #080808;
+   --bs-btn-border-color: #ffffff;
+   --bs-btn-hover-color: #000;
+   --bs-btn-hover-bg: rgb(255 255 255);
+   --bs-btn-hover-border-color: #000;
+   --bs-btn-focus-shadow-rgb: 184, 107, 160;
+   --bs-btn-active-color: #000;
+   --bs-btn-active-bg: rgb(9 9 9);
+   --bs-btn-active-border-color: #ffffff;
+   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+   --bs-btn-disabled-color: #ffffff;
+   --bs-btn-disabled-bg: #ffffff;
+   --bs-btn-disabled-border-color: #000;
+}
