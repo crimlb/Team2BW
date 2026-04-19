@@ -1,0 +1,4 @@
+DENTRO IL PACKAGE-JSON HO CREATP 2 COMANDI NELLO SCRIPT
+(build e watch) per eseguirli basta avviare il terminale e digitare
+"npm run build" per il building del file css
+"npm run watch" per rendere visibili le modifiche apportate a tutti i file che compongono il sito.
