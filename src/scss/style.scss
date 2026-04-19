@@ -1,13 +1,53 @@
-// @use "../../node_modules/bootstrap/scss/bootstrap.scss";
+//Tema da usare nella home page principale
+$bianco: #ffffff;
+$grigio:#b3b6bb;
+$nero: #000;
+//Tema da usare per l'Area Studenti
+$verdeChiaro: #84A98C;
+$verde:#52796F;
+//Tema da usare per la segreteria
+$antraciteChiaro: #64748B;
+$antracite:#334155;
+//Tema da usare per l'area Docenti
+$azzurroChiaro: #B1D4E0;
+$azzurro:#5cafca;
 
-@use "./colors" as *;
-
+//ovviamente le variabili della HomePage sono riutilizzabili ed abbinabili in tutte le Sezioni
 
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
-   $font-family-sans-serif: "Poppins"#{","} sans);
+$primary: $bianco,
+$secondary: $nero,
+$success: $verdeChiaro,
+$green: $verde, 
+$info: $azzurroChiaro,
+$cyan: $azzurro,
+$body-color: $antraciteChiaro,
+$light:$antracite,
+$warning:$grigio,
+$font-family-sans-serif: "Poppins"#{","} sans);
 
 
+body {
+   background-color:$grigio;
+}
+
+body.loading #content {
+  opacity: 0;
+}
+
+#content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#content.fade-out {
+  opacity: 0;
+}
+
+#content.fade-in {
+  opacity: 1;
+}
 
 .carosello {
    margin-top: 50px;
@@ -21,21 +61,26 @@
 }
 
 .slider-main {
-   overflow: hidden
+   overflow: hidden;
+   display:block;
 }
 
 .slider-card {
    display: flex;
    gap: 9px;
-   margin-top: 6vw;
+   margin-top: 10vw;
    width: max-content;
-   animation: slider 20s linear infinite;
+   animation: slider 60s linear infinite;
+}
+.slider-card video {
+   flex-shrink: 0;
 }
 
 .sliderCardDimensione {
-   width: 50rem;
+   width: 30rem;
    border-radius: 1vw;
 }
+
 
 @keyframes slider {
    from {
@@ -47,7 +92,7 @@
    }
 }
 
-.row {
+.row-custom {
    --bs-gutter-x: 1.5rem;
    --bs-gutter-y: 0;
    display: flex;
