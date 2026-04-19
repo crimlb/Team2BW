@@ -13,10 +13,12 @@
     <header data-bs-theme="dark">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="">
+                <!-- INSERIRE UN MENU A CASCATA -->
+                <a class="navbar-brand" href="../dist/index.html">
                     <font dir="auto" style="vertical-align: inherit;">
                         <font dir="auto" style="vertical-align: inherit;">
-                            <img src="../assets/img/logo.png" width="150px" alt="">Programmers' University
+                            <img src="../assets/img/logo.png" width="150px" alt="logoUniversitario">Programmers'
+                            University
                         </font>
                     </font>
                 </a>
@@ -27,54 +29,76 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+
+                            <div class="dropdown">
+                                <a class="nav-link active collapsed" data-bs-toggle="dropdown" aria-expanded="false"
+                                    data-page="areaStudenti/areaStudenti" role="button" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Didattica
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            <!-- <a class="nav-link active" aria-current="page" data-page="areaStudenti/areaStudenti">
                                 <font dir="auto" style="vertical-align: inherit;">
                                     <font dir="auto" style="vertical-align: inherit;">Didattica</font>
                                 </font>
-                            </a>
+                            </a> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">Campus e Servizi</font>
-                                </font>
-                            </a>
+                            <div class="dropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <font dir=" auto" style="vertical-align: inherit;">
+                                        <font dir="auto" style="vertical-align: inherit;">Innovazione</font>
+                                    </font>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">Ricerca</font>
-                                </font>
-                            </a>
+                            <div class="dropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <font dir=" auto" style="vertical-align: inherit;">
+                                        <font dir="auto" style="vertical-align: inherit;">Ateneo</font>
+                                    </font>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">Università e Società</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">Ateneo</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">News</font>
-                                </font>
-                            </a>
+                            <div class="dropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <font dir=" auto" style="vertical-align: inherit;">
+                                        <font dir="auto" style="vertical-align: inherit;">News</font>
+                                    </font>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
 
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Ricerca" aria-label="Ricerca">
+                        <!-- FORM DI ISCRIZIONE DELLO STUDENTE -->
+                        <input class="form-control me-2" type="search" placeholder="Studia con noi..."
+                            aria-label="Ricerca">
                         <button class="btn btn-secondary " type="submit">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Ricerca</font>
+                                <font dir="auto" style="vertical-align: inherit;">Iscrizione</font>
                             </font>
                         </button>
                     </form>
@@ -92,81 +116,54 @@
                 <img src="../assets/img/carosello2.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello3.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello4.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">   
-                <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">     
+                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-    
+
 
                 <img src="../assets/img/carosello1.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello2.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello3.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello4.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">     
+                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
                 <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">    
+                <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
             </div>
         </section>
 
         <div class="container marketing"> <!-- 3 colonne di reindirizzamento -->
-            <div class="row-custom">
+            <div class="row-custom bgSezioni">
                 <div class="col-lg-4">
-                    <img src="../assets/img/areaStudenti.jpg" alt="img" class="bd-placeholder-img rounded-circle" height="140">
-                    <h2 class="fw-normal">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Area Studenti</font>
-                        </font>
-                    </h2>
+                    <img src="../assets/img/areaStudenti.jpg" alt="img" class="bd-placeholder-img rounded-circle"
+                        height="140">
                     <p>
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Titolo Area Studenti</font>
-                        </font>
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary"
-                            data-page="areaStudenti/areaStudenti">
+                        <a class="btn btn-secondary" data-page="areaStudenti/areaStudenti">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Visualizza i dettagli</font>
+                                <font dir="auto" style="vertical-align: inherit;">Area Studenti</font>
                             </font>
                         </a>
                     </p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <img src="../assets/img/segreteria.jpg" alt="img" class="bd-placeholder-img rounded-circle" height="140">
-                    <h2 class="fw-normal">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Segreteria</font>
-                        </font>
-                    </h2>
+                    <img src="../assets/img/segreteria.jpg" alt="img" class="bd-placeholder-img rounded-circle"
+                        height="140">
                     <p>
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Titolo Segreteria</font>
-                        </font>
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" 
-                            data-page="segreteria/segreteria">
+                        <a class="btn btn-secondary" data-page="segreteria/segreteria">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Visualizza i dettagli</font>
+                                <font dir="auto" style="vertical-align: inherit;">Segreteria</font>
                             </font>
                         </a>
                     </p>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4"><img src="../assets/img/areaProfessori.jpg" alt="img" class="bd-placeholder-img rounded-circle" height="140">
-                    <h2 class="fw-normal">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Area Docenti</font>
-                        </font>
-                    </h2>
+                <div class="col-lg-4"><img src="../assets/img/areaProfessori.jpg" alt="img"
+                        class="bd-placeholder-img rounded-circle" height="140">
                     <p>
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Titolo Area Docenti</font>
-                        </font>
-                    </p>
-                    <p><a class="btn btn-secondary" data-page="areaDocenti/areaDocenti">
+                        <a class="btn btn-secondary" data-page="areaDocenti/areaDocenti">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Visualizza i dettagli</font>
+                                <font dir="auto" style="vertical-align: inherit;">Area Docenti</font>
                             </font>
-                        </a></p>
+                        </a>
+                    </p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row --> <!-- START THE FEATURETTES -->
             <hr class="featurette-divider">
@@ -178,7 +175,7 @@
                             </font>
                         </font><span class="text-body-secondary">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Vi lascerà a bocca aperta.</font>
+                                <font dir="auto" style="vertical-align: inherit;"><br>Vi lascerà a bocca aperta.</font>
                             </font>
                         </span>
                     </h2>
@@ -189,13 +186,15 @@
                         </font>
                     </p>
                 </div>
-                <div class="col-md-5"> <svg aria-label="Segnaposto: 500x500"
+                <div class="col-md-5">
+                    <svg aria-label="Segnaposto: 500x500"
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
                         preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
                         <title>Placeholder</title>
                         <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
                             fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg> </div>
+                    </svg>
+                </div>
             </div>
             <hr class="featurette-divider">
             <div class="row-custom featurette">
@@ -205,7 +204,7 @@
                             <font dir="auto" style="vertical-align: inherit;">Oh sì, è davvero così buono. </font>
                         </font><span class="text-body-secondary">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Guarda tu stesso.</font>
+                                <font dir="auto" style="vertical-align: inherit;"><br>Guarda tu stesso.</font>
                             </font>
                         </span>
                     </h2>
@@ -233,7 +232,7 @@
                             <font dir="auto" style="vertical-align: inherit;">E infine, questa. </font>
                         </font><span class="text-body-secondary">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Scacco matto.</font>
+                                <font dir="auto" style="vertical-align: inherit;"><br>Scacco matto.</font>
                             </font>
                         </span>
                     </h2>
