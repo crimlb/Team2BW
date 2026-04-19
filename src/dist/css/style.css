@@ -11938,6 +11938,7 @@ body.loading #content {
 }
 
 .btn-secondary {
+  font-size: 1.2vw;
   --bs-btn-color: black;
   --bs-btn-bg: white;
   --bs-btn-border-color: black;
@@ -11952,6 +11953,7 @@ body.loading #content {
   --bs-btn-disabled-color: black;
   --bs-btn-disabled-bg: #9c9a9a;
   --bs-btn-disabled-border-color: black;
+  padding: 0px 20px 5px 20px;
 }
 
 .bgSezioni {
@@ -11964,6 +11966,7 @@ body.loading #content {
 
 .rounded-circle {
   border: 2px solid rgba(33, 37, 41, 0.7882352941);
+  margin-bottom: 1vw;
 }
 
 .fw-normal {

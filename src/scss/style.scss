@@ -1,56 +1,56 @@
 //Tema da usare nella home page principale
 $bianco: #ffffff;
-$grigio:#b3b6bb;
-$grigioScuro:#212529c9;
+$grigio: #b3b6bb;
+$grigioScuro: #212529c9;
 $nero: #000;
 //Tema da usare per l'Area Studenti
 $verdeChiaro: #84A98C;
-$verde:#52796F;
+$verde: #52796F;
 //Tema da usare per la segreteria
 $antraciteChiaro: #64748B;
-$antracite:#334155;
+$antracite: #334155;
 //Tema da usare per l'area Docenti
 $azzurroChiaro: #B1D4E0;
-$azzurro:#5cafca;
+$azzurro: #5cafca;
 
 //ovviamente le variabili della HomePage sono riutilizzabili ed abbinabili in tutte le Sezioni
 
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
-$primary: $bianco,
-$secondary: $nero,
-$success: $verdeChiaro,
-$green: $verde, 
-$info: $azzurroChiaro,
-$cyan: $azzurro,
-$body-color: $antraciteChiaro,
-$light:$antracite,
-$warning:$grigio,
-$danger:$grigioScuro,
-$font-family-sans-serif: "Poppins"#{","} sans);
+   $primary: $bianco,
+   $secondary: $nero,
+   $success: $verdeChiaro,
+   $green: $verde,
+   $info: $azzurroChiaro,
+   $cyan: $azzurro,
+   $body-color: $antraciteChiaro,
+   $light: $antracite,
+   $warning: $grigio,
+   $danger: $grigioScuro,
+   $font-family-sans-serif: "Poppins"#{","} sans);
 
 
 body {
-   background-color:$grigio;
+   background-color: $grigio;
    width: 100%;
    max-width: 100%;
 }
 
 body.loading #content {
-  opacity: 0;
+   opacity: 0;
 }
 
 #content {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+   transition: opacity 0.3s ease-in-out;
 }
 
 #content.fade-out {
-  opacity: 0;
+   opacity: 0;
 }
 
 #content.fade-in {
-  opacity: 1;
+   opacity: 1;
 }
 
 .carosello {
@@ -66,7 +66,7 @@ body.loading #content {
 
 .slider-main {
    overflow: hidden;
-   display:block;
+   display: block;
 }
 
 .slider-card {
@@ -76,14 +76,15 @@ body.loading #content {
    width: max-content;
    animation: slider 60s linear infinite;
 }
+
 .slider-card video {
    flex-shrink: 0;
 }
 
 .sliderCardDimensione {
-  width: 30rem;
-    border-radius: 0vw;
-    border: 3px solid $nero;
+   width: 30rem;
+   border-radius: 0vw;
+   border: 3px solid $nero;
 }
 
 
@@ -111,6 +112,7 @@ body.loading #content {
 }
 
 .btn-secondary {
+   font-size: 1.2vw;
    --bs-btn-color: black;
    --bs-btn-bg: white;
    --bs-btn-border-color: black;
@@ -125,20 +127,22 @@ body.loading #content {
    --bs-btn-disabled-color: black;
    --bs-btn-disabled-bg: #9c9a9a;
    --bs-btn-disabled-border-color: black;
+   padding: 0px 20px 5px 20px;
 }
 
-.bgSezioni{
+.bgSezioni {
    background-color: $grigioScuro;
-    padding-top: 1vw;
-    margin-left: -15vw;
-    margin-right: -15vw;
-    border: 3px solid black;
+   padding-top: 1vw;
+   margin-left: -15vw;
+   margin-right: -15vw;
+   border: 3px solid black;
 }
 
-.rounded-circle{
-       border: 2px solid $grigioScuro;
+.rounded-circle {
+   border: 2px solid $grigioScuro;
+   margin-bottom: 1vw;
 }
 
-.fw-normal{
+.fw-normal {
    color: $bianco;
 }
