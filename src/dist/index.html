@@ -14,119 +14,114 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="bg-dark">
     <!-- ================================================ HEADER =========================================================== -->
-    <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <!-- INSERIRE UN MENU A CASCATA -->
-                <a class="navbar-brand" href="../dist/index.html">
-                    <font dir="auto" style="vertical-align: inherit;">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <img src="../assets/img/logo.png" width="150px" alt="logoUniversitario">Programmers'
-                            University
-                        </font>
-                    </font>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Attiva/disattiva la navigazione">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
 
-                            <div class="dropdown">
-                                <a class="nav-link active collapsed" data-bs-toggle="dropdown" aria-expanded="false"
-                                    data-page="areaStudenti/areaStudenti" role="button" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                   News!
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                            <!-- <a class="nav-link active" aria-current="page" data-page="areaStudenti/areaStudenti">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">Didattica</font>
-                                </font>
-                            </a> -->
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <font dir=" auto" style="vertical-align: inherit;">
-                                        <font dir="auto" style="vertical-align: inherit;">Eventi</font>
-                                    </font>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <font dir=" auto" style="vertical-align: inherit;">
-                                        <font dir="auto" style="vertical-align: inherit;">Link Rapidi</font>
-                                    </font>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+    <header class="p-3 text-bg-warning">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <img class="d-flex align-items-center mb-2 mb-lg-0 " src="../assets/img/logo.webp" width="150px"
+                    alt="logoUniversitario">
+                <div class="h1">
+                    <a class="navbar-brand text-dark" href="../dist/index.html">Programmers' University</a>
+                </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 h5">
 
-                    <form class="d-flex" role="search">
-                        <!-- FORM DI ISCRIZIONE DELLO STUDENTE -->
-                        <input class="form-control me-2" type="search" placeholder="Studia con noi..."
-                            aria-label="Ricerca">
-                        <button class="btn btn-secondary " type="submit">
+                    <li>
+                        <a data-page="news/news" class="nav-link px-2 text-dark">
                             <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Iscrizione</font>
+                                <font dir="auto" style="vertical-align: inherit;">News</font>
                             </font>
-                        </button>
-                    </form>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-2 text-dark">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Eventi</font>
+                            </font>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-2 text-dark">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Link Rapidi</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
 
+                <div class="text-end">
+                    <button type="button" class="btn btn-dark btn-outline-light">
+                        <font dir="auto" style="vertical-align: inherit;">
+                            <font dir="auto" style="vertical-align: inherit;">Login</font>
+                        </font>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                        <font dir="auto" style="vertical-align: inherit;">
+                            <font dir="auto" style="vertical-align: inherit;">Iscrizione</font>
+                        </font>
+                    </button>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
+
+
+
     <!-- ============================================ INIZIO MAIN =========================================================== -->
-    <main id="content" class="bg-light">
+    <main id="content">
+        <!-- ============================================ INIZIO HERO =========================================================== -->
+
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6"> <img src="https://picsum.photos/200"
+                        class="d-block mx-lg-auto img-fluid" alt="Temi Bootstrap" width="700" height="500"
+                        loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-warning lh-1 mb-3">La tua carriera nel coding inizia qui.</h1>
+                    <p class="lead text-light">Formazione intensiva, docenti esperti e
+                        collaborazioni con aziende tech per lanciare la tua carriera.
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
+                            class="btn btn-primary btn-lg px-4 me-md-2">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Primario</font>
+                            </font>
+                        </button> <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Predefinito</font>
+                            </font>
+                        </button> </div>
+                </div>
+            </div>
+        </div>
         <!-- ======================================= CAROSELLO SLIDE =================================================== -->
         <section class="slider-main">
             <div class="slider-card">
-                <img src="../assets/img/carosello1.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello2.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello3.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello4.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello1.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello2.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello3.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello4.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello5.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello6.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello7.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
 
 
-                <img src="../assets/img/carosello1.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello2.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello3.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello4.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello1.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello2.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello3.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello4.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello5.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello6.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello7.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
             </div>
         </section>
 
         <div class="container marketing"> <!-- 3 colonne di reindirizzamento -->
             <div class="row-custom bgSezioni">
                 <div class="col-lg-4">
-                    <img src="../assets/img/areaStudenti.jpg" alt="img" class="bd-placeholder-img rounded-circle"
+                    <img src="../assets/img/areaStudenti.webp" alt="img" class="bd-placeholder-img rounded-circle"
                         height="140">
                     <p>
                         <a class="btn btn-secondary" data-page="iNostriCorsi/iNostriCorsi">
@@ -137,7 +132,7 @@
                     </p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <img src="../assets/img/segreteria.jpg" alt="img" class="bd-placeholder-img rounded-circle "
+                    <img src="../assets/img/segreteria.webp" alt="img" class="bd-placeholder-img rounded-circle "
                         height="140">
                     <p>
                         <a class="btn btn-secondary" data-page="chiSiamo/chiSiamo">
@@ -147,7 +142,7 @@
                         </a>
                     </p>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4 "><img src="../assets/img/areaProfessori.jpg" alt="img"
+                <div class="col-lg-4 "><img src="../assets/img/areaProfessori.webp" alt="img"
                         class="bd-placeholder-img rounded-circle" height="140">
                     <p>
                         <a class="btn btn-secondary" data-page="news/news">

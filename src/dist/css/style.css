@@ -11765,20 +11765,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background-color: #4A5565;
-  width: 100%;
-  max-width: 100%;
-}
-
-body.loading #content {
-  opacity: 0;
-}
-
 #content {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
-  margin-top: 150px;
+  margin-top: 25px;
 }
 
 #content.fade-out {
@@ -11789,17 +11779,6 @@ body.loading #content {
   opacity: 1;
 }
 
-.carosello {
-  margin-top: 50px;
-  overflow: visible;
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
 .slider-main {
   overflow: hidden;
   display: block;
@@ -11808,7 +11787,6 @@ body.loading #content {
 .slider-card {
   display: flex;
   gap: 9px;
-  margin-top: 8vw;
   width: max-content;
   animation: slider 60s linear infinite;
 }
@@ -11820,7 +11798,7 @@ body.loading #content {
 .sliderCardDimensione {
   width: 30rem;
   border-radius: 0vw;
-  border: 3px solid #0B0C15;
+  border: 3px solid #ffffff;
 }
 
 @keyframes slider {

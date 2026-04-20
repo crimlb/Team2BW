@@ -26,20 +26,11 @@
 @use "chiSiamo";
 
 
-body {
-   background-color: $grigio;
-   width: 100%;
-   max-width: 100%;
-}
-
-body.loading #content {
-   opacity: 0;
-}
 
 #content {
    opacity: 1;
    transition: opacity 0.3s ease-in-out;
-   margin-top: 150px;
+   margin-top: 25px;
 }
 
 #content.fade-out {
@@ -50,16 +41,6 @@ body.loading #content {
    opacity: 1;
 }
 
-.carosello {
-   margin-top: 50px;
-   overflow: visible;
-   text-align: center;
-   width: 100%;
-   max-width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   position: relative;
-}
 
 .slider-main {
    overflow: hidden;
@@ -69,7 +50,6 @@ body.loading #content {
 .slider-card {
    display: flex;
    gap: 9px;
-   margin-top: 8vw;
    width: max-content;
    animation: slider 60s linear infinite;
 }
@@ -81,7 +61,7 @@ body.loading #content {
 .sliderCardDimensione {
    width: 30rem;
    border-radius: 0vw;
-   border: 3px solid $neroSfondo;
+   border: 3px solid $bianco;
 }
 
 
