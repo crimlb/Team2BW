@@ -1,5 +1,5 @@
 @use "colori" as *;
-
+@use "fonts" as *;
 
 
 
@@ -18,10 +18,8 @@
 
       ),
 
-
-
-
-   $font-family-sans-serif: "Poppins"#{","} sans);
+      $font-family-base : "Source Code Pro" monospace,
+ ); 
 
 @use "news";
 @use "iNostriCorsi";
