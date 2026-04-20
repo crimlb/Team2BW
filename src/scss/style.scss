@@ -3,7 +3,6 @@
 
 
 
-
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
 
 
@@ -19,14 +18,13 @@
 
       ),
 
+          $font-family-base : "Source Code Pro" monospace,
+ ); 
 
+@use "news";
+@use "iNostriCorsi";
+@use "chiSiamo";
 
-
-   $font-family-sans-serif: "Poppins"#{","} sans);
-
-@use "segreteria";
-@use "areaDocenti";
-@use "areaStudenti";
 
 body {
    background-color: $grigio;
