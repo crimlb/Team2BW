@@ -1,3 +1,53 @@
-.display-shadow{
-    text-shadow:hsl(from color h s l)
+@use 'colori' as *;
+
+
+.slider-about-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+}
+
+.slider-about-track {
+    display: flex;
+    width: max-content;
+    animation: sliderAbout 45s linear infinite;
+}
+
+.slider-about-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.slider-about-card img {
+    display: block;
+}
+
+.sliderCardDimensione {
+    width: 30rem;
+    border-radius: 0;
+    border: 3px solid $neroSfondo;
+}
+
+@keyframes sliderAbout {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 10px));
+    }
+}
+
+.carousel-item {
+    transition: transform 5s ease;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 600px;
+    width: 100%;
+}
+
+.carousel-item {
+    position: relative;
 }

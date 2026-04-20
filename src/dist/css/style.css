@@ -69,10 +69,10 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: ("Source Code Pro",);
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: ("Source Code Pro",);
+  --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -5645,7 +5645,7 @@ textarea.form-control-lg {
   z-index: var(--bs-tooltip-zindex);
   display: block;
   margin: var(--bs-tooltip-margin);
-  font-family: "Source Code Pro";
+  font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5755,7 +5755,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: "Source Code Pro";
+  font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11771,8 +11771,53 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.display-shadow {
-  text-shadow: hsl(from color h s l);
+.slider-about-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+}
+
+.slider-about-track {
+  display: flex;
+  width: max-content;
+  animation: sliderAbout 45s linear infinite;
+}
+
+.slider-about-card {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.slider-about-card img {
+  display: block;
+}
+
+.sliderCardDimensione {
+  width: 30rem;
+  border-radius: 0;
+  border: 3px solid #0B0C15;
+}
+
+@keyframes sliderAbout {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+.carousel-item {
+  transition: transform 5s ease;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 600px;
+  width: 100%;
+}
+
+.carousel-item {
+  position: relative;
 }
 
 body {
