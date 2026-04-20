@@ -11765,6 +11765,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.display-shadow {
+  text-shadow: hsl(from color h s l);
+}
+
 body {
   background-color: #4A5565;
   width: 100%;
