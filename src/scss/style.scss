@@ -1,19 +1,24 @@
-@use "./colori" as *;
+@use "colori" as *;
 
 
 
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
-   $primary: $bianco,
-   $secondary: $nero,
-   $success: $verdeChiaro,
+   $primary: $neroSfondo,
+   $secondary: $gialloTitoloBottoni,
+   $light: $bianco,
+   $danger: $grigioScuro,
+   $success: $grigio,
+   $cyan: $gigioChiaro,
+   $warning: $blu,
+
    $green: $verde,
    $info: $azzurroChiaro,
-   $cyan: $azzurro,
+
    $body-color: $antraciteChiaro,
-   $light: $antracite,
-   $warning: $grigio,
-   $danger: $grigioScuro,
+
+
+
    $font-family-sans-serif: "Poppins"#{","} sans);
 
 
@@ -134,6 +139,6 @@ body.loading #content {
    color: $bianco;
 }
 
-@use "./segreteria";
-@use "./areaDocenti";
-@use "./areaStudenti";
+@use "segreteria";
+@use "areaDocenti";
+@use "areaStudenti";

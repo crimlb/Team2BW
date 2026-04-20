@@ -1,9 +1,9 @@
 /* Error: @use rules must be written before any other rules.
  *     ,
- * 137 | @use "./segreteria";
- *     | ^^^^^^^^^^^^^^^^^^^
+ * 142 | @use "segreteria";
+ *     | ^^^^^^^^^^^^^^^^^
  *     '
- *   src\scss\style.scss 137:1  root stylesheet */
+ *   src\scss\style.scss 142:1  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: @use rules must be written before any other rules.\a     \2577 \a 137 \2502  @use "./segreteria";\d\a     \2502  ^^^^^^^^^^^^^^^^^^^\a     \2575 \a   src\\scss\\style.scss 137:1  root stylesheet';
+  content: 'Error: @use rules must be written before any other rules.\a     \2577 \a 142 \2502  @use "segreteria";\d\a     \2502  ^^^^^^^^^^^^^^^^^\a     \2575 \a   src\\scss\\style.scss 142:1  root stylesheet';
 }
