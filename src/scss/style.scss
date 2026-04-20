@@ -23,9 +23,9 @@
 
    $font-family-sans-serif: "Poppins"#{","} sans);
 
-@use "segreteria";
-@use "areaDocenti";
-@use "areaStudenti";
+@use "news";
+@use "iNostriCorsi";
+@use "chiSiamo";
 
 body {
    background-color: $grigio;
