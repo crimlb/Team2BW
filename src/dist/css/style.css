@@ -1,9 +1,9 @@
-/* Error: @use rules must be written before any other rules.
- *     ,
- * 142 | @use "segreteria";
- *     | ^^^^^^^^^^^^^^^^^
- *     '
- *   src\scss\style.scss 142:1  root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 10 |          "primary": $primary, // colore blue 
+ *    |                     ^^^^^^^^
+ *    '
+ *   src\scss\style.scss 10:21  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: @use rules must be written before any other rules.\a     \2577 \a 142 \2502  @use "segreteria";\d\a     \2502  ^^^^^^^^^^^^^^^^^\a     \2575 \a   src\\scss\\style.scss 142:1  root stylesheet';
+  content: 'Error: Undefined variable.\a    \2577 \a 10 \2502           "primary": $primary, // colore blue \d\a    \2502                      ^^^^^^^^\a    \2575 \a   src\\scss\\style.scss 10:21  root stylesheet';
 }

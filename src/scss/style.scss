@@ -4,23 +4,31 @@
 
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
-   $primary: $neroSfondo,
-   $secondary: $gialloTitoloBottoni,
-   $light: $bianco,
-   $danger: $grigioScuro,
-   $success: $grigio,
-   $cyan: $gigioChiaro,
-   $warning: $blu,
 
-   $green: $verde,
-   $info: $azzurroChiaro,
 
-   $body-color: $antraciteChiaro,
+      $theme-colors: (
+         "primary": $primary, // colore blue 
+         "secondary": $grigioScuroCard,
+         "success": $success,
+         "info": $blu,
+         "warning": $gialloTitoloBottoni, // titoli e bottoni 
+         "danger": $rosso,
+         "light": $bianco, // testo normale
+         "dark": $neroSfondo, // usato per gli sfondi
+
+         "grigioChiaro": $grigioChiaro, // per il background dei campi input
+         "grigio" : $grigio,
+         
+      ),
+
 
 
 
    $font-family-sans-serif: "Poppins"#{","} sans);
 
+@use "segreteria";
+@use "areaDocenti";
+@use "areaStudenti";
 
 body {
    background-color: $grigio;
@@ -139,6 +147,3 @@ body.loading #content {
    color: $bianco;
 }
 
-@use "segreteria";
-@use "areaDocenti";
-@use "areaStudenti";
