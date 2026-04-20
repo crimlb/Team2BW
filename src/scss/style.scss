@@ -18,7 +18,8 @@
 
       ),
 
-          $font-family-base : "Source Code Pro" monospace,
+         $display-font-family: $source-code,
+         $font-family-base: $source-code
  ); 
 
 @use "news";
