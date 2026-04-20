@@ -15,7 +15,7 @@ try {
 content.classList.add("fade-out");
 
 setTimeout(async () => {
-  const res = await fetch(`/src/dist/${page}.html`);
+  const res = await fetch(`${page}.html`);
   const html = await res.text();
 
   content.innerHTML = html;

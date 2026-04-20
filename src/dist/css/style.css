@@ -11778,6 +11778,7 @@ body.loading #content {
 #content {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+  margin-top: 150px;
 }
 
 #content.fade-out {
@@ -11865,8 +11866,8 @@ body.loading #content {
 .bgSezioni {
   background-color: #2E2F37;
   padding-top: 1vw;
-  margin-left: -15vw;
-  margin-right: -15vw;
+  display: flex;
+  flex-direction: row;
   border: 3px solid black;
 }
 
