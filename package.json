@@ -7,19 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     
     "build-css":"sass src/scss/style.scss src/dist/css/style.css",
-    "build-areaStudenti-css":"sass src/scss/areaStudenti.scss src/dist/css/areaStudenti.css",
-    "build-segreteria-css":"sass src/scss/segreteria.scss src/dist/css/segreteria.css",
-    "build-areaDocenti-css":"sass src/scss/areaDocenti.scss src/dist/css/areaDocenti.css",
+    "watch-css": "sass --watch src/scss/style.scss src/dist/css/style.css"
 
-    "build": "npm-run-all build-css build-areaStudenti-css build-segreteria-css build-areaDocenti-css",
-
-
-    "watch-css": "sass --watch src/scss/style.scss src/dist/css/style.css",
-    "watch-areaStudenti": "sass --watch src/scss/areaStudenti.scss src/dist/css/areaStudenti.css",
-    "watch-segreteria": "sass --watch src/scss/segreteria.scss src/dist/css/segreteria.css",
-    "watch-areaDocenti": "sass --watch src/scss/areaDocenti.scss src/dist/css/areaDocenti.css",
-
-    "watch": "npm-run-all --parallel watch-css watch-areaStudenti watch-segreteria watch-areaDocenti"
+    
   },
   "keywords": [],
   "author": "",
