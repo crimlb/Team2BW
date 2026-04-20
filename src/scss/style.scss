@@ -7,10 +7,7 @@
 
 
       $theme-colors: (
-         "primary": $primary, // colore blue 
          "secondary": $grigioScuroCard,
-         "success": $success,
-         "info": $blu,
          "warning": $gialloTitoloBottoni, // titoli e bottoni 
          "danger": $rosso,
          "light": $bianco, // testo normale
@@ -18,7 +15,7 @@
 
          "grigioChiaro": $grigioChiaro, // per il background dei campi input
          "grigio" : $grigio,
-         
+
       ),
 
 
@@ -84,7 +81,7 @@ body.loading #content {
 .sliderCardDimensione {
    width: 30rem;
    border-radius: 0vw;
-   border: 3px solid $nero;
+   border: 3px solid $neroSfondo;
 }
 
 
@@ -131,7 +128,7 @@ body.loading #content {
 }
 
 .bgSezioni {
-   background-color: $grigioScuro;
+   background-color: $grigioScuroCard;
    padding-top: 1vw;
    margin-left: -15vw;
    margin-right: -15vw;
@@ -139,7 +136,7 @@ body.loading #content {
 }
 
 .rounded-circle {
-   border: 2px solid $grigioScuro;
+   border: 2px solid $grigioScuroCard;
    margin-bottom: 1vw;
 }
 
