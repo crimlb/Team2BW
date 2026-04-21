@@ -37,6 +37,41 @@ body.loading #content {
    opacity: 0;
 }
 
+header {
+   overflow-x: hidden;
+}
+
+.logo {
+   width: 20rem;
+}
+
+.navbar {
+   max-width: 100%;
+}
+
+.navbar-brand {
+   white-space: nowrap;
+
+}
+
+.btn {
+   border-radius: 0 !important;
+}
+
+.btn-press {
+   transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn-press:active {
+   transform: translateY(1px) scale(0.98);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-wrapper {
+   position: relative;
+   overflow: hidden;
+}
+
 #content {
    opacity: 1;
    transition: opacity 0.3s ease-in-out;
