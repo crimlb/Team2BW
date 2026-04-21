@@ -70,12 +70,12 @@ html, body {
    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-.hero-wrapper {
+.hero-wrapper .contenitore {
    position: relative;
    overflow: hidden;
 }
 
-.immagini {
+.img {
   max-width: 100%;
   width: 100%;
   height: auto;
@@ -98,7 +98,7 @@ html, body {
 }
 
 /* CONTENUTO SOPRA */
-.hero-wrapper .contenitore {
+.hero-wrapper {
    position: relative;
    z-index: 2;
 }

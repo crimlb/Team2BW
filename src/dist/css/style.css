@@ -73,6 +73,10 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: "Source Code Pro", monospace;
+<<<<<<< HEAD
+=======
+  --bs-body-font-family: "Source Code Pro", monospace;
+>>>>>>> origin/main
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -5640,6 +5644,10 @@ textarea.form-control-lg {
   display: block;
   margin: var(--bs-tooltip-margin);
   font-family: "Source Code Pro", monospace;
+<<<<<<< HEAD
+=======
+  font-family: "Source Code Pro", monospace;
+>>>>>>> origin/main
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5750,6 +5758,10 @@ textarea.form-control-lg {
   display: block;
   max-width: var(--bs-popover-max-width);
   font-family: "Source Code Pro", monospace;
+<<<<<<< HEAD
+=======
+  font-family: "Source Code Pro", monospace;
+>>>>>>> origin/main
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11776,6 +11788,44 @@ textarea.form-control-lg {
   animation: sliderAbout 45s linear infinite;
 }
 
+<<<<<<< HEAD
+=======
+.slider-about-track {
+  display: flex;
+  width: max-content;
+  animation: sliderAbout 45s linear infinite;
+}
+
+.slider-about-card {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+@keyframes sliderAbout {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+.carousel-item {
+  transition: transform 5s ease;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 600px;
+  width: 100%;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+html, body {
+  overflow-x: hidden;
+>>>>>>> origin/main
 .slider-about-card {
   flex: 0 0 auto;
   margin-right: 20px;
@@ -11811,6 +11861,10 @@ html, body {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   margin-top: 5px;
+<<<<<<< HEAD
+=======
+  margin-top: 5px;
+>>>>>>> origin/main
 }
 
 #content.fade-out {
@@ -11852,12 +11906,66 @@ html, body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
+<<<<<<< HEAD
 .hero-wrapper {
+=======
+.hero-wrapper .contenitore {
+>>>>>>> origin/main
   position: relative;
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .immagini {
+=======
+.img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+.intestazione {
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 20rem;
+  margin-right: -4rem;
+  margin-left: -4rem;
+}
+
+.navbar {
+  max-width: 100%;
+}
+
+.navbar-brand {
+  white-space: nowrap;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.btn-press {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn-press:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-wrapper .contenitore {
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+>>>>>>> origin/main
   max-width: 100%;
   width: 100%;
   height: auto;
@@ -11877,7 +11985,20 @@ html, body {
   }
 }
 /* CONTENUTO SOPRA */
+<<<<<<< HEAD
 .hero-wrapper .contenitore {
+=======
+.hero-wrapper {
+}
+
+@media (min-width: 992px) {
+  .hero-bg {
+    width: 100%;
+  }
+}
+/* CONTENUTO SOPRA */
+.hero-wrapper {
+>>>>>>> origin/main
   position: relative;
   z-index: 2;
 }
@@ -11888,6 +12009,18 @@ html, body {
   max-height: 420px;
   object-fit: cover;
   z-index: 2;
+<<<<<<< HEAD
+=======
+  z-index: 2;
+}
+
+/* IMMAGINE PRINCIPALE */
+.hero-image {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-height: 420px;
+  object-fit: cover;
+  z-index: 2;
+>>>>>>> origin/main
 }
 
 .slider-main {
@@ -11909,6 +12042,10 @@ html, body {
 .sliderCardDimensione {
   width: 30rem;
   border: 3px solid #FFED00;
+<<<<<<< HEAD
+=======
+  border: 3px solid #FFED00;
+>>>>>>> origin/main
 }
 
 @keyframes slider {
@@ -11925,6 +12062,15 @@ html, body {
 
 .card-hover:hover {
   transform: translateY(-6px) scale(1.01);
+<<<<<<< HEAD
+=======
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+>>>>>>> origin/main
 }
 
 .footer-links a {
@@ -11941,8 +12087,31 @@ html, body {
 .footer-icons a {
   transition: 0.2s ease;
   opacity: 0.7;
+<<<<<<< HEAD
 }
 
+=======
+.footer-links a {
+  transition: 0.2s ease;
+  opacity: 0.75;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.footer-icons a {
+  transition: 0.2s ease;
+  opacity: 0.7;
+}
+
+.footer-icons a:hover {
+  color: #ffc107;
+  opacity: 1;
+  transform: translateY(-3px) scale(1.15);
+>>>>>>> origin/main
 .footer-icons a:hover {
   color: #ffc107;
   opacity: 1;

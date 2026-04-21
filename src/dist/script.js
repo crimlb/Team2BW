@@ -1,18 +1,25 @@
 document.body.classList.add("loading");
 
+
+// Selettori DOM
+const content = document.getElementById("content");
+
+
+//Variaibli globali
+let currentStyle = null;
+let currentScript = null;
+
+
 window.addEventListener("load", () => {
 document.body.classList.remove("loading");
 });
 
-const content = document.getElementById("content");
-
-// 🔥 DEVONO ESSERE GLOBALI
-let currentStyle = null;
-let currentScript = null;
 
 async function loadPage(page, push = true) {
 try {
 content.classList.add("fade-out");
+
+
 
 setTimeout(async () => {
   const res = await fetch(`${page}.html`);
