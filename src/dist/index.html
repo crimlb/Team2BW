@@ -104,38 +104,45 @@
     <!--INIZIO MAIN-->
     <main id="content" class="container-fluid px-0">
       <!--INIZIO HERO-->
-      <div class="hero-wrapper position-relative overflow-hidden">
-        <div
-          class="d-flex w-100 flex-lg-row-reverse align-items-center container-fluid p-0"
-        >
-          <img
-            class="hero-bg object-fit-cover object-fit-lg-contain d-block w-100 h-100"
-            src="../assets/img/bgHero.webp"
-          />
-          <!--               <div class="col-10 col-sm-8 col-lg-6">
+      <div class="hero-wrapper">
+        <div class="">
+          <div
+            class="contenitore container col-xxl-8 px-4 py-5 hero-bg"
+            style="
+              background: url(&quot;../assets/img/bgHero.webp&quot;)
+                center/cover no-repeat;
+              min-height: 80vh;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <div class="row flex-lg-row-reverse align-items-center g-5">
+              <div class="col-10 col-sm-8 col-lg-6">
                 <img
-                  src="../assets/img/bgHero.webp"
-                  class="img-fluid mx-lg-auto hero-image"
+                  src=""
+                  class="immagini img-fluid mx-lg-auto hero-image"
                   alt="Temi Bootstrap"
                   loading="lazy"
                 />
-              </div> -->
-          <div class="hero-content position-absolute z-2">
-            <h1 class="display-5 fw-bold text-warning lh-1 mb-3">
-              La tua carriera nel <span class="fw-bolder">coding</span> inizia
-              qui!
-            </h1>
-            <p class="lead text-light">
-              Formazione intensiva, docenti esperti e collaborazioni con aziende
-              tech per lanciare la tua carriera.
-            </p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
-                type="button"
-                class="fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press"
-              >
-                Scopri il corso che fa per te!
-              </button>
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
+                  La tua carriera nel <span class="fw-bold">coding</span> inizia
+                  qui!
+                </h1>
+                <p class="lead text-light">
+                  Formazione intensiva, docenti esperti e collaborazioni con
+                  aziende tech per lanciare la tua carriera.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button
+                    type="button"
+                    class="fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press"
+                  >
+                    Scopri il corso che fa per te!
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

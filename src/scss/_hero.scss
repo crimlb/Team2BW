@@ -4,7 +4,7 @@
     object-fit: cover;
     z-index: 2;
 } */
-
+/* 
  .hero-wrapper{
     width: 100%;
     max-height: 600px;
@@ -21,6 +21,21 @@
 
 .hero-bg {
 
+} */
+
+.hero-wrapper .contenitore {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* IMMAGINE PRINCIPALE */
+.hero-image {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-height: 420px;
+    object-fit: cover;
+    z-index: 2;
 }
 
 
