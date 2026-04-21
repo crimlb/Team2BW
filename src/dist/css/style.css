@@ -11778,7 +11778,6 @@ textarea.form-control-lg {
   padding-bottom: 0.75rem;
   flex-wrap: wrap;
   gap: 12px;
-  background: var(--uni-grigio);
 }
 
 .news-section .section-title {
@@ -11810,15 +11809,14 @@ textarea.form-control-lg {
 }
 
 .filter-btn:hover {
-  background: var(--uni-blue-ligh);
-  border-color: var(--uni-blue);
+  background: #FFED00;
+  border-color: #C21111;
   color: var(--uni-blue-dark);
 }
 
 .filter-btn.active {
-  background: var(--uni-gold);
-  border-color: #000000;
-  color: #000000;
+  background: #FFED00;
+  color: #0B0C15;
 }
 
 /* Regole pagina iNostriCorsi */

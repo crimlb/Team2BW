@@ -1,4 +1,6 @@
 /* Regole della pagina di news */
+@use "colori" as *;
+
 .news-section .section-header {
     align-items: center;
     justify-content: space-between;
@@ -6,7 +8,6 @@
     padding-bottom: 0.75rem;
     flex-wrap: wrap;
     gap: 12px;
-    background: var(--uni-grigio);
 }
 
 .news-section .section-title {
@@ -27,7 +28,7 @@
     flex-wrap: wrap;
 }
 
-.filter-btn {
+.filter-btn { 
     padding: 7px 14px;
     border: 1px solid #000000;
     background: #fff;
@@ -38,13 +39,12 @@
 }
 
 .filter-btn:hover {
-    background: var(--uni-blue-ligh);
-    border-color: var(--uni-blue);
+    background: $gialloTitoloBottoni;
+    border-color: $rosso;
     color: var(--uni-blue-dark);
 }
 
 .filter-btn.active { 
-    background: var(--uni-gold);
-    border-color: #000000;
-    color: #000000;
+    background: $gialloTitoloBottoni;
+    color: $neroSfondo;
 }
