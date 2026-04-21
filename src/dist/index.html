@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programmers' University</title>
     <!-- FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,39 +119,42 @@
                         <div class="row text-center g-4">
                             <div class="col-lg-4">
                                 <!-- =========================================CARD 1==================================================== -->
-                                <div class="p-5 bg-secondary rounded-4 h-100 shadow-sm card-hover text-center">
+                                <div
+                                    class="p-5 bg-secondary rounded-2 h-100 shadow-sm card-hover text-center border border-grigio border-3">
                                     <img src="../assets/img/areaStudenti.webp"
-                                        class="rounded-4 img-fluid shadow-sm mb-4 border border-grigioChiaro">
+                                        class="rounded-1 img-fluid shadow-sm mb-4 border border-warning border-1">
                                     <h4 class="text-light mb-3">I nostri Corsi</h4>
                                     <p class="text-light opacity-75">Percorsi pratici per diventare developer</p>
                                     <a data-page="iNostriCorsi/iNostriCorsi"
-                                        class="btn btn-warning btn-lg rounded-pill px-4 mt-3 btn-press">
+                                        class="btn btn-warning btn-lg rounded-1 px-4 mt-3 btn-press border border-dark border-1">
                                         Scopri
                                     </a>
                                 </div>
                             </div>
                             <!-- =========================================CARD 2==================================================== -->
                             <div class="col-lg-4">
-                                <div class="p-5 bg-secondary rounded-4 h-100 shadow-sm card-hover text-center">
+                                <div
+                                    class="p-5 bg-secondary rounded-2 h-100 shadow-sm card-hover text-center border border-grigio border-3">
                                     <img src="../assets/img/segreteria.webp"
-                                        class="rounded-4 img-fluid shadow-sm mb-4 border border-grigioChiaro">
+                                        class="rounded-1 img-fluid shadow-sm mb-4 border border-warning border-1">
                                     <h4 class="text-light mb-3">Chi Siamo</h4>
                                     <p class="text-light opacity-75">Una community di sviluppatori e mentor</p>
                                     <a data-page="chiSiamo/chiSiamo"
-                                        class="btn btn-warning btn-lg rounded-pill px-4 mt-3 btn-press">
+                                        class="btn btn-warning btn-lg rounded-1 px-4 mt-3 btn-press border border-dark border-1">
                                         Scopri
                                     </a>
                                 </div>
                             </div>
                             <!-- =========================================CARD 3==================================================== -->
                             <div class="col-lg-4">
-                                <div class="p-5 bg-secondary rounded-4 h-100 shadow-sm card-hover text-center">
+                                <div
+                                    class="p-5 bg-secondary rounded-2 h-100 shadow-sm card-hover text-center border border-grigio border-3">
                                     <img src="../assets/img/areaProfessori.webp"
-                                        class="rounded-4 img-fluid shadow-sm mb-4 border border-grigioChiaro">
+                                        class="rounded-1 img-fluid shadow-sm mb-4 border border-warning border-1">
                                     <h4 class="text-light mb-3">News</h4>
                                     <p class="text-light opacity-75">Aggiornamenti, eventi e novità tech</p>
                                     <a data-page="news/news"
-                                        class="btn btn-warning btn-lg rounded-pill px-4 mt-3 btn-press">
+                                        class="btn btn-warning btn-lg rounded-1 px-4 mt-3 btn-press border border-dark border-1">
                                         Scopri
                                     </a>
                                 </div>
@@ -165,56 +168,128 @@
 
         <!-- ========================================INIZIO THE FEATURETTES ==================================================== -->
         <div class="container marketing">
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
-                            class="text-body-secondary">It’ll blow your mind.</span></h2>
-                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
-                        prose here.</p>
+            <hr class="featurette-divider border border-warning opacity-50">
+            <!-- ========================================FEATURETTES 1 ==================================================== -->
+            <div class="row featurette align-items-center">
+                <div class="col-md-7 order-2 order-md-1">
+                    <h2 class="featurette-heading fw-normal lh-1 text-warning">
+                        Corsi in partenza
+                    </h2>
+                    <p class="lead text-light opacity-75">
+                        Inizia il tuo percorso nel mondo dello sviluppo con i prossimi corsi disponibili.
+                    </p>
+                    <div class="bg-secondary rounded-2 p-4 shadow-sm border border-grigio border-2 mt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="text-light">
+                                <i class="bi bi-code-slash text-warning me-2"></i>
+                                Full Stack Web Developer
+                            </div>
+                            <span class="badge bg-warning text-dark">12 Mag</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="text-light">
+                                <i class="bi bi-cpu text-warning me-2"></i>
+                                Java Backend Developer
+                            </div>
+                            <span class="badge bg-warning text-dark">3 Giu</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="text-light">
+                                <i class="bi bi-graph-up text-warning me-2"></i>
+                                Data Analysis
+                            </div>
+                            <span class="badge bg-warning text-dark">10 Giu</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark">
+                        Vedi tutti i corsi
+                    </a>
                 </div>
-                <div class="col-md-5"> <svg aria-label="Placeholder: 500x500"
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                        preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg> </div>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://picsum.photos/500"
+                        class="featurette-image img-fluid mx-auto rounded-2 shadow border border-warning" loading="lazy"
+                        alt="Corsi in partenza">
+                </div>
             </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
-                            class="text-body-secondary">See for yourself.</span></h2>
-                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
-                        how
-                        this layout would work with some actual real-world content in place.</p>
+            <hr class="featurette-divider border border-warning opacity-50">
+
+            <!-- ========================================FEATURETTES 2 ==================================================== -->
+
+            <div class="row featurette align-items-center">
+                <div class="col-md-7 order-2 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1 text-warning">
+                        Impara con progetti reali
+                    </h2>
+                    <p class="lead text-light opacity-75">
+                        Costruisci il tuo portfolio lavorando su progetti concreti guidati dai nostri mentor.
+                    </p>
+                    <div class="bg-secondary rounded-2 p-4 shadow-sm border border-grigio border-2 mt-4">
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-code-slash text-warning me-2"></i>
+                            Siti web e landing page professionali
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-diagram-3 text-warning me-2"></i>
+                            API e applicazioni full stack
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-clipboard-check text-warning me-2"></i>
+                            Code review con mentor
+                        </div>
+                        <div class="d-flex align-items-center text-light">
+                            <i class="bi bi-briefcase text-warning me-2"></i>
+                            Portfolio pronto per le aziende
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark">
+                        Scopri il metodo
+                    </a>
                 </div>
-                <div class="col-md-5 order-md-1"> <svg aria-label="Placeholder: 500x500"
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                        preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg> </div>
+                <div class="col-md-5 order-1 order-md-1">
+                    <img src="https://picsum.photos/500"
+                        class="featurette-image img-fluid mx-auto rounded-2 shadow border border-warning" loading="lazy"
+                        alt="Progetti reali">
+                </div>
             </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
-                            class="text-body-secondary">Checkmate.</span></h2>
-                    <p class="lead">And yes, this is the last block of representative placeholder content. Again, not
-                        really
-                        intended to be actually read, simply here to give you a better view of what this would look like
-                        with some actual content. Your content.</p>
+            <hr class="featurette-divider border border-warning opacity-50">
+
+            <!-- ========================================FEATURETTES 3 ==================================================== -->
+
+            <div class="row featurette align-items-center">
+                <div class="col-md-7 order-2 order-md-1">
+                    <h2 class="featurette-heading fw-normal lh-1 text-warning">
+                        Supporto al lavoro
+                    </h2>
+                    <p class="lead text-light opacity-75">
+                        Ti accompagniamo fino all’ingresso nel mondo del lavoro con un supporto completo e pratico.
+                    </p>
+                    <div class="bg-secondary rounded-2 p-4 shadow-sm border border-grigio border-2 mt-4">
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-file-earmark-person text-warning me-2"></i>
+                            Revisione CV e portfolio tecnico
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-linkedin text-warning me-2"></i>
+                            Ottimizzazione profilo LinkedIn
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-chat-square-dots text-warning me-2"></i>
+                            Simulazioni colloqui tecnici
+                        </div>
+                        <div class="d-flex align-items-center text-light">
+                            <i class="bi bi-building text-warning me-2"></i>
+                            Network con aziende partner
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark">
+                        Inizia la tua carriera
+                    </a>
                 </div>
-                <div class="col-md-5"> <svg aria-label="Placeholder: 500x500"
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                        preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg> </div>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://picsum.photos/500"
+                        class="featurette-image img-fluid mx-auto rounded-2 shadow border border-warning" loading="lazy"
+                        alt="Career support">
+                </div>
             </div>
             <hr class="featurette-divider">
         </div>
