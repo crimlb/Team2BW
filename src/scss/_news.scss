@@ -1,7 +1,6 @@
-@use "colori" as *;
-@use "fonts" as *;
 
-:root {
+
+/* :root {
     --uni-blue: #185FA5;
     --uni-blue-light: #E6F1FB;
     --uni-blue-dark: #0C447C;
@@ -10,10 +9,9 @@
     --uni-teal: #0F6E56;
     --uni-teal-light: #E1F5EE;
     --uni-grigio: #2E2F37;
-}
+} */
 
 .news-section .section-header {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
@@ -42,9 +40,7 @@
 }
 
 .filter-btn {
-    font-size: 18px;
     padding: 7px 14px;
-    border-radius: 5px;
     border: 1px solid #000000;
     background: #fff;
     color: #000000;
@@ -59,7 +55,7 @@
     color: var(--uni-blue-dark);
 }
 
-.filter-btn.active {
+.filter-btn.active { 
     background: var(--uni-gold);
     border-color: #000000;
     color: #000000;
