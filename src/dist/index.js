@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
 document.body.classList.remove("loading");
 });
 
+
 const content = document.getElementById("content");
 
 // 🔥 DEVONO ESSERE GLOBALI
