@@ -20,8 +20,15 @@ monospace;
 @use "iNostriCorsi";
 @use "chiSiamo";
 
-html, body {
-  overflow-x: hidden;
+
+body {
+   background-color: $grigio;
+   width: 100%;
+   max-width: 100%;
+}
+
+body.loading #content {
+   opacity: 0;
 }
 
 #content {
@@ -38,67 +45,14 @@ html, body {
    opacity: 1;
 }
 
-.intestazione {
-   overflow-x: hidden;
-}
-
-.logo {
-   width: 20rem;
-   margin-right: -4rem;
-   margin-left: -4rem;
-}
-
-.navbar {
-   max-width: 100%;
-}
-
-.navbar-brand {
-   white-space: nowrap;
-
-}
-
-.btn {
-   border-radius: 0 !important;
-}
-
-.btn-press {
-   transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-
-.btn-press:active {
-   transform: translateY(1px) scale(0.98);
-   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-.hero-wrapper .contenitore {
-   position: relative;
-   overflow: hidden;
-}
-
-.img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-
-//MOBILE
-.hero-bg {
-   background-size: cover;
-   background-position: center;
-   z-index: -1;
+.carosello {
+   margin-top: 50px;
+   overflow: visible;
+   text-align: center;
    width: 100%;
-   max-width: 100%; 
-}
-
-//DESKTOP
-@media (min-width: 992px) {
-   .hero-bg {
-      width: 100%;
-   }
-}
-
-/* CONTENUTO SOPRA */
-.hero-wrapper {
+   max-width: 100%;
+   margin-left: auto;
+   margin-right: auto;
    position: relative;
    z-index: 2;
 }
