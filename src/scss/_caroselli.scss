@@ -3,7 +3,7 @@
 
 .carosello {
     margin-top: 50px;
-    overflow: visible;
+    overflow: hidden;
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -14,23 +14,26 @@
 }
 
 .slider-main {
-    overflow: hidden;
-    display: block;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .slider-card {
-    display: flex;
-    gap: 9px;
-    width: max-content;
-    animation: slider 60s linear infinite;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+.slider-card::-webkit-scrollbar {
+  display: none; /* opzionale: nasconde scrollbar */
 }
 
-.slider-card video {
-    flex-shrink: 0;
-}
 
 .sliderCardDimensione {
-    width: 30rem;
+   flex: 0 0 auto;
+  width: 90%;
+  max-width: 100%;
+  height: auto;
 }
 
 

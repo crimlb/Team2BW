@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body class="bg-dark d-flex flex-column min-vh-100">
+<body class="bg-dark d-flex flex-column max-vh-100 overflow-x-hidden">
   <!--HEADER-->
 
   <header class="p-1 text-bg-warning border border-dark border-2 intestazione">
@@ -53,48 +53,124 @@
 
           <!-- Bottoni: full-width su mobile, auto su desktop -->
           <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0">
-            <button type="button" class="btn btn-dark btn-outline-light fw-bold border rounded-0">
+            <button type="button" class="btn btn-dark btn-outline-light fw-bold border rounded-0" data-bs-toggle="modal"
+              data-bs-target="#exampleModalCenter">
               Login
             </button>
+            <!-- MODALE LOGIN -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                  <div class="modal-header bg-warning">
+                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalCenterTitle">Login</h1>
+                    <button type="button" class="btn-close btn-dark" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-dark text-light">
+                    <div class="input-group mb-3 w-100">
+                      <input type="text" class="form-control rounded-0" id="floatingInput5" placeholder="Nome Utente">
+                      <label for="floatingInput6">Nome Utente</label>
+                    </div>
+                    <div class="input-group mb-3 w-100">
+                      <input type="password" class="form-control rounded-0" id="floatingPassword3"
+                        placeholder="Password">
+                      <label for="floatingPassword4">Password</label>
+                    </div>
+                  </div>
+                  <div class="modal-footer bg-warning flex-wrap">
+                    <div class="form-check me-auto">
+                      <input class="form-check-input text-dark" type="checkbox" value="" id="defaultCheck1">
+                      <a href="">Ricordami</a>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
+                      data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">Accedi</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FINE MODALE LOGIN -->
             <button type="button" class="btn btn-outline-dark fw-bold rounded-0" data-bs-toggle="modal"
               data-bs-target="#exampleModalScrollable">
               Iscrizione
             </button>
+            <!-- MODALE REGISTRAZIONE -->
             <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
-              aria-labelledby="exampleModalScrollableTitle" style="display: none;" aria-hidden="true">
+              aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
+                <div class="modal-content rounded-0">
                   <div class="modal-header bg-warning">
-                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalScrollableTitle">Iscriviti ai nostri corsi</h1><button type="button"
-                      class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="modal-title fs-5 fw-bold" id="exampleModalScrollableTitle">Iscriviti ai nostri corsi</h2>
+                    <button type="button" class="btn-close btn-dark" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
                   </div>
                   <div class="modal-body bg-dark text-light">
-                    <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line
-                      breaks to demonstrate how content can exceed minimum inner height, thereby showing inner
-                      scrolling. When content becomes longer than the predefined max-height of modal, content will be
-                      cropped and scrollable within the modal.</p>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    <p>This content should appear at the bottom after you scroll.</p>
+                    <div class="bd-example m-0 border-0">
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="text" class="form-control rounded-0" id="inputGroup-sizing-default"
+                          placeholder="*Nome Utente">
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="text" class="form-control rounded-0" id="inputGroup-sizing-default"
+                          placeholder="*Nome">
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="text" class="form-control rounded-0" id="floatingInput1" placeholder="*Cognome">
+
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="email" class="form-control rounded-0" id="floatingPassword1"
+                          placeholder="example@email.it">
+
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="password" class="form-control rounded-0" id="floatingInput3"
+                          placeholder="*Password">
+
+                      </div>
+                      <select class="form-select form-select-lg mb-3 rounded-0" aria-label="Large select example">
+                        <option selected="">Cosa ti piacerebbe studiare?</option>
+                        <option value="1">Voglio iniziare da zero</option>
+                        <option value="2">Voglio diventare sviluppatore web</option>
+                        <option value="3">Voglio sviluppare app mobile</option>
+                        <option value="4">Voglio lavorare con l'IA</option>
+                        <option value="5">Voglio migliorare le mie competenze</option>
+                        <option value="6">Non sono sicuro, voglio orientarmi</option>
+                      </select>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <a href="">*Accetto i termini e le condizioni d’uso, dichiaro inoltre di essere maggiorenne e
+                          che i dati da me inseriti, validi per la fatturazione, sono veritieri e reali</a>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <a href="">*Ho preso visione dell'informativa privacy e acconsento al trattamento dei miei dati
+                          personali per le finalità ivi indicate</a>
+                      </div>
+                    </div>
+
+
                   </div>
-                  <div class="modal-footer bg-warning">
-                    <button type="button" class="btn btn-dark rounded-0"
-                      data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-outline-dark fw-bold rounded-0">Save
-                      changes</button></div>
+                  <div class="modal-footer bg-warning flex-wrap">
+                    <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
+                      data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">Registrati</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- FINE MODALE REGISTRAZIONE -->
         </div>
       </div>
     </nav>
   </header>
 
   <!--INIZIO MAIN-->
-  <main id="content" class="container-fluid px-0">
+  <main id="content" class="container-fluid ">
     <!--INIZIO HERO-->
     <div class="hero-wrapper">
-      <div class="">
         <div class="contenitore container col-xxl-8 px-4 py-5 hero-bg" style="
               background: url(&quot;../assets/img/bgHero.webp&quot;)
                 center/cover no-repeat;
@@ -124,11 +200,10 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
     <!-- ======================================= CAROSELLO SLIDE =================================================== -->
     <section class="slider-main">
-      <div class="slider-card">
+      <div class="slider-card container-fluid">
         <img src="../assets/img/carosello1.webp" alt="immagineCarosello"
           class="d-block sliderCardDimensione border border-1 border-warning" />
         <img src="../assets/img/carosello2.webp" alt="immagineCarosello"
@@ -354,8 +429,8 @@
 
   <!-- ================================================ FOOTER =========================================================== -->
 
-  <footer class="mt-auto bg-dark text-light border-top border-warning py-5">
-    <div class="container contenitore">
+  <footer class="mt-auto bg-dark text-light border-top border-warning py-5 overflow-hidden">
+    <div class="container">
       <div class="row g-4">
         <!-- BRAND -->
         <div class="col-12 col-md-4">
