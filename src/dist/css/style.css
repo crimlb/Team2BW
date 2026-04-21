@@ -11900,6 +11900,14 @@ body.loading #content {
   z-index: 2;
 }
 
+.btn {
+  border-radius: 0px !important;
+}
+
+#logo {
+  width: 100px !important;
+}
+
 .slider-main {
   overflow: hidden;
   display: block;
@@ -11935,6 +11943,11 @@ body.loading #content {
 
 .card-hover:hover {
   transform: translateY(-6px) scale(1.01);
+}
+
+.hero-wrapper .contenitore {
+  position: relative;
+  z-index: 2;
 }
 
 .footer-links a {
