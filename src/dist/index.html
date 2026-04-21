@@ -3,276 +3,366 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programmers' University</title>
     <!-- FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="bg-dark d-flex flex-column min-vh-100">
     <!-- ================================================ HEADER =========================================================== -->
-    <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <!-- INSERIRE UN MENU A CASCATA -->
-                <a class="navbar-brand" href="../dist/index.html">
-                    <font dir="auto" style="vertical-align: inherit;">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <img src="../assets/img/logo.png" width="150px" alt="logoUniversitario">Programmers'
-                            University
-                        </font>
-                    </font>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Attiva/disattiva la navigazione">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
 
-                            <div class="dropdown">
-                                <a class="nav-link active collapsed" data-bs-toggle="dropdown" aria-expanded="false"
-                                    data-page="areaStudenti/areaStudenti" role="button" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                   News!
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                            <!-- <a class="nav-link active" aria-current="page" data-page="areaStudenti/areaStudenti">
-                                <font dir="auto" style="vertical-align: inherit;">
-                                    <font dir="auto" style="vertical-align: inherit;">Didattica</font>
-                                </font>
-                            </a> -->
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <font dir=" auto" style="vertical-align: inherit;">
-                                        <font dir="auto" style="vertical-align: inherit;">Eventi</font>
-                                    </font>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <font dir=" auto" style="vertical-align: inherit;">
-                                        <font dir="auto" style="vertical-align: inherit;">Link Rapidi</font>
-                                    </font>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+    <header class="p-1 text-bg-warning border border-dark border-2 intestazione">
+        <div class="contenitore container-fluid overflow-hidden">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <img class="img-fluid d-flex align-items-center mb-2 mb-lg-0 logo" src="../assets/img/logo.webp"
+                    alt="logoUniversitario">
 
-                    <form class="d-flex" role="search">
-                        <!-- FORM DI ISCRIZIONE DELLO STUDENTE -->
-                        <input class="form-control me-2" type="search" placeholder="Studia con noi..."
-                            aria-label="Ricerca">
-                        <button class="btn btn-secondary " type="submit">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Iscrizione</font>
-                            </font>
-                        </button>
-                    </form>
+                <a class="navbar-brand text-dark fs-4 fw-bold flex-shrink-0 me-1" href="../dist/index.html">Programmers'
+                    University</a>
 
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 h5 gap-5">
+
+                    <li>
+                        <a data-page="news/news" class="nav-link px-2 text-dark fw-bold">New</a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
+                    </li>
+                </ul>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-dark btn-outline-light fw-bold">Login</button>
+                    <button type="button" class="btn btn-outline-dark fw-bold">Iscrizione</button>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
+
+
+
     <!-- ============================================ INIZIO MAIN =========================================================== -->
-    <main id="content" class="bg-light">
+    <main id="content" class="container-fluid">
+        <!-- ============================================ INIZIO HERO =========================================================== -->
+        <div class="hero-wrapper">
+            <div class="hero-bg">
+                
+                <div class="contenitore container col-xxl-8 px-4 py-5">
+                    <div class="row flex-lg-row-reverse align-items-center g-5">
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <img src="" class="immagini img-fluid mx-lg-auto hero-image" alt="Temi Bootstrap" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-1 fw-bold text-warning lh-1 mb-3">La tua carriera nel <span
+                                    class="fw-bold">coding</span>
+                                inizia qui!</h1>
+                            <p class="lead text-light">Formazione intensiva, docenti esperti e
+                                collaborazioni con aziende tech per lanciare la tua carriera.
+                            </p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button type="button"
+                                    class=" fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press">
+                                    Scopri il corso che fa per te!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ======================================= CAROSELLO SLIDE =================================================== -->
         <section class="slider-main">
             <div class="slider-card">
-                <img src="../assets/img/carosello1.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello2.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello3.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello4.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello1.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello2.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello3.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello4.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello5.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello6.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello7.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
 
 
-                <img src="../assets/img/carosello1.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello2.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello3.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello4.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello5.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello6.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
-                <img src="../assets/img/carosello7.jpg" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello1.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello2.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello3.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello4.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello5.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello6.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
+                <img src="../assets/img/carosello7.webp" alt="immagineCarosello" class="d-block sliderCardDimensione">
             </div>
         </section>
 
-        <div class="container marketing"> <!-- 3 colonne di reindirizzamento -->
-            <div class="row-custom bgSezioni">
-                <div class="col-lg-4">
-                    <img src="../assets/img/areaStudenti.jpg" alt="img" class="bd-placeholder-img rounded-circle"
-                        height="140">
-                    <p>
-                        <a class="btn btn-secondary" data-page="iNostriCorsi/iNostriCorsi">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">I nostri Corsi</font>
-                            </font>
-                        </a>
-                    </p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img src="../assets/img/segreteria.jpg" alt="img" class="bd-placeholder-img rounded-circle "
-                        height="140">
-                    <p>
-                        <a class="btn btn-secondary" data-page="chiSiamo/chiSiamo">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">Chi Siamo</font>
-                            </font>
-                        </a>
-                    </p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4 "><img src="../assets/img/areaProfessori.jpg" alt="img"
-                        class="bd-placeholder-img rounded-circle" height="140">
-                    <p>
-                        <a class="btn btn-secondary" data-page="news/news">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;">News</font>
-                            </font>
-                        </a>
-                    </p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row --> <!-- START THE FEATURETTES -->
-            <hr class="featurette-divider">
-            <div class="row-custom featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-normal lh-1">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Prima introduzione al dietro le quinte.
-                            </font>
-                        </font><span class="text-body-secondary">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;"><br>Vi lascerà a bocca aperta.</font>
-                            </font>
-                        </span>
+        <div class="container contenitore"> <!-- 3 colonne di reindirizzamento -->
+            <!-- ========================================SEZIONE CARD==================================================== -->
+            <div class="row justify-content-center g-4 ">
+                <section class="py-5 bg-dark">
+                    <div class="container contenitore">
+                        <div class="row text-center g-4">
+                            <div class="col-lg-4">
+                                <!-- =========================================CARD 1==================================================== -->
+                                <div
+                                    class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
+                                    <img src="../assets/img/areaStudenti.webp"
+                                        class="immagini img-fluid shadow-sm mb-4 border border-warning border-1">
+                                    <h4 class="text-light mb-3 fw-bold">I nostri Corsi</h4>
+                                    <p class="text-light opacity-75">Percorsi pratici per diventare developer</p>
+                                    <a data-page="iNostriCorsi/iNostriCorsi"
+                                        class="fw-bold btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1">
+                                        Scopri
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- =========================================CARD 2==================================================== -->
+                            <div class="col-lg-4">
+                                <div
+                                    class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
+                                    <img src="../assets/img/segreteria.webp"
+                                        class="immagini img-fluid shadow-sm mb-4 border border-warning border-1">
+                                    <h4 class="text-light mb-3 fw-bold">Chi Siamo</h4>
+                                    <p class="text-light opacity-75">Una community di sviluppatori e mentor</p>
+                                    <a data-page="chiSiamo/chiSiamo"
+                                        class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold">
+                                        Scopri
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- =========================================CARD 3==================================================== -->
+                            <div class="col-lg-4">
+                                <div
+                                    class="p-5 bg-secondary  h-100 shadow-sm card-hover text-center border border-grigio border-3">
+                                    <img src="../assets/img/areaProfessori.webp"
+                                        class="immagini img-fluid shadow-sm mb-4 border border-warning border-1">
+                                    <h4 class="text-light mb-3 fw-bold">News</h4>
+                                    <p class="text-light opacity-75">Aggiornamenti, eventi e novità tech</p>
+                                    <a data-page="news/news"
+                                        class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold">
+                                        Scopri
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- =========================================FINE SEZIONE CARD ==================================================== -->
+
+        <!-- ========================================INIZIO THE FEATURETTES ==================================================== -->
+        <div class="container marketing contenitore">
+            <hr class="featurette-divider border border-warning opacity-50">
+            <!-- ========================================FEATURETTES 1 ==================================================== -->
+            <div class="row featurette align-items-center">
+                <div class="col-md-7 order-2 order-md-1">
+                    <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
+                        Corsi in partenza
                     </h2>
-                    <p class="lead">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Ecco un ottimo contenuto provvisorio per
-                                il primo breve filmato. Immaginate qui un testo avvincente.</font>
-                        </font>
+                    <p class="lead text-light opacity-75">
+                        Inizia il tuo percorso nel mondo dello sviluppo con i prossimi corsi disponibili.
                     </p>
+                    <div class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="text-light">
+                                <i class="bi bi-code-slash text-warning me-2"></i>
+                                Full Stack Web Developer
+                            </div>
+                            <span class="badge bg-warning text-dark rounded-0 fw-semibold">12 Mag</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="text-light">
+                                <i class="bi bi-cpu text-warning me-2"></i>
+                                Java Backend Developer
+                            </div>
+                            <span class="badge bg-warning text-dark rounded-0 fw-semibold">3 Giu</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="text-light">
+                                <i class="bi bi-graph-up text-warning me-2"></i>
+                                Data Analysis
+                            </div>
+                            <span class="badge bg-warning text-dark rounded-0 fw-semibold">10 Giu</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold">
+                        Vedi tutti i corsi
+                    </a>
                 </div>
-                <div class="col-md-5">
-                    <svg aria-label="Segnaposto: 500x500"
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                        preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://picsum.photos/500"
+                        class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
+                        alt="Corsi in partenza">
+                </div>
+            </div>
+            <hr class="featurette-divider border border-warning opacity-50">
+
+            <!-- ========================================FEATURETTES 2 ==================================================== -->
+
+            <div class="row featurette align-items-center">
+                <div class="col-md-7 order-2 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
+                        Impara con progetti reali
+                    </h2>
+                    <p class="lead text-light opacity-75">
+                        Costruisci il tuo portfolio lavorando su progetti concreti guidati dai nostri mentor.
+                    </p>
+                    <div class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4">
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-code-slash text-warning me-2"></i>
+                            Siti web e landing page professionali
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-diagram-3 text-warning me-2"></i>
+                            API e applicazioni full stack
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-clipboard-check text-warning me-2"></i>
+                            Code review con mentor
+                        </div>
+                        <div class="d-flex align-items-center text-light">
+                            <i class="bi bi-briefcase text-warning me-2"></i>
+                            Portfolio pronto per le aziende
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold">
+                        Scopri il metodo
+                    </a>
+                </div>
+                <div class="col-md-5 order-1 order-md-1">
+                    <img src="https://picsum.photos/500"
+                        class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
+                        alt="Progetti reali">
+                </div>
+            </div>
+            <hr class="featurette-divider border border-warning opacity-50">
+
+            <!-- ========================================FEATURETTES 3 ==================================================== -->
+
+            <div class="row featurette align-items-center">
+                <div class="col-md-7 order-2 order-md-1">
+                    <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
+                        Supporto al lavoro
+                    </h2>
+                    <p class="lead text-light opacity-75">
+                        Ti accompagniamo fino all’ingresso nel mondo del lavoro con un supporto completo e pratico.
+                    </p>
+                    <div class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4">
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-file-earmark-person text-warning me-2"></i>
+                            Revisione CV e portfolio tecnico
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-linkedin text-warning me-2"></i>
+                            Ottimizzazione profilo LinkedIn
+                        </div>
+                        <div class="d-flex align-items-center mb-3 text-light">
+                            <i class="bi bi-chat-square-dots text-warning me-2"></i>
+                            Simulazioni colloqui tecnici
+                        </div>
+                        <div class="d-flex align-items-center text-light">
+                            <i class="bi bi-building text-warning me-2"></i>
+                            Network con aziende partner
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold">
+                        Inizia la tua carriera
+                    </a>
+                </div>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://picsum.photos/500"
+                        class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
+                        alt="Career support">
                 </div>
             </div>
             <hr class="featurette-divider">
-            <div class="row-custom featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading fw-normal lh-1">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Oh sì, è davvero così buono. </font>
-                        </font><span class="text-body-secondary">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;"><br>Guarda tu stesso.</font>
-                            </font>
-                        </span>
-                    </h2>
-                    <p class="lead">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Un altro contenuto extra? Certo. Qui
-                                trovate altro contenuto segnaposto per darvi un'idea di come questo layout funzionerebbe
-                                con del contenuto reale.</font>
-                        </font>
-                    </p>
-                </div>
-                <div class="col-md-5 order-md-1"> <svg aria-label="Segnaposto: 500x500"
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                        preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg> </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row-custom featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-normal lh-1">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">E infine, questa. </font>
-                        </font><span class="text-body-secondary">
-                            <font dir="auto" style="vertical-align: inherit;">
-                                <font dir="auto" style="vertical-align: inherit;"><br>Scacco matto.</font>
-                            </font>
-                        </span>
-                    </h2>
-                    <p class="lead">
-                        <font dir="auto" style="vertical-align: inherit;">
-                            <font dir="auto" style="vertical-align: inherit;">Ebbene sì, questo è l'ultimo blocco di
-                                contenuto segnaposto rappresentativo. Anche in questo caso, non è pensato per essere
-                                effettivamente letto, serve semplicemente a darvi un'idea di come apparirebbe con del
-                                contenuto reale. Il vostro contenuto.</font>
-                        </font>
-                    </p>
-                </div>
-                <div class="col-md-5"> <svg aria-label="Segnaposto: 500x500"
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                        preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                    </svg> </div>
-            </div>
-            <hr class="featurette-divider"> <!-- /END THE FEATURETTES -->
-        </div><!-- /.container -->
-        <!-- ================================================ FOOTER =========================================================== -->
-        <footer class="container">
-            <p class="float-end"><a href="#">
-                    <font dir="auto" style="vertical-align: inherit;">
-                        <font dir="auto" style="vertical-align: inherit;">Torna all'inizio</font>
-                    </font>
-                </a></p>
-            <p>
-                <font dir="auto" style="vertical-align: inherit;">
-                    <font dir="auto" style="vertical-align: inherit;">© 2017–2025 Company, Inc. · </font>
-                </font><a href="#">
-                    <font dir="auto" style="vertical-align: inherit;">
-                        <font dir="auto" style="vertical-align: inherit;">Informativa sulla privacy</font>
-                    </font>
-                </a>
-                <font dir="auto" style="vertical-align: inherit;">
-                    <font dir="auto" style="vertical-align: inherit;"> · </font>
-                </font><a href="#">
-                    <font dir="auto" style="vertical-align: inherit;">
-                        <font dir="auto" style="vertical-align: inherit;">Termini e condizioni</font>
-                    </font>
-                </a>
-            </p>
-        </footer>
+        </div>
     </main>
 
+
+
+
+    <!-- ================================================ FOOTER =========================================================== -->
+
+    <footer class="mt-auto bg-dark text-light border-top border-warning py-5">
+        <div class="container contenitore">
+
+            <div class="row g-4">
+
+                <!-- BRAND -->
+                <div class="col-12 col-md-4">
+                    <h5 class="text-warning fw-bold">Programmers' University</h5>
+                    <p class="text-light opacity-75">
+                        Formazione pratica per diventare developer pronti al mondo reale.
+                    </p>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="d-flex gap-3 footer-icons">
+                        <a href="#" class="text-light fs-5"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- CORSI -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-warning">Corsi</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="text-light text-decoration-none">Frontend</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Backend</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Full Stack</a></li>
+                    </ul>
+                </div>
+
+                <!-- NAVIGAZIONE -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-warning">Navigazione</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="../dist/index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a data-page="chiSiamo/chiSiamo" class="text-light text-decoration-none">Chi Siamo</a></li>
+                        <li><a data-page="news/news" class="text-light text-decoration-none">News</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTATTI -->
+                <div class="col-12 col-md-4">
+                    <h6 class="text-warning">Contatti</h6>
+
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+                        Catania, Italia
+                    </p>
+
+                    <p class="mb-1">
+                        <i class="bi bi-envelope-fill text-warning me-2"></i>
+                        info@programmersuniversity.it
+                    </p>
+
+                    <p>
+                        <i class="bi bi-clock-fill text-warning me-2"></i>
+                        Lun - Ven | 9:00 - 18:00
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="border-warning opacity-25 my-4">
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75">
+                <span>Code your future</span>
+                <span>© 2026 Programmers' University</span>
+            </div>
+
+        </div>
+    </footer>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../dist/index.js"></script>
 </body>

@@ -1,29 +1,161 @@
 <!-- LE PAGINE SECONDARIE SONO SEZIONI DELLA PAGINA INIZIALE (INDEX.HTML). QUINDI NON SERVE HEAD, BODY, FOOTER 
 La prima section funge da body di tutta questa pagina. -->
+<link rel="stylesheet" href="../../scss/_news.scss">
+<section class="news-section container" aria-label="News ed eventi universitari">
 
-<section>
-    <section>
+    <div class="section-header d-flex flex-column mt-3 bg-grigioChiaro border border-1 border-warning py-3">
+        <h2 class="text-center text-warning fw-bold display-4">News &amp; Eventi — Maggio 2025</h2>
+        <div class="filter-bar" role="group" aria-label="Filtra per categoria">
+            <button class="filter-btn active" data-filter="tutti" onclick="filterItems('tutti')">Tutti</button>
+            <button class="filter-btn" data-filter="workshop" onclick="filterItems('workshop')">Workshop</button>
+            <button class="filter-btn" data-filter="tecnologia" onclick="filterItems('tecnologia')">Tecnologie</button>
+            <button class="filter-btn" data-filter="ammissioni" onclick="filterItems('ammissioni')">Ammissioni</button>
+        </div>
+    </div>
 
-        <h2 class="titolo">NEWS!!</h2>
-        <ul class="esempio">
-            <li>Punto 1</li>
-            <li>Punto 2</li>
-            <li>Punto 3</li>
-                        <li>Punto 1</li>
-                        <li>Punto 2</li>
-                        <li>Punto 3</li>
-                                    <li>Punto 1</li>
-                                    <li>Punto 2</li>
-                                    <li>Punto 3</li>
-                                                <li>Punto 1</li>
-                                                <li>Punto 2</li>
-                                                <li>Punto 3</li>
-                                                            <li>Punto 1</li>
-                                                            <li>Punto 2</li>
-                                                            <li>Punto 3</li>
-                                                                        <li>Punto 1</li>
-                                                                        <li>Punto 2</li>
-                                                                        <li>Punto 3</li>
-        </ul>
-    </section>
+    <div class="news-grid">
+
+        <!-- COLONNA SINISTRA: Calendario eventi -->
+        <div class="calendar-col">
+            <p class="col-label">Calendario eventi</p>
+
+            <article class="event-card" data-category="workshop">
+                <div class="event-date" aria-label="5 maggio">
+                    <div class="day">05</div>
+                    <div class="month">Mag</div>
+                </div>
+                <div class="event-body">
+                    <span class="event-tag tag-workshop">Workshop</span>
+                    <h3 class="event-title">Introduzione a React — da zero al primo componente</h3>
+                    <div class="event-meta">
+                        <span>Ore 14:00 – 17:00</span>
+                        <span>Aula B3, Polo Informatico</span>
+                    </div>
+                    <a class="event-register" href="#">Iscriviti al workshop →</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="tecnologia">
+                <div class="event-date" aria-label="9 maggio">
+                    <div class="day">09</div>
+                    <div class="month">Mag</div>
+                </div>
+                <div class="event-body">
+                    <span class="event-tag tag-tecnologia">Tecnologia</span>
+                    <h3 class="event-title">Seminar: AI Generativa e LLM — applicazioni pratiche nel 2025</h3>
+                    <div class="event-meta">
+                        <span>Ore 10:30 – 12:30</span>
+                        <span>Aula Magna</span>
+                    </div>
+                    <a class="event-register" href="#">Prenota il posto →</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="workshop">
+                <div class="event-date" aria-label="14 maggio">
+                    <div class="day">14</div>
+                    <div class="month">Mag</div>
+                </div>
+                <div class="event-body">
+                    <span class="event-tag tag-workshop">Workshop</span>
+                    <h3 class="event-title">Node.js hands-on: REST API con Express e MongoDB</h3>
+                    <div class="event-meta">
+                        <span>Ore 15:00 – 18:00</span>
+                        <span>Lab 2, Edificio C</span>
+                    </div>
+                    <a class="event-register" href="#">Iscriviti al workshop →</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="ammissioni">
+                <div class="event-date" aria-label="20 maggio">
+                    <div class="day">20</div>
+                    <div class="month">Mag</div>
+                </div>
+                <div class="event-body">
+                    <span class="event-tag tag-ammissioni">Ammissioni</span>
+                    <h3 class="event-title">Open Day — Corsi magistrali in Informatica e Data Science</h3>
+                    <div class="event-meta">
+                        <span>Ore 09:00 – 13:00</span>
+                        <span>Campus Centrale</span>
+                    </div>
+                    <a class="event-register" href="#">Registrati all'Open Day →</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="tecnologia">
+                <div class="event-date" aria-label="27 maggio">
+                    <div class="day">27</div>
+                    <div class="month">Mag</div>
+                </div>
+                <div class="event-body">
+                    <span class="event-tag tag-tecnologia">Tecnologia</span>
+                    <h3 class="event-title">Hackathon 24h — Sviluppa una web app con l'AI Stack</h3>
+                    <div class="event-meta">
+                        <span>Dalle ore 10:00</span>
+                        <span>Polo Tecnologico</span>
+                    </div>
+                    <a class="event-register" href="#">Forma il tuo team →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- COLONNA DESTRA: Articoli in rilievo -->
+        <div class="articles-col">
+            <p class="col-label">Articoli in rilievo</p>
+
+            <article class="article-card featured" data-category="tecnologia">
+                <div class="featured-badge">★ In evidenza</div>
+                <h3 class="article-title">Perché React continua a dominare il frontend nel 2025</h3>
+                <p class="article-excerpt">Un'analisi dello stack tecnologico adottato dalle principali aziende tech
+                    italiane: React, Next.js e TypeScript rimangono le competenze più richieste dai recruiter.</p>
+                <div class="article-footer">
+                    <span>Redazione Ateneo · 2 mag 2025</span>
+                    <a class="read-more" href="#">Leggi →</a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="workshop">
+                <h3 class="article-title">Guida ai workshop di maggio: cosa portare e come prepararsi</h3>
+                <p class="article-excerpt">Dal laptop con Node.js installato alla gestione dei prerequisiti: tutto
+                    quello che devi sapere prima di partecipare agli eventi pratici del mese.</p>
+                <div class="article-footer">
+                    <span>Ufficio Didattica · 28 apr 2025</span>
+                    <a class="read-more" href="#">Leggi →</a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="tecnologia">
+                <h3 class="article-title">Node.js 22 e le novità di ES2025 — cosa cambia per gli sviluppatori</h3>
+                <p class="article-excerpt">Le ultime release portano miglioramenti alle performance e nuove API native.
+                    Il nostro docente analizza l'impatto pratico per chi inizia oggi.</p>
+                <div class="article-footer">
+                    <span>Prof. Marchetti · 25 apr 2025</span>
+                    <a class="read-more" href="#">Leggi →</a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="ammissioni">
+                <h3 class="article-title">Bando ammissioni aperto: scadenza 31 maggio per le magistrali</h3>
+                <p class="article-excerpt">Sono aperti i bandi per l'accesso ai corsi magistrali in Ingegneria
+                    Informatica, Data Science e Intelligenza Artificiale. Documentazione sul portale studenti.</p>
+                <div class="article-footer">
+                    <span>Segreteria · 1 mag 2025</span>
+                    <a class="read-more" href="#">Leggi →</a>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+    <!-- CTA Newsletter -->
+    <div class="iscriviti-cta">
+        <div>
+            <p class="cta-text">Non perdere i prossimi eventi</p>
+            <p class="cta-sub">Iscriviti alla newsletter e ricevi aggiornamenti su workshop e bandi</p>
+        </div>
+        <a class="cta-btn" href="#">Iscriviti alla newsletter</a>
+    </div>
 </section>
