@@ -1,0 +1,66 @@
+@use "colori" as *;
+@use "fonts" as *;
+
+:root {
+    --uni-blue: #185FA5;
+    --uni-blue-light: #E6F1FB;
+    --uni-blue-dark: #0C447C;
+    --uni-gold: #BA7517;
+    --uni-gold-light: #FAEEDA;
+    --uni-teal: #0F6E56;
+    --uni-teal-light: #E1F5EE;
+    --uni-grigio: #2E2F37;
+}
+
+.news-section .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--uni-grigio);
+}
+
+.news-section .section-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--uni-blue-light);
+    letter-spacing: -0.3px;
+}
+
+.news-section .section-title span {
+    color: var(--uni-gold);
+}
+
+/* --- Filtri --- */
+.filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    font-size: 18px;
+    padding: 7px 14px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background: #fff;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.20s;
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    background: var(--uni-blue-ligh);
+    border-color: var(--uni-blue);
+    color: var(--uni-blue-dark);
+}
+
+.filter-btn.active {
+    background: var(--uni-gold);
+    border-color: #000000;
+    color: #000000;
+}
