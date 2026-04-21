@@ -11766,6 +11766,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#logo {
+  width: 150px;
+}
+
 /* Regole della pagina di news */
 .news-section .section-header {
   align-items: center;
@@ -11898,14 +11902,6 @@ body.loading #content {
   max-height: 420px;
   object-fit: cover;
   z-index: 2;
-}
-
-.btn {
-  border-radius: 0px !important;
-}
-
-#logo {
-  width: 150px;
 }
 
 .slider-main {

@@ -1,6 +1,8 @@
 @use "colori" as *;
 @use "fonts" as *;
 
+
+
 $font-family-base : "Source Code Pro",
 monospace;
 
@@ -16,6 +18,7 @@ monospace;
 
    $font-family-base: $font-family-base);
 
+@use "./navbar";
 @use "news";
 @use "iNostriCorsi";
 @use "chiSiamo";
@@ -30,8 +33,6 @@ body {
 body.loading #content {
    opacity: 0;
 }
-
-
 
 
 #content {
@@ -69,13 +70,8 @@ body.loading #content {
 }
 
 
-.btn{
-   border-radius: 0px!important;
-}
 
-#logo{
-   width: 150px;
-}
+
 
 .slider-main {
    overflow: hidden;
