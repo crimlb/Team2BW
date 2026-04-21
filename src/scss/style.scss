@@ -1,49 +1,33 @@
 @use "colori" as *;
 @use "fonts" as *;
 
+$font-family-base : "Source Code Pro",
+monospace;
 
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ($theme-colors: ("secondary": $grigioScuroCard,
+      "warning": $gialloTitoloBottoni, // titoli e bottoni 
+      "danger": $rosso,
+      "light": $bianco, // testo normale
+      "dark": $neroSfondo, // usato per gli sfondi
+      "grigioChiaro": $grigioChiaro, // per il background dei campi input
+      "grigio" : $grigio,
 
-@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( // $secondary: $black,
+   ),
 
-
-      $theme-colors: (
-         "secondary": $grigioScuroCard,
-         "warning": $gialloTitoloBottoni, // titoli e bottoni 
-         "danger": $rosso,
-         "light": $bianco, // testo normale
-         "dark": $neroSfondo, // usato per gli sfondi
-
-         "grigioChiaro": $grigioChiaro, // per il background dei campi input
-         "grigio" : $grigio,
-
-      ),
-
-<<<<<<< HEAD
-      $font-family-base : "Source Code Pro" monospace,
-=======
-          $font-family-base : "Source Code Pro" monospace,
->>>>>>> 3132fd627eeb14dfa32ee1fbb3ea99eb05c8c1bd
- ); 
+   $font-family-base: $font-family-base);
 
 @use "news";
 @use "iNostriCorsi";
 @use "chiSiamo";
 
-
-body {
-   background-color: $grigio;
-   width: 100%;
-   max-width: 100%;
-}
-
-body.loading #content {
-   opacity: 0;
+html, body {
+  overflow-x: hidden;
 }
 
 #content {
    opacity: 1;
    transition: opacity 0.3s ease-in-out;
-   margin-top: 150px;
+   margin-top: 5px;
 }
 
 #content.fade-out {
@@ -54,16 +38,79 @@ body.loading #content {
    opacity: 1;
 }
 
-.carosello {
-   margin-top: 50px;
-   overflow: visible;
-   text-align: center;
-   width: 100%;
-   max-width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   position: relative;
+.intestazione {
+   overflow-x: hidden;
 }
+
+.logo {
+   width: 20rem;
+   margin-right: -4rem;
+   margin-left: -4rem;
+}
+
+.navbar {
+   max-width: 100%;
+}
+
+.navbar-brand {
+   white-space: nowrap;
+
+}
+
+.btn {
+   border-radius: 0 !important;
+}
+
+.btn-press {
+   transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn-press:active {
+   transform: translateY(1px) scale(0.98);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-wrapper {
+   position: relative;
+   overflow: hidden;
+}
+
+.immagini {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+//MOBILE
+.hero-bg {
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+   width: 100%;
+   max-width: 100%; 
+}
+
+//DESKTOP
+@media (min-width: 992px) {
+   .hero-bg {
+      width: 100%;
+   }
+}
+
+/* CONTENUTO SOPRA */
+.hero-wrapper .contenitore {
+   position: relative;
+   z-index: 2;
+}
+
+/* IMMAGINE PRINCIPALE */
+.hero-image {
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+   max-height: 420px;
+   object-fit: cover;
+   z-index: 2;
+}
+
 
 .slider-main {
    overflow: hidden;
@@ -73,7 +120,6 @@ body.loading #content {
 .slider-card {
    display: flex;
    gap: 9px;
-   margin-top: 8vw;
    width: max-content;
    animation: slider 60s linear infinite;
 }
@@ -84,8 +130,7 @@ body.loading #content {
 
 .sliderCardDimensione {
    width: 30rem;
-   border-radius: 0vw;
-   border: 3px solid $neroSfondo;
+   border: 3px solid $gialloTitoloBottoni;
 }
 
 
@@ -99,52 +144,38 @@ body.loading #content {
    }
 }
 
-.row-custom {
-   --bs-gutter-x: 1.5rem;
-   --bs-gutter-y: 0;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   text-align: center;
-   margin-top: 2rem;
-   align-content: center;
-   justify-content: center;
-   align-items: baseline;
+.card-hover {
+   transition: all 0.2s ease;
 }
 
-.btn-secondary {
-   font-size: 1.2vw;
-   --bs-btn-color: black;
-   --bs-btn-bg: white;
-   --bs-btn-border-color: black;
-   --bs-btn-hover-color: black;
-   --bs-btn-hover-bg: #9c9a9a;
-   --bs-btn-hover-border-color: black;
-   --bs-btn-focus-shadow-rgb: 184, 107, 160;
-   --bs-btn-active-color: black;
-   --bs-btn-active-bg: #9c9a9a;
-   --bs-btn-active-border-color: black;
-   --bs-btn-active-shadow: inset 0 3px 5px rgba(95, 84, 84, 0.125);
-   --bs-btn-disabled-color: black;
-   --bs-btn-disabled-bg: #9c9a9a;
-   --bs-btn-disabled-border-color: black;
-   padding: 0px 20px 5px 20px;
+.card-hover:hover {
+   transform: translateY(-6px) scale(1.01);
 }
 
-.bgSezioni {
-   background-color: $grigioScuroCard;
-   padding-top: 1vw;
-   display: flex;
-   flex-direction: row;
-   border: 3px solid black;
+
+
+
+
+
+// ================================================FOOTER=============================================
+.footer-links a {
+   transition: 0.2s ease;
+   opacity: 0.75;
 }
 
-.rounded-circle {
-   border: 2px solid $grigioScuroCard;
-   margin-bottom: 1vw;
+.footer-links a:hover {
+   color: #ffc107;
+   opacity: 1;
+   transform: translateX(5px);
 }
 
-.fw-normal {
-   color: $bianco;
+.footer-icons a {
+   transition: 0.2s ease;
+   opacity: 0.7;
 }
 
+.footer-icons a:hover {
+   color: #ffc107;
+   opacity: 1;
+   transform: translateY(-3px) scale(1.15);
+}
