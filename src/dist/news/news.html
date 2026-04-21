@@ -1,110 +1,101 @@
 <!-- LE PAGINE SECONDARIE SONO SEZIONI DELLA PAGINA INIZIALE (INDEX.HTML). QUINDI NON SERVE HEAD, BODY, FOOTER 
 La prima section funge da body di tutta questa pagina. -->
-<section
-  class="news-section container"
-  aria-label="News ed eventi universitari"
->
-  <div class="section-header d-flex flex-column mt-3 py-3">
+<section class="container-fluid" aria-label="News ed eventi universitari">
+  <div class="d-flex flex-column mt-3 py-3">
     <h2 class="text-center text-warning fw-bold display-4">
       News &amp; Eventi <br />
     </h2>
     <div
-      class="filter-bar d-flex gap-3 flex-wrap"
+      class="filter-bar d-flex flex-md-row gap-3 flex-wrap container justify-content-center"
       role="group"
       aria-label="Filtra per categoria"
     >
       <button
-        class="filter-btn p-3 border border-1 border-black active col-sm-6"
+        class="filter-btn p-3 border border-1 border-black active col-sm-auto"
         data-filter="tutti"
-        onclick="filterItems('tutti')"
+        onclick="filtraCategorie('tutti')"
       >
         Tutti
       </button>
       <button
-        class="filter-btn p-3 border border-1 border-black col-sm-6"
+        class="filter-btn p-3 border border-1 border-black col-sm-auto"
         data-filter="workshop"
-        onclick="filterItems('workshop')"
+        onclick="filtraCategorie('workshop')"
       >
         Workshop
       </button>
       <button
-        class="filter-btn p-3 border border-1 border-black col-sm-6"
+        class="filter-btn p-3 border border-1 border-black col-sm-auto"
         data-filter="tecnologia"
-        onclick="filterItems('tecnologia')"
+        onclick="filtraCategorie('tecnologia')"
       >
         Tecnologie
       </button>
       <button
-        class="filter-btn p-3 border border-1 border-black col-sm-6"
+        class="filter-btn p-3 border border-1 border-black col-sm-auto"
         data-filter="ammissioni"
-        onclick="filterItems('ammissioni')"
+        onclick="filtraCategorie('ammissioni')"
       >
         Ammissioni
       </button>
     </div>
   </div>
 
-  <main class="news-grid">
+  <main class="container-fluid d-flex flex-column flex-lg-row gap-3">
     <!-- COLONNA SINISTRA: Calendario eventi -->
-    <section class="calendar-col d-flex flex-column gap-5">
-      <p class="col-label text-warning display-5 fw-bold">Calendario eventi</p>
+    <section class="d-flex flex-column gap-5 col-md-7 col-lg-8 px-md-4 my-5">
+      <p class="text-warning display-5 fw-bold">Calendario eventi</p>
 
       <article
         class="event-card d-flex flex-column border border-3 border-white text-white p-3"
         data-category="workshop"
       >
-        <div
-          class="event-date d-flex flex-row gap-5 mb-3"
-          aria-label="5 maggio"
-        >
-          <span class="event-tag tag-workshop">Workshop</span>
-          <span class="day">05</span>
-          <span class="month">Mag</span>
-        </div>
-        <div class="event-body">
-          <h3 class="event-title text-warning fw-bold">
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Workshop</span>
+          <span>05</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
             Introduzione a React — da zero al primo componente
           </h3>
-          <div class="event-meta text-white">
-            <span class="">Ore 14:00 – 17:00</span>
-            <span class="">Aula B3, Polo Informatico</span>
+          <div class="text-white">
+            <span>Ore 14:00 – 17:00</span>
+            <span>Aula B3, Polo Informatico</span>
           </div>
           <button
-            class="event-register btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
             href="#"
           >
             Iscriviti al workshop
           </button>
-        </div>
+        </main>
       </article>
       <!---->
       <article
         class="event-card d-flex flex-column border border-3 border-white text-white p-3"
         data-category="tecnologia"
       >
-        <div
-          class="event-date d-flex flex-row gap-5 mb-3"
-          aria-label="5 maggio"
-        >
-          <span class="event-tag tag-tecnologia">Tecnologia</span>
-          <span class="day">09</span>
-          <span class="month">Mag</span>
-        </div>
-        <div class="event-body">
-          <h3 class="event-title text-warning fw-bold">
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Tecnologia</span>
+          <span>09</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
             Seminar: AI Generativa e LLM — applicazioni pratiche nel 2025
           </h3>
-          <div class="event-meta text-white">
-            <span class="">Ore 10:30 – 12:30</span>
-            <span class="">Aula Magna</span>
+          <div class="text-white">
+            <span>Ore 10:30 – 12:30</span>
+            <span>Aula Magna</span>
           </div>
           <button
-            class="event-register btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
             href="#"
           >
             Prenota il posto
           </button>
-        </div>
+        </main>
       </article>
 
       <!---->
@@ -112,29 +103,26 @@ La prima section funge da body di tutta questa pagina. -->
         class="event-card d-flex flex-column border border-3 border-white text-white p-3"
         data-category="workshop"
       >
-        <div
-          class="event-date d-flex flex-row gap-5 mb-3"
-          aria-label="5 maggio"
-        >
-          <span class="event-tag tag-workshop">Workshop</span>
-          <span class="day">14</span>
-          <span class="month">Mag</span>
-        </div>
-        <div class="event-body">
-          <h3 class="event-title text-warning fw-bold">
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Workshop</span>
+          <span>14</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
             Node.js hands-on: REST API con Express e MongoDB
           </h3>
-          <div class="event-meta text-white">
+          <div class="text-white">
             <span class="">Ore 15:00 – 18:00</span>
             <span class="">Lab 2, Edificio C</span>
           </div>
           <button
-            class="event-register btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
             href="#"
           >
             Iscriviti al workshop
           </button>
-        </div>
+        </main>
       </article>
 
       <!---->
@@ -142,29 +130,26 @@ La prima section funge da body di tutta questa pagina. -->
         class="event-card d-flex flex-column border border-3 border-white text-white p-3"
         data-category="ammissioni"
       >
-        <div
-          class="event-date d-flex flex-row gap-5 mb-3"
-          aria-label="5 maggio"
-        >
-          <span class="event-tag tag-workshop">Ammissioni</span>
-          <span class="day">20</span>
-          <span class="month">Mag</span>
-        </div>
-        <div class="event-body">
-          <h3 class="event-title text-warning fw-bold">
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Ammissioni</span>
+          <span>20</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
             Open Day — Corsi magistrali in Informatica e Data Science
           </h3>
-          <div class="event-meta text-white">
-            <span class="">Ore 09:00 – 13:00</span>
-            <span class="">Campus Centrale</span>
+          <div class="text-white">
+            <span>Ore 09:00 – 13:00</span>
+            <span>Campus Centrale</span>
           </div>
           <button
-            class="event-register btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
             href="#"
           >
             Registrati all'Open Day
           </button>
-        </div>
+        </main>
       </article>
 
       <!---->
@@ -172,128 +157,171 @@ La prima section funge da body di tutta questa pagina. -->
         class="event-card d-flex flex-column border border-3 border-white text-white p-3"
         data-category="tecnologia"
       >
-        <div
-          class="event-date d-flex flex-row gap-5 mb-3"
-          aria-label="5 maggio"
-        >
-          <span class="event-tag tag-workshop">Tecnologia</span>
-          <span class="day">27</span>
-          <span class="month">Mag</span>
-        </div>
-        <div class="event-body">
-          <h3 class="event-title text-warning fw-bold">
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Tecnologia</span>
+          <span>27</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
             Hackathon 24h — Sviluppa una web app con l'AI Stack
           </h3>
-          <div class="event-meta text-white">
-            <span class="">Dalle ore 10:00</span>
-            <span class="">Polo Tecnologico</span>
+          <div class="text-white">
+            <span>Dalle ore 10:00</span>
+            <span>Polo Tecnologico</span>
           </div>
           <button
-            class="event-register btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
             href="#"
           >
             Forma il tuo team
           </button>
-        </div>
+        </main>
+      </article>
+
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="workshop"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Workshop</span>
+          <span>12</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            UX Design: principi fondamentali per interfacce efficaci
+          </h3>
+          <div class="text-white">
+            <span>Ore 10:00 – 13:00</span>
+            <span>Aula A1, Polo Informatico</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Iscriviti al workshop
+          </button>
+        </main>
+      </article>
+
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="tecnologia"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Tecnologia</span>
+          <span>20</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Intelligenza Artificiale: opportunità e sfide nel 2026
+          </h3>
+          <div class="text-white">
+            <span>Ore 16:00 – 18:30</span>
+            <span>Aula Magna, Polo Informatico</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Prenota il tuo posto
+          </button>
+        </main>
       </article>
     </section>
 
     <!-- COLONNA DESTRA: Articoli in rilievo -->
-    <aside class="articles-col d-flex flex-column gap-3">
-      <p class="col-label fw-bold text-warning display-5">
-        Articoli in rilievo
-      </p>
-
-      <article
-        class="article-card featured border border-2 border-warning p-3"
-        data-category="tecnologia"
-      >
-        <div class="featured-badge text-danger">★ In evidenza</div>
-        <h3 class="article-title fs-3 text-warning fw-medium">
-          Perché React continua a dominare il frontend nel 2025
-        </h3>
-        <p class="article-excerpt text-white">
-          Un'analisi dello stack tecnologico adottato dalle principali aziende
-          tech italiane: React, Next.js e TypeScript rimangono le competenze più
-          richieste dai recruiter.
+    <aside
+      class="d-flex flex-column flex-lg-column-reverse gap-3 gap-md-1 gap-lg-3 col-md-5 col-lg-4 px-md-4 mb-md-5 justify-content-end"
+    >
+      <section class="d-flex flex-column gap-3">
+        <p class="col-label fw-bold text-warning display fs-3 mt-5 mt-md-0">
+          Articoli in rilievo
         </p>
-        <div class="article-footer text-white">
-          <span>Redazione Ateneo · 2 mag 2025</span>
-          <a class="read-more text-danger text-decoration-none" href="#"
-            >Leggi →</a
-          >
-        </div>
-      </article>
 
-      <article
-        class="article-card border border-2 border-warning p-3"
-        data-category="workshop"
-      >
-        <h3 class="article-title fs-3 text-warning fw-medium">
-          Guida ai workshop di maggio: cosa portare e come prepararsi
-        </h3>
-        <p class="article-excerpt text-white">
-          Dal laptop con Node.js installato alla gestione dei prerequisiti:
-          tutto quello che devi sapere prima di partecipare agli eventi pratici
-          del mese.
-        </p>
-        <div class="article-footer text-white">
-          <span>Ufficio Didattica · 28 apr 2025</span>
-          <a class="read-more text-danger text-decoration-none" href="#"
-            >Leggi →</a
-          >
-        </div>
-      </article>
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="tecnologia"
+        >
+          <span class="text-danger">★ In evidenza</span>
+          <h3 class="fs-3 text-warning fw-medium">
+            Perché React continua a dominare il frontend nel 2025
+          </h3>
+          <p class="text-white">
+            Un'analisi dello stack tecnologico adottato dalle principali aziende
+            tech italiane: React, Next.js e TypeScript rimangono le competenze
+            più richieste dai recruiter.
+          </p>
+          <div class="text-white">
+            <span>Redazione Ateneo · 2 mag 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
 
-      <article
-        class="article-card border border-2 border-warning p-3"
-        data-category="tecnologia"
-      >
-        <h3 class="article-title fs-3 text-warning fw-medium">
-          Node.js 22 e le novità di ES2025 — cosa cambia per gli sviluppatori
-        </h3>
-        <p class="article-excerpt text-white">
-          Le ultime release portano miglioramenti alle performance e nuove API
-          native. Il nostro docente analizza l'impatto pratico per chi inizia
-          oggi.
-        </p>
-        <div class="article-footer text-white">
-          <span>Prof. Marchetti · 25 apr 2025</span>
-          <a class="read-more text-danger text-decoration-none" href="#"
-            >Leggi →</a
-          >
-        </div>
-      </article>
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="workshop"
+        >
+          <h3 class="fs-3 text-warning fw-medium">
+            Guida ai workshop di maggio: cosa portare e come prepararsi
+          </h3>
+          <p class="text-white">
+            Dal laptop con Node.js installato alla gestione dei prerequisiti:
+            tutto quello che devi sapere prima di partecipare agli eventi
+            pratici del mese.
+          </p>
+          <div class="text-white">
+            <span>Ufficio Didattica · 28 apr 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
 
-      <article
-        class="article-card border border-2 border-warning p-3"
-        data-category="ammissioni"
-      >
-        <h3 class="article-title fs-3 text-warning fw-medium">
-          Bando ammissioni aperto: scadenza 31 maggio per le magistrali
-        </h3>
-        <p class="article-excerpt text-white">
-          Sono aperti i bandi per l'accesso ai corsi magistrali in Ingegneria
-          Informatica, Data Science e Intelligenza Artificiale. Documentazione
-          sul portale studenti.
-        </p>
-        <div class="article-footer text-white">
-          <span>Segreteria · 1 mag 2025</span>
-          <a class="read-more text-danger text-decoration-none" href="#"
-            >Leggi →</a
-          >
-        </div>
-      </article>
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="tecnologia"
+        >
+          <h3 class="fs-3 text-warning fw-medium">
+            Node.js 22 e le novità di ES2025 — cosa cambia per gli sviluppatori
+          </h3>
+          <p class="text-white">
+            Le ultime release portano miglioramenti alle performance e nuove API
+            native. Il nostro docente analizza l'impatto pratico per chi inizia
+            oggi.
+          </p>
+          <div class="text-white">
+            <span>Prof. Marchetti · 25 apr 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
+
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="ammissioni"
+        >
+          <h3 class="fs-3 text-warning fw-medium">
+            Bando ammissioni aperto: scadenza 31 maggio per le magistrali
+          </h3>
+          <p class="text-white">
+            Sono aperti i bandi per l'accesso ai corsi magistrali in Ingegneria
+            Informatica, Data Science e Intelligenza Artificiale. Documentazione
+            sul portale studenti.
+          </p>
+          <div class="text-white">
+            <span>Segreteria · 1 mag 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
+      </section>
 
       <!-- CTA Newsletter -->
-      <section
-        class="iscriviti-cta d-flex flex-column my-5 justify-content-center"
-      >
+      <section class="d-flex flex-column my-5 my-lg-0 justify-content-center">
         <form class="text-center d-flex flex-column gap-3 my-5">
-          <h3 class="display fs-5 text-warning fw-bold">
+          <h3 class="display fs-1 text-warning fw-bolder">
             Non perdere i prossimi eventi
           </h3>
-          <p class="text-white fw-medium">
+          <p class="text-white fw-bold">
             Iscriviti alla newsletter e ricevi aggiornamenti su workshop e bandi
           </p>
           <input

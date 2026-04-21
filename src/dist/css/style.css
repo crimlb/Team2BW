@@ -11771,31 +11771,13 @@ textarea.form-control-lg {
 }
 
 /* Regole della pagina di news */
-.news-section .section-header {
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
+/* --- Filtri --- */
+.filter-bar {
+  display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-}
-
-.news-section .section-title {
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--uni-blue-light);
-  letter-spacing: -0.3px;
-}
-
-.news-section .section-title span {
-  color: var(--uni-gold);
 }
 
 .filter-btn {
-  padding: 7px 14px;
-  border: 1px solid #000000;
-  background: #fff;
-  color: #000000;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -11803,7 +11785,6 @@ textarea.form-control-lg {
 .filter-btn:hover {
   background: #FFED00;
   border-color: #C21111;
-  color: var(--uni-blue-dark);
 }
 
 .filter-btn.active {
