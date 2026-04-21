@@ -92,12 +92,10 @@ e.preventDefault();
 loadPage(link.dataset.page);
 });
 
-// BACK/FORWARD
-window.addEventListener("popstate", e => {
-const page = e.state?.page || "index";
-loadPage(page, false);
-});
 
+window.addEventListener("popstate", () => {
+  window.location.href = "index.html";
+});
 // CARICAMENTO INIZIALE
 const params = new URLSearchParams(window.location.search);
 const initialPage = params.get("page");
