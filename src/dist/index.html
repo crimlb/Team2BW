@@ -1,581 +1,443 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programmers' University</title>
-    <!-- FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
 
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programmers' University</title>
+  <!-- FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <body class="bg-dark d-flex flex-column min-vh-100">
-    <!--HEADER-->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
 
-    <header
-      class="p-1 text-bg-warning border border-dark border-2 intestazione"
-    >
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <!-- Logo + Titolo -->
-          <a
-            class="navbar-brand d-flex align-items-center gap-2 text-dark fw-bold fs-5"
-            href="../dist/index.html"
-          >
-            <img
-              id="logo"
-              src="../assets/img/logo.webp"
-              alt="logoUniversitario"
-            />
-            <span class="d-none d-sm-inline fs-4">Programmers' University</span>
-            <span class="d-inline d-sm-none fs-6">Progs' Uni</span>
-          </a>
+<body class="bg-dark d-flex flex-column min-vh-100">
+  <!--HEADER-->
 
-          <!-- Hamburger -->
-          <button
-            class="navbar-toggler border-dark"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <header class="p-1 text-bg-warning border border-dark border-2 intestazione">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Logo + Titolo -->
+        <a class="navbar-brand d-flex align-items-center gap-2 text-dark fw-bold fs-5" href="../dist/index.html">
+          <img id="logo" src="../assets/img/logo.webp" alt="logoUniversitario" />
+          <span class="d-none d-sm-inline fs-4">Programmers' University</span>
+          <span class="d-inline d-sm-none fs-6">Progs' Uni</span>
+        </a>
 
-          <!-- Link + Bottoni -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarMenu"
-          >
-            <ul
-              class="navbar-nav align-items-lg-center gap-1 me-lg-2 mt-2 mt-lg-0"
-            >
-              <li class="nav-item">
-                <a data-page="news/news" class="nav-link px-2 text-dark fw-bold"
-                  >News</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  data-page="chiSiamo/chiSiamo"
-                  class="nav-link px-2 text-dark fw-bold"
-                  >Chi Siamo</a
-                >
-              </li>
-            </ul>
+        <!-- Hamburger -->
+        <button class="navbar-toggler border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Bottoni: full-width su mobile, auto su desktop -->
-            <div
-              class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0"
-            >
-              <button
-                type="button"
-                class="btn btn-dark btn-outline-light fw-bold"
-              >
-                Login
-              </button>
-              <button type="button" class="btn btn-outline-dark fw-bold">
-                Iscrizione
-              </button>
+        <!-- Link + Bottoni -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <ul class="navbar-nav align-items-lg-center gap-1 me-lg-2 mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a data-page="news/news" class="nav-link px-2 text-dark fw-bold">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
+            </li>
+            <li class="nav-item">
+              <a data-page="chiSiamo/chiSiamo" class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
+            </li>
+          </ul>
+
+          <!-- Bottoni: full-width su mobile, auto su desktop -->
+          <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0">
+            <button type="button" class="btn btn-dark btn-outline-light fw-bold border rounded-0">
+              Login
+            </button>
+            <button type="button" class="btn btn-outline-dark fw-bold rounded-0" data-bs-toggle="modal"
+              data-bs-target="#exampleModalScrollable">
+              Iscrizione
+            </button>
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
+              aria-labelledby="exampleModalScrollableTitle" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header bg-warning">
+                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalScrollableTitle">Iscriviti ai nostri corsi</h1><button type="button"
+                      class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-dark text-light">
+                    <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line
+                      breaks to demonstrate how content can exceed minimum inner height, thereby showing inner
+                      scrolling. When content becomes longer than the predefined max-height of modal, content will be
+                      cropped and scrollable within the modal.</p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <p>This content should appear at the bottom after you scroll.</p>
+                  </div>
+                  <div class="modal-footer bg-warning">
+                    <button type="button" class="btn btn-dark rounded-0"
+                      data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-outline-dark fw-bold rounded-0">Save
+                      changes</button></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <!--INIZIO MAIN-->
-    <main id="content" class="container-fluid px-0">
-      <!--INIZIO HERO-->
-      <div class="hero-wrapper">
-        <div class="">
-          <div
-            class="contenitore container col-xxl-8 px-4 py-5 hero-bg"
-            style="
+  <!--INIZIO MAIN-->
+  <main id="content" class="container-fluid px-0">
+    <!--INIZIO HERO-->
+    <div class="hero-wrapper">
+      <div class="">
+        <div class="contenitore container col-xxl-8 px-4 py-5 hero-bg" style="
               background: url(&quot;../assets/img/bgHero.webp&quot;)
                 center/cover no-repeat;
               min-height: 80vh;
               display: flex;
               align-items: center;
-            "
-          >
-            <div class="row flex-lg-row-reverse align-items-center g-5">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <img
-                  src=""
-                  class="immagini img-fluid mx-lg-auto hero-image"
-                  alt="Temi Bootstrap"
-                  loading="lazy"
-                />
-              </div>
-              <div class="col-lg-6">
-                <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
-                  La tua carriera nel <span class="fw-bold">coding</span> inizia
-                  qui!
-                </h1>
-                <p class="lead text-light">
-                  Formazione intensiva, docenti esperti e collaborazioni con
-                  aziende tech per lanciare la tua carriera.
-                </p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button
-                    type="button"
-                    class="fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press"
-                  >
-                    Scopri il corso che fa per te!
-                  </button>
-                </div>
+            ">
+          <div class="row flex-lg-row-reverse align-items-center g-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="" class="immagini img-fluid mx-lg-auto hero-image" alt="Temi Bootstrap" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
+                La tua carriera nel <span class="fw-bold">coding</span> inizia
+                qui!
+              </h1>
+              <p class="lead text-light">
+                Formazione intensiva, docenti esperti e collaborazioni con
+                aziende tech per lanciare la tua carriera.
+              </p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button"
+                  class="fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press rounded-0">
+                  Scopri il corso che fa per te!
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- ======================================= CAROSELLO SLIDE =================================================== -->
-      <section class="slider-main">
-        <div class="slider-card">
-          <img
-            src="../assets/img/carosello1.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello2.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello3.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello4.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello5.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello6.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello7.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
+    </div>
+    <!-- ======================================= CAROSELLO SLIDE =================================================== -->
+    <section class="slider-main">
+      <div class="slider-card">
+        <img src="../assets/img/carosello1.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello2.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello3.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello4.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello5.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello6.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello7.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
 
-          <img
-            src="../assets/img/carosello1.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello2.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello3.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello4.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello5.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello6.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-          <img
-            src="../assets/img/carosello7.webp"
-            alt="immagineCarosello"
-            class="d-block sliderCardDimensione border border-1 border-warning"
-          />
-        </div>
-      </section>
-
-      <div class="container contenitore">
-        <!-- 3 colonne di reindirizzamento -->
-        <!-- ========================================SEZIONE CARD==================================================== -->
-        <div class="row justify-content-center g-4">
-          <section class="py-5 bg-dark">
-            <div class="container contenitore">
-              <div class="row text-center g-4">
-                <div class="col-lg-4">
-                  <!-- =========================================CARD 1==================================================== -->
-                  <div
-                    class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3"
-                  >
-                    <img
-                      src="../assets/img/areaStudenti.webp"
-                      alt=""
-                      class="immagini img-fluid shadow-sm mb-4 border border-warning border-1"
-                    />
-                    <h4 class="text-light mb-3 fw-bold">I nostri Corsi</h4>
-                    <p class="text-light opacity-75">
-                      Percorsi pratici per diventare developer
-                    </p>
-                    <a
-                      data-page="iNostriCorsi/iNostriCorsi"
-                      class="fw-bold btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1"
-                    >
-                      Scopri
-                    </a>
-                  </div>
-                </div>
-                <!-- =========================================CARD 2==================================================== -->
-                <div class="col-lg-4">
-                  <div
-                    class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3"
-                  >
-                    <img
-                      src="../assets/img/segreteria.webp"
-                      alt=""
-                      class="immagini img-fluid shadow-sm mb-4 border border-warning border-1"
-                    />
-                    <h4 class="text-light mb-3 fw-bold">Chi Siamo</h4>
-                    <p class="text-light opacity-75">
-                      Una community di sviluppatori e mentor
-                    </p>
-                    <a
-                      data-page="chiSiamo/chiSiamo"
-                      class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold"
-                    >
-                      Scopri
-                    </a>
-                  </div>
-                </div>
-                <!-- =========================================CARD 3==================================================== -->
-                <div class="col-lg-4">
-                  <div
-                    class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3"
-                  >
-                    <img
-                      src="../assets/img/areaProfessori.webp"
-                      alt=""
-                      class="immagini img-fluid shadow-sm mb-4 border border-warning border-1"
-                    />
-                    <h4 class="text-light mb-3 fw-bold">News</h4>
-                    <p class="text-light opacity-75">
-                      Aggiornamenti, eventi e novità tech
-                    </p>
-                    <a
-                      data-page="news/news"
-                      class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold"
-                    >
-                      Scopri
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+        <img src="../assets/img/carosello1.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello2.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello3.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello4.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello5.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello6.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
+        <img src="../assets/img/carosello7.webp" alt="immagineCarosello"
+          class="d-block sliderCardDimensione border border-1 border-warning" />
       </div>
-      <!-- =========================================FINE SEZIONE CARD ==================================================== -->
+    </section>
 
-      <!-- ========================================INIZIO THE FEATURETTES ==================================================== -->
-      <div class="container marketing contenitore">
-        <hr class="featurette-divider border border-warning opacity-50" />
-        <!-- ========================================FEATURETTES 1 ==================================================== -->
-        <div class="row featurette align-items-center">
-          <div class="col-md-7 order-2 order-md-1">
-            <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
-              Corsi in partenza
-            </h2>
-            <p class="lead text-light opacity-75">
-              Inizia il tuo percorso nel mondo dello sviluppo con i prossimi
-              corsi disponibili.
-            </p>
-            <div
-              class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="text-light">
-                  <i class="bi bi-code-slash text-warning me-2"></i>
-                  Full Stack Web Developer
+    <div class="container contenitore">
+      <!-- 3 colonne di reindirizzamento -->
+      <!-- ========================================SEZIONE CARD==================================================== -->
+      <div class="row justify-content-center g-4">
+        <section class="py-5 bg-dark">
+          <div class="container contenitore">
+            <div class="row text-center g-4">
+              <div class="col-lg-4">
+                <!-- =========================================CARD 1==================================================== -->
+                <div class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
+                  <img src="../assets/img/areaStudenti.webp" alt=""
+                    class="immagini img-fluid shadow-sm mb-4 border border-warning border-1" />
+                  <h4 class="text-light mb-3 fw-bold">I nostri Corsi</h4>
+                  <p class="text-light opacity-75">
+                    Percorsi pratici per diventare developer
+                  </p>
+                  <a data-page="iNostriCorsi/iNostriCorsi"
+                    class="fw-bold btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 rounded-0">
+                    Scopri
+                  </a>
                 </div>
-                <span class="badge bg-warning text-dark rounded-0 fw-semibold"
-                  >12 Mag</span
-                >
               </div>
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="text-light">
-                  <i class="bi bi-cpu text-warning me-2"></i>
-                  Java Backend Developer
+              <!-- =========================================CARD 2==================================================== -->
+              <div class="col-lg-4">
+                <div class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
+                  <img src="../assets/img/segreteria.webp" alt=""
+                    class="immagini img-fluid shadow-sm mb-4 border border-warning border-1" />
+                  <h4 class="text-light mb-3 fw-bold">Chi Siamo</h4>
+                  <p class="text-light opacity-75">
+                    Una community di sviluppatori e mentor
+                  </p>
+                  <a data-page="chiSiamo/chiSiamo"
+                    class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold rounded-0">
+                    Scopri
+                  </a>
                 </div>
-                <span class="badge bg-warning text-dark rounded-0 fw-semibold"
-                  >3 Giu</span
-                >
               </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="text-light">
-                  <i class="bi bi-graph-up text-warning me-2"></i>
-                  Data Analysis
+              <!-- =========================================CARD 3==================================================== -->
+              <div class="col-lg-4">
+                <div class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
+                  <img src="../assets/img/areaProfessori.webp" alt=""
+                    class="immagini img-fluid shadow-sm mb-4 border border-warning border-1" />
+                  <h4 class="text-light mb-3 fw-bold">News</h4>
+                  <p class="text-light opacity-75">
+                    Aggiornamenti, eventi e novità tech
+                  </p>
+                  <a data-page="news/news"
+                    class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold rounded-0">
+                    Scopri
+                  </a>
                 </div>
-                <span class="badge bg-warning text-dark rounded-0 fw-semibold"
-                  >10 Giu</span
-                >
               </div>
             </div>
-            <a
-              href="#"
-              class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold"
-            >
-              Vedi tutti i corsi
-            </a>
           </div>
-          <div class="col-md-5 order-1 order-md-2">
-            <img
-              src="https://picsum.photos/500"
-              class="featurette-image immagini img-fluid mx-auto shadow border border-warning"
-              loading="lazy"
-              alt="Corsi in partenza"
-            />
-          </div>
-        </div>
-        <hr class="featurette-divider border border-warning opacity-50" />
+        </section>
+      </div>
+    </div>
+    <!-- =========================================FINE SEZIONE CARD ==================================================== -->
 
-        <!-- ========================================FEATURETTES 2 ==================================================== -->
-
-        <div class="row featurette align-items-center">
-          <div class="col-md-7 order-2 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
-              Impara con progetti reali
-            </h2>
-            <p class="lead text-light opacity-75">
-              Costruisci il tuo portfolio lavorando su progetti concreti guidati
-              dai nostri mentor.
-            </p>
-            <div
-              class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4"
-            >
-              <div class="d-flex align-items-center mb-3 text-light">
+    <!-- ========================================INIZIO THE FEATURETTES ==================================================== -->
+    <div class="container marketing contenitore">
+      <hr class="featurette-divider border border-warning opacity-50" />
+      <!-- ========================================FEATURETTES 1 ==================================================== -->
+      <div class="row featurette align-items-center">
+        <div class="col-md-7 order-2 order-md-1">
+          <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
+            Corsi in partenza
+          </h2>
+          <p class="lead text-light opacity-75">
+            Inizia il tuo percorso nel mondo dello sviluppo con i prossimi
+            corsi disponibili.
+          </p>
+          <div class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="text-light">
                 <i class="bi bi-code-slash text-warning me-2"></i>
-                Siti web e landing page professionali
+                Full Stack Web Developer
               </div>
-              <div class="d-flex align-items-center mb-3 text-light">
-                <i class="bi bi-diagram-3 text-warning me-2"></i>
-                API e applicazioni full stack
-              </div>
-              <div class="d-flex align-items-center mb-3 text-light">
-                <i class="bi bi-clipboard-check text-warning me-2"></i>
-                Code review con mentor
-              </div>
-              <div class="d-flex align-items-center text-light">
-                <i class="bi bi-briefcase text-warning me-2"></i>
-                Portfolio pronto per le aziende
-              </div>
+              <span class="badge bg-warning text-dark rounded-0 fw-semibold">12 Mag</span>
             </div>
-            <a
-              href="#"
-              class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold"
-            >
-              Scopri il metodo
-            </a>
-          </div>
-          <div class="col-md-5 order-1 order-md-1">
-            <img
-              src="https://picsum.photos/500"
-              class="featurette-image immagini img-fluid mx-auto shadow border border-warning"
-              loading="lazy"
-              alt="Progetti reali"
-            />
-          </div>
-        </div>
-        <hr class="featurette-divider border border-warning opacity-50" />
-
-        <!-- ========================================FEATURETTES 3 ==================================================== -->
-
-        <div class="row featurette align-items-center">
-          <div class="col-md-7 order-2 order-md-1">
-            <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
-              Supporto al lavoro
-            </h2>
-            <p class="lead text-light opacity-75">
-              Ti accompagniamo fino all’ingresso nel mondo del lavoro con un
-              supporto completo e pratico.
-            </p>
-            <div
-              class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4"
-            >
-              <div class="d-flex align-items-center mb-3 text-light">
-                <i class="bi bi-file-earmark-person text-warning me-2"></i>
-                Revisione CV e portfolio tecnico
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="text-light">
+                <i class="bi bi-cpu text-warning me-2"></i>
+                Java Backend Developer
               </div>
-              <div class="d-flex align-items-center mb-3 text-light">
-                <i class="bi bi-linkedin text-warning me-2"></i>
-                Ottimizzazione profilo LinkedIn
-              </div>
-              <div class="d-flex align-items-center mb-3 text-light">
-                <i class="bi bi-chat-square-dots text-warning me-2"></i>
-                Simulazioni colloqui tecnici
-              </div>
-              <div class="d-flex align-items-center text-light">
-                <i class="bi bi-building text-warning me-2"></i>
-                Network con aziende partner
-              </div>
+              <span class="badge bg-warning text-dark rounded-0 fw-semibold">3 Giu</span>
             </div>
-            <a
-              href="#"
-              class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold"
-            >
-              Inizia la tua carriera
-            </a>
-          </div>
-          <div class="col-md-5 order-1 order-md-2">
-            <img
-              src="https://picsum.photos/500"
-              class="featurette-image immagini img-fluid mx-auto shadow border border-warning"
-              loading="lazy"
-              alt="Career support"
-            />
-          </div>
-        </div>
-        <hr class="featurette-divider" />
-      </div>
-    </main>
-
-    <!-- ================================================ FOOTER =========================================================== -->
-
-    <footer class="mt-auto bg-dark text-light border-top border-warning py-5">
-      <div class="container contenitore">
-        <div class="row g-4">
-          <!-- BRAND -->
-          <div class="col-12 col-md-4">
-            <h5 class="text-warning fw-bold">Programmers' University</h5>
-            <p class="text-light opacity-75">
-              Formazione pratica per diventare developer pronti al mondo reale.
-            </p>
-
-            <!-- SOCIAL ICONS -->
-            <div class="d-flex gap-3 footer-icons">
-              <a href="#" class="text-light fs-5"
-                ><i class="bi bi-github"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="bi bi-envelope"></i
-              ></a>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-light">
+                <i class="bi bi-graph-up text-warning me-2"></i>
+                Data Analysis
+              </div>
+              <span class="badge bg-warning text-dark rounded-0 fw-semibold">10 Giu</span>
             </div>
           </div>
-
-          <!-- CORSI -->
-          <div class="col-6 col-md-2">
-            <h6 class="text-warning">Corsi</h6>
-            <ul class="list-unstyled footer-links">
-              <li>
-                <a href="#" class="text-light text-decoration-none">Frontend</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Backend</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Full Stack</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- NAVIGAZIONE -->
-          <div class="col-6 col-md-2">
-            <h6 class="text-warning">Navigazione</h6>
-            <ul class="list-unstyled footer-links">
-              <li>
-                <a
-                  href="../dist/index.html"
-                  class="text-light text-decoration-none"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  data-page="chiSiamo/chiSiamo"
-                  class="text-light text-decoration-none"
-                  >Chi Siamo</a
-                >
-              </li>
-              <li>
-                <a data-page="news/news" class="text-light text-decoration-none"
-                  >News</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- CONTATTI -->
-          <div class="col-12 col-md-4">
-            <h6 class="text-warning">Contatti</h6>
-
-            <p class="mb-1">
-              <i class="bi bi-geo-alt-fill text-warning me-2"></i>
-              Catania, Italia
-            </p>
-
-            <p class="mb-1">
-              <i class="bi bi-envelope-fill text-warning me-2"></i>
-              info@programmersuniversity.it
-            </p>
-
-            <p>
-              <i class="bi bi-clock-fill text-warning me-2"></i>
-              Lun - Ven | 9:00 - 18:00
-            </p>
-          </div>
+          <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
+            Vedi tutti i corsi
+          </a>
         </div>
-
-        <hr class="border-warning opacity-25 my-4" />
-
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75"
-        >
-          <span>Code your future</span>
-          <span>© 2026 Programmers' University</span>
+        <div class="col-md-5 order-1 order-md-2">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdEPFNY0iYbOPuUEBRahMcDlxNM8j4u8qRrg&s"
+            class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
+            alt="Corsi in partenza" />
         </div>
       </div>
-    </footer>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="../dist/script.js"></script>
-  </body>
+      <hr class="featurette-divider border border-warning opacity-50" />
+
+      <!-- ========================================FEATURETTES 2 ==================================================== -->
+
+      <div class="row featurette align-items-center">
+        <div class="col-md-7 order-2 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
+            Impara con progetti reali
+          </h2>
+          <p class="lead text-light opacity-75">
+            Costruisci il tuo portfolio lavorando su progetti concreti guidati
+            dai nostri mentor.
+          </p>
+          <div class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4">
+            <div class="d-flex align-items-center mb-3 text-light">
+              <i class="bi bi-code-slash text-warning me-2"></i>
+              Siti web e landing page professionali
+            </div>
+            <div class="d-flex align-items-center mb-3 text-light">
+              <i class="bi bi-diagram-3 text-warning me-2"></i>
+              API e applicazioni full stack
+            </div>
+            <div class="d-flex align-items-center mb-3 text-light">
+              <i class="bi bi-clipboard-check text-warning me-2"></i>
+              Code review con mentor
+            </div>
+            <div class="d-flex align-items-center text-light">
+              <i class="bi bi-briefcase text-warning me-2"></i>
+              Portfolio pronto per le aziende
+            </div>
+          </div>
+          <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
+            Scopri il metodo
+          </a>
+        </div>
+        <div class="col-md-5 order-1 order-md-1">
+          <img src="https://i.ytimg.com/vi/ncC2B1m9wYc/maxresdefault.jpg"
+            class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
+            alt="Progetti reali" />
+        </div>
+      </div>
+      <hr class="featurette-divider border border-warning opacity-50" />
+
+      <!-- ========================================FEATURETTES 3 ==================================================== -->
+
+      <div class="row featurette align-items-center">
+        <div class="col-md-7 order-2 order-md-1">
+          <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
+            Supporto al lavoro
+          </h2>
+          <p class="lead text-light opacity-75">
+            Ti accompagniamo fino all’ingresso nel mondo del lavoro con un
+            supporto completo e pratico.
+          </p>
+          <div class="bg-secondary p-4 shadow-sm border border-grigio border-2 mt-4">
+            <div class="d-flex align-items-center mb-3 text-light">
+              <i class="bi bi-file-earmark-person text-warning me-2"></i>
+              Revisione CV e portfolio tecnico
+            </div>
+            <div class="d-flex align-items-center mb-3 text-light">
+              <i class="bi bi-linkedin text-warning me-2"></i>
+              Ottimizzazione profilo LinkedIn
+            </div>
+            <div class="d-flex align-items-center mb-3 text-light">
+              <i class="bi bi-chat-square-dots text-warning me-2"></i>
+              Simulazioni colloqui tecnici
+            </div>
+            <div class="d-flex align-items-center text-light">
+              <i class="bi bi-building text-warning me-2"></i>
+              Network con aziende partner
+            </div>
+          </div>
+          <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
+            Inizia la tua carriera
+          </a>
+        </div>
+        <div class="col-md-5 order-1 order-md-2">
+          <img src="https://picsum.photos/500"
+            class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
+            alt="Career support" />
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+    </div>
+  </main>
+
+  <!-- ================================================ FOOTER =========================================================== -->
+
+  <footer class="mt-auto bg-dark text-light border-top border-warning py-5">
+    <div class="container contenitore">
+      <div class="row g-4">
+        <!-- BRAND -->
+        <div class="col-12 col-md-4">
+          <h5 class="text-warning fw-bold">Programmers' University</h5>
+          <p class="text-light opacity-75">
+            Formazione pratica per diventare developer pronti al mondo reale.
+          </p>
+
+          <!-- SOCIAL ICONS -->
+          <div class="d-flex gap-3 footer-icons">
+            <a href="#" class="text-light fs-5"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- CORSI -->
+        <div class="col-6 col-md-2">
+          <h6 class="text-warning">Corsi</h6>
+          <ul class="list-unstyled footer-links">
+            <li>
+              <a href="#" class="text-light text-decoration-none">Frontend</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Backend</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Full Stack</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- NAVIGAZIONE -->
+        <div class="col-6 col-md-2">
+          <h6 class="text-warning">Navigazione</h6>
+          <ul class="list-unstyled footer-links">
+            <li>
+              <a href="../dist/index.html" class="text-light text-decoration-none">Home</a>
+            </li>
+            <li>
+              <a data-page="chiSiamo/chiSiamo" class="text-light text-decoration-none">Chi Siamo</a>
+            </li>
+            <li>
+              <a data-page="news/news" class="text-light text-decoration-none">News</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTATTI -->
+        <div class="col-12 col-md-4">
+          <h6 class="text-warning">Contatti</h6>
+
+          <p class="mb-1">
+            <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+            Catania, Italia
+          </p>
+
+          <p class="mb-1">
+            <i class="bi bi-envelope-fill text-warning me-2"></i>
+            info@programmersuniversity.it
+          </p>
+
+          <p>
+            <i class="bi bi-clock-fill text-warning me-2"></i>
+            Lun - Ven | 9:00 - 18:00
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-warning opacity-25 my-4" />
+
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75">
+        <span>Code your future</span>
+        <span>© 2026 Programmers' University</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../dist/script.js"></script>
+</body>
+
 </html>
