@@ -11770,16 +11770,22 @@ textarea.form-control-lg {
   width: 150px;
 }
 
-.hero-image {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  max-height: 420px;
-  object-fit: cover;
-  z-index: 2;
+/* .hero-image {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-height: 420px;
+    object-fit: cover;
+    z-index: 2;
+} */
+.hero-wrapper {
+  width: 100%;
+  max-height: 600px;
 }
 
-.hero-wrapper .contenitore {
-  position: relative;
-  z-index: 2;
+.hero-content {
+  top: 5%;
+  left: 8%;
+  max-width: 300px;
+  transform: scale(0.75);
 }
 
 .carosello {

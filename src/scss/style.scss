@@ -3,7 +3,10 @@
 
 
 
-@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ($theme-colors: ("secondary": $grigioScuroCard,
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
+  
+$theme-colors: (
+      "secondary": $grigioScuroCard,
       "warning": $gialloTitoloBottoni, // titoli e bottoni 
       "danger": $rosso,
       "light": $bianco, // testo normale
