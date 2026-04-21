@@ -1,13 +1,13 @@
 <!-- LE PAGINE SECONDARIE SONO SEZIONI DELLA PAGINA INIZIALE (INDEX.HTML). QUINDI NON SERVE HEAD, BODY, FOOTER 
 La prima section funge da body di tutta questa pagina. -->
 
-<section class="bg-dark">
+<section class="bg-dark container-fluid px-5">
     <header class="container-fluid d-flex flex-column flex-md-row-reverse justify-content-center bg-dark p-3 my-lg-5">
-        <div class="px-4 py-5 mt-5 col-sm-12 col-md-6 col-lg-6 m-auto"> 
+        <div class="px-4 py-5 mt-5 col-sm-10 col-md-6 col-lg-5 m-auto"> 
             <img class="img-fluid w-100"
                 src="../assets/img/logo.png" alt="logo">
         </div>
-            <div class=" col-8 col-md-6 col-lg-6 m-auto mb-5 text-center py-5 px-md-5 px-lg-5">
+            <div class=" col-8 col-md-6 col-lg-5 m-auto mb-5 text-center py-5 px-md-5 px-lg-5">
                 <h2 class="display-5 fw-bolder text-center text-warning mb-5">L'università dei programmatori</h2>
                 <p class="lead mb-4 text-light">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
                     popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
@@ -18,10 +18,10 @@ La prima section funge da body di tutta questa pagina. -->
                 </div>
             </div>
     </header>
-    <main class="container-fluid d-flex flex-column bg-dark">
-        <section class="sezione-carosello-about bg-dark my-5 py-5 px-4 text-light container-fluid d-flex flex-column flex-lg-row-reverse">
+    <main class="bg-dark">
+        <section class="bg-dark text-light d-flex flex-column flex-lg-row-reverse container">
 
-            <section class="px-5 col-lg-6 end-0 z-1">
+            <section class="px-5 col-lg-5">
             <h2 class="display-5 fs-2 text-warning fw-medium fw-bold">Siamo i numeri <span class="text-danger fw-bold fs-1">1</span> in corsi di programmazione!</h2>
             <p class="text-light py-5 fw-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur tellus facilisis efficitur consectetur.
             Phasellus consequat massa quis diam lobortis venenatis. Cras eu efficitur leo, a vestibulum ligula. Proin condimentum
@@ -34,7 +34,7 @@ La prima section funge da body di tutta questa pagina. -->
 
 
         <!-- sezione slider -->
-                        <section class="slider-about-wrapper bg-dark col-12 container-fluid d-flex flex-row align-items-center">
+                        <section class="slider-about-wrapper bg-dark d-flex align-items-center">
                             <div class="slider-about-track">
                                 <div class="slider-about-card">
                                     <img src="../assets/img/carosello1.jpg" alt="immagineCarosello"
@@ -97,13 +97,13 @@ La prima section funge da body di tutta questa pagina. -->
                         </section>
             </section>
             <!-- Sezione Cards Campus -->
-        <section class="d-flex flex-column gap-5 my-5" id="#campus">
+        <section class="d-flex flex-column container py-5 m-auto" id="campus">
 
             <h2 class="text-center text-warning display-3 mt-3 mb-3 fw-bolder">I nostri Campus</h2>
 
-            <div class="d-flex flex-column flex-md-row gap-3 justify-content-evenly m-auto align-items-start">
+            <div class="m-auto d-flex flex-column flex-md-row container-fluid gap-5 justify-content-center align-items-start">
 
-            <section class="border-grigio border border-3 bg-secondary col-md-4 col-lg-3 ">
+            <section class="border-grigio border border-3 bg-secondary col-md-4 col-lg-3">
                 <header class="border border-0 mt-3">
                     <h3 class="text-center text-warning fw-semibold display-6">Campus<br>Roma</h3>
                 </header>
@@ -325,7 +325,7 @@ La prima section funge da body di tutta questa pagina. -->
 
         <!-- Sezione professori-->
 <section class="my-5 py-5">
-    <h2 class="display-3 text-warning text-center mb-5">I nostri Professori</h2>
+    <h2 class="display-3 text-warning text-center mb-5 fw-bold">I nostri Professori</h2>
         <div class="d-flex flex-column col-md-8 col-lg-5 m-auto"> 
         
             <div id="carouselExampleCaptions" class="carousel slide d-flex flex-column">
