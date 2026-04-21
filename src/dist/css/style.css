@@ -11799,6 +11799,10 @@ header {
   white-space: nowrap;
 }
 
+.btn {
+  border-radius: 0 !important;
+}
+
 .btn-press {
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
@@ -11806,6 +11810,42 @@ header {
 .btn-press:active {
   transform: translateY(1px) scale(0.98);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .hero-bg {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .hero-bg {
+    width: 100%;
+  }
+}
+/* CONTENUTO SOPRA */
+.hero-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* IMMAGINE PRINCIPALE */
+.hero-image {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-height: 420px;
+  object-fit: cover;
+  z-index: 2;
 }
 
 .slider-main {
@@ -11826,7 +11866,6 @@ header {
 
 .sliderCardDimensione {
   width: 30rem;
-  border-radius: 0vw;
   border: 3px solid #FFED00;
 }
 
