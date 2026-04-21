@@ -11791,13 +11791,6 @@ textarea.form-control-lg {
   color: var(--uni-gold);
 }
 
-/* --- Filtri --- */
-.filter-bar {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
 .filter-btn {
   padding: 7px 14px;
   border: 1px solid #000000;
@@ -11805,7 +11798,6 @@ textarea.form-control-lg {
   color: #000000;
   cursor: pointer;
   transition: all 0.2s;
-  font-family: inherit;
 }
 
 .filter-btn:hover {

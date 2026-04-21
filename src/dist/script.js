@@ -101,3 +101,29 @@ window.addEventListener("popstate", () => {
 const params = new URLSearchParams(window.location.search);
 const initialPage = params.get("page");
 if (initialPage) loadPage(initialPage, false);
+
+
+
+/// filtraggio per le news
+
+function filterItems(category) {
+  const items = document.querySelectorAll('.event-card, .article-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  // reset bottoni attivi
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  // attiva bottone cliccato
+  const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  items.forEach(item => {
+    const itemCategory = item.getAttribute('data-category');
+
+    if (category === 'tutti' || itemCategory === category) {
+      item.style.display = 'flex'; // perché usi flex nei tuoi card
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}

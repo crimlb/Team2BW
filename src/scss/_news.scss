@@ -24,7 +24,7 @@
 /* --- Filtri --- */
 .filter-bar {
     display: flex;
-    gap: 8px;
+
     flex-wrap: wrap;
 }
 
@@ -35,7 +35,6 @@
     color: #000000;
     cursor: pointer;
     transition: all 0.20s;
-    font-family: inherit;
 }
 
 .filter-btn:hover {
