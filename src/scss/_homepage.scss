@@ -1,0 +1,32 @@
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body.loading #content {
+    opacity: 0;
+}
+
+
+#content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+#content.fade-out {
+    opacity: 0;
+}
+
+#content.fade-in {
+    opacity: 1;
+}
+
+
+.card-hover {
+    transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px) scale(1.01);
+}

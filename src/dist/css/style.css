@@ -11770,6 +11770,149 @@ textarea.form-control-lg {
   width: 150px;
 }
 
+.hero-image {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-height: 420px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.hero-wrapper .contenitore {
+  position: relative;
+  z-index: 2;
+}
+
+.carosello {
+  margin-top: 50px;
+  overflow: visible;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.slider-main {
+  overflow: hidden;
+  display: block;
+}
+
+.slider-card {
+  display: flex;
+  gap: 9px;
+  width: max-content;
+  animation: slider 60s linear infinite;
+}
+
+.slider-card video {
+  flex-shrink: 0;
+}
+
+.sliderCardDimensione {
+  width: 30rem;
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.slider-about-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-about-track {
+  display: flex;
+  width: max-content;
+  animation: sliderAbout 45s linear infinite;
+}
+
+.slider-about-card {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+@keyframes sliderAbout {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+.carousel-item {
+  transition: transform 5s ease;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 600px;
+  width: 100%;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.footer-links a {
+  transition: 0.2s ease;
+  opacity: 0.75;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.footer-icons a {
+  transition: 0.2s ease;
+  opacity: 0.7;
+}
+
+.footer-icons a:hover {
+  color: #ffc107;
+  opacity: 1;
+  transform: translateY(-3px) scale(1.15);
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+body.loading #content {
+  opacity: 0;
+}
+
+#content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+#content.fade-out {
+  opacity: 0;
+}
+
+#content.fade-in {
+  opacity: 1;
+}
+
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
 /* Regole della pagina di news */
 .news-section .section-header {
   align-items: center;
@@ -11822,150 +11965,5 @@ textarea.form-control-lg {
 }
 
 /* Regole pagina iNostriCorsi */
-.slider-about-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-.slider-about-track {
-  display: flex;
-  width: max-content;
-  animation: sliderAbout 45s linear infinite;
-}
-
-.slider-about-card {
-  flex: 0 0 auto;
-  margin-right: 20px;
-}
-
-@keyframes sliderAbout {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - 10px));
-  }
-}
-.carousel-item {
-  transition: transform 5s ease;
-}
-
-.carousel-item img {
-  object-fit: cover;
-  max-height: 600px;
-  width: 100%;
-}
-
-.carousel-item {
-  position: relative;
-}
-
-body {
-  background-color: #4A5565;
-  width: 100%;
-  max-width: 100%;
-}
-
-body.loading #content {
-  opacity: 0;
-}
-
-#content {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  margin-top: 5px;
-}
-
-#content.fade-out {
-  opacity: 0;
-}
-
-#content.fade-in {
-  opacity: 1;
-}
-
-.carosello {
-  margin-top: 50px;
-  overflow: visible;
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 2;
-}
-
-/* IMMAGINE PRINCIPALE */
-.hero-image {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  max-height: 420px;
-  object-fit: cover;
-  z-index: 2;
-}
-
-.slider-main {
-  overflow: hidden;
-  display: block;
-}
-
-.slider-card {
-  display: flex;
-  gap: 9px;
-  width: max-content;
-  animation: slider 60s linear infinite;
-}
-
-.slider-card video {
-  flex-shrink: 0;
-}
-
-.sliderCardDimensione {
-  width: 30rem;
-  border: 3px solid #FFED00;
-}
-
-@keyframes slider {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-.card-hover {
-  transition: all 0.2s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-6px) scale(1.01);
-}
-
-.hero-wrapper .contenitore {
-  position: relative;
-  z-index: 2;
-}
-
-.footer-links a {
-  transition: 0.2s ease;
-  opacity: 0.75;
-}
-
-.footer-links a:hover {
-  color: #ffc107;
-  opacity: 1;
-  transform: translateX(5px);
-}
-
-.footer-icons a {
-  transition: 0.2s ease;
-  opacity: 0.7;
-}
-
-.footer-icons a:hover {
-  color: #ffc107;
-  opacity: 1;
-  transform: translateY(-3px) scale(1.15);
-}
 
 /*# sourceMappingURL=style.css.map */

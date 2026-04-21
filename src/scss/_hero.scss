@@ -1,0 +1,11 @@
+.hero-image {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-height: 420px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.hero-wrapper .contenitore {
+    position: relative;
+    z-index: 2;
+}
