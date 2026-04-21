@@ -11765,14 +11765,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
+html, body {
   overflow-x: hidden;
 }
 
 #content {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 #content.fade-out {
@@ -11783,12 +11783,14 @@ body {
   opacity: 1;
 }
 
-header {
+.intestazione {
   overflow-x: hidden;
 }
 
 .logo {
   width: 20rem;
+  margin-right: -4rem;
+  margin-left: -4rem;
 }
 
 .navbar {
@@ -11817,11 +11819,18 @@ header {
   overflow: hidden;
 }
 
+.immagini {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
 .hero-bg {
   background-size: cover;
   background-position: center;
   z-index: -1;
   width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -11829,13 +11838,8 @@ header {
     width: 100%;
   }
 }
-@media (min-width: 768px) {
-  .hero-bg {
-    width: 100%;
-  }
-}
 /* CONTENUTO SOPRA */
-.hero-wrapper .container {
+.hero-wrapper .contenitore {
   position: relative;
   z-index: 2;
 }
