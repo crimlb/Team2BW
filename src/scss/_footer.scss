@@ -1,10 +1,12 @@
+@use "colori" as *;
+
 .footer-links a {
     transition: 0.2s ease;
     opacity: 0.75;
 }
 
 .footer-links a:hover {
-    color: #ffc107;
+    color: $gialloTitoloBottoni;
     opacity: 1;
     transform: translateX(5px);
 }
@@ -15,7 +17,7 @@
 }
 
 .footer-icons a:hover {
-    color: #ffc107;
+    color: $gialloTitoloBottoni;
     opacity: 1;
     transform: translateY(-3px) scale(1.15);
 }
