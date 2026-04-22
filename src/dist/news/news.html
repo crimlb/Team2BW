@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmers' University</title>
+    <!-- FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="bg-dark">
+    <header class="p-1 text-bg-warning border border-dark border-2 intestazione">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo + Titolo -->
+                <a class="navbar-brand d-flex align-items-center gap-2 text-dark fw-bold fs-5" href="../index.html">
+                    <img id="logo" src="../../assets/img/logo.webp" alt="logoUniversitario" />
+                    <span class="d-none d-sm-inline fs-4">Programmers' University</span>
+                    <span class="d-inline d-sm-none fs-6">Progs' Uni</span>
+                </a>
+
+                <!-- Hamburger -->
+                <button class="navbar-toggler border-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Link + Bottoni -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                    <ul class="navbar-nav align-items-lg-center gap-1 me-lg-2 mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="./news.html" class="nav-link px-2 text-dark fw-bold">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../chiSiamo/chiSiamo.html" class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
+                        </li>
+                    </ul>
+
+                    <!-- Bottoni: full-width su mobile, auto su desktop -->
+                    <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0">
+                        <button type="button" class="btn btn-dark btn-outline-light fw-bold border rounded-0"
+                            data-bs-toggle="modal" data-bs-target="#loginNews">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-dark fw-bold rounded-0" data-bs-toggle="modal"
+                data-bs-target="#exampleModalScrollable">
+                Iscrizione
+            </button>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FINE NAVBAR -->
+<section class="container-fluid" aria-label="News ed eventi universitari">
+  <div class="d-flex flex-column mt-3 py-3">
+    <h2 class="text-center text-warning fw-bold display-4">
+      News &amp; Eventi <br />
+    </h2>
+    <div
+      class="filter-bar d-flex flex-md-row gap-3 flex-wrap container justify-content-center"
+      role="group"
+      aria-label="Filtra per categoria"
+    >
+      <button
+        class="filter-btn p-3 border border-1 border-black active col-sm-auto"
+        data-filter="tutti"
+        onclick="filtraCategorie('tutti')"
+      >
+        Tutti
+      </button>
+      <button
+        class="filter-btn p-3 border border-1 border-black col-sm-auto"
+        data-filter="workshop"
+        onclick="filtraCategorie('workshop')"
+      >
+        Workshop
+      </button>
+      <button
+        class="filter-btn p-3 border border-1 border-black col-sm-auto"
+        data-filter="tecnologia"
+        onclick="filtraCategorie('tecnologia')"
+      >
+        Tecnologie
+      </button>
+      <button
+        class="filter-btn p-3 border border-1 border-black col-sm-auto"
+        data-filter="ammissioni"
+        onclick="filtraCategorie('ammissioni')"
+      >
+        Ammissioni
+      </button>
+    </div>
+  </div>
+
+  <main class="container-fluid d-flex flex-column flex-lg-row gap-3">
+    <!-- COLONNA SINISTRA: Calendario eventi -->
+    <section class="d-flex flex-column gap-5 col-md-7 col-lg-8 px-md-4 my-5">
+      <p class="text-warning display-5 fw-bold">Calendario eventi</p>
+
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="workshop"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Workshop</span>
+          <span>05</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Introduzione a React — da zero al primo componente
+          </h3>
+          <div class="text-white">
+            <span>Ore 14:00 – 17:00</span>
+            <span>Aula B3, Polo Informatico</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Iscriviti al workshop
+          </button>
+        </main>
+      </article>
+      <!---->
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="tecnologia"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Tecnologia</span>
+          <span>09</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Seminar: AI Generativa e LLM — applicazioni pratiche nel 2025
+          </h3>
+          <div class="text-white">
+            <span>Ore 10:30 – 12:30</span>
+            <span>Aula Magna</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Prenota il posto
+          </button>
+        </main>
+      </article>
+
+      <!---->
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="workshop"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Workshop</span>
+          <span>14</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Node.js hands-on: REST API con Express e MongoDB
+          </h3>
+          <div class="text-white">
+            <span class="">Ore 15:00 – 18:00</span>
+            <span class="">Lab 2, Edificio C</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Iscriviti al workshop
+          </button>
+        </main>
+      </article>
+
+      <!---->
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="ammissioni"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Ammissioni</span>
+          <span>20</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Open Day — Corsi magistrali in Informatica e Data Science
+          </h3>
+          <div class="text-white">
+            <span>Ore 09:00 – 13:00</span>
+            <span>Campus Centrale</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Registrati all'Open Day
+          </button>
+        </main>
+      </article>
+
+      <!---->
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="tecnologia"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Tecnologia</span>
+          <span>27</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Hackathon 24h — Sviluppa una web app con l'AI Stack
+          </h3>
+          <div class="text-white">
+            <span>Dalle ore 10:00</span>
+            <span>Polo Tecnologico</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Forma il tuo team
+          </button>
+        </main>
+      </article>
+
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="workshop"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Workshop</span>
+          <span>12</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            UX Design: principi fondamentali per interfacce efficaci
+          </h3>
+          <div class="text-white">
+            <span>Ore 10:00 – 13:00</span>
+            <span>Aula A1, Polo Informatico</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Iscriviti al workshop
+          </button>
+        </main>
+      </article>
+
+      <article
+        class="event-card d-flex flex-column border border-3 border-white text-white p-3"
+        data-category="tecnologia"
+      >
+        <header class="d-flex flex-row gap-5 mb-3">
+          <span>Tecnologia</span>
+          <span>20</span>
+          <span>Mag</span>
+        </header>
+        <main>
+          <h3 class="text-warning fw-bold">
+            Intelligenza Artificiale: opportunità e sfide nel 2026
+          </h3>
+          <div class="text-white">
+            <span>Ore 16:00 – 18:30</span>
+            <span>Aula Magna, Polo Informatico</span>
+          </div>
+          <button
+            class="btn border border-warning rounded-0 mt-3 fw-bold text-warning"
+            href="#"
+          >
+            Prenota il tuo posto
+          </button>
+        </main>
+      </article>
+    </section>
+
+    <!-- COLONNA DESTRA: Articoli in rilievo -->
+    <aside
+      class="d-flex flex-column flex-lg-column-reverse gap-3 gap-md-1 gap-lg-3 col-md-5 col-lg-4 px-md-4 mb-md-5 justify-content-end"
+    >
+      <section class="d-flex flex-column gap-3">
+        <p class="col-label fw-bold text-warning display fs-3 mt-5 mt-md-0">
+          Articoli in rilievo
+        </p>
+
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="tecnologia"
+        >
+          <span class="text-danger">★ In evidenza</span>
+          <h3 class="fs-3 text-warning fw-medium">
+            Perché React continua a dominare il frontend nel 2025
+          </h3>
+          <p class="text-white">
+            Un'analisi dello stack tecnologico adottato dalle principali aziende
+            tech italiane: React, Next.js e TypeScript rimangono le competenze
+            più richieste dai recruiter.
+          </p>
+          <div class="text-white">
+            <span>Redazione Ateneo · 2 mag 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
+
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="workshop"
+        >
+          <h3 class="fs-3 text-warning fw-medium">
+            Guida ai workshop di maggio: cosa portare e come prepararsi
+          </h3>
+          <p class="text-white">
+            Dal laptop con Node.js installato alla gestione dei prerequisiti:
+            tutto quello che devi sapere prima di partecipare agli eventi
+            pratici del mese.
+          </p>
+          <div class="text-white">
+            <span>Ufficio Didattica · 28 apr 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
+
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="tecnologia"
+        >
+          <h3 class="fs-3 text-warning fw-medium">
+            Node.js 22 e le novità di ES2025 — cosa cambia per gli sviluppatori
+          </h3>
+          <p class="text-white">
+            Le ultime release portano miglioramenti alle performance e nuove API
+            native. Il nostro docente analizza l'impatto pratico per chi inizia
+            oggi.
+          </p>
+          <div class="text-white">
+            <span>Prof. Marchetti · 25 apr 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
+
+        <article
+          class="article-card d-flex flex-column border border-2 border-warning p-3"
+          data-category="ammissioni"
+        >
+          <h3 class="fs-3 text-warning fw-medium">
+            Bando ammissioni aperto: scadenza 31 maggio per le magistrali
+          </h3>
+          <p class="text-white">
+            Sono aperti i bandi per l'accesso ai corsi magistrali in Ingegneria
+            Informatica, Data Science e Intelligenza Artificiale. Documentazione
+            sul portale studenti.
+          </p>
+          <div class="text-white">
+            <span>Segreteria · 1 mag 2025</span>
+            <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- CTA Newsletter -->
+      <section class="d-flex flex-column my-5 my-lg-0 justify-content-center">
+        <form class="text-center d-flex flex-column gap-3 my-5">
+          <h3 class="display fs-1 text-warning fw-bolder">
+            Non perdere i prossimi eventi
+          </h3>
+          <p class="text-white fw-bold">
+            Iscriviti alla newsletter e ricevi aggiornamenti su workshop e bandi
+          </p>
+          <input
+            type="email"
+            class="input-control p-3"
+            placeholder="la-tua@email.com"
+          />
+          <button
+            class="btn rounded-0 border border-2 border-warning text-warning p-3"
+            href="#"
+          >
+            Iscriviti
+          </button>
+        </form>
+      </section>
+    </aside>
+  </main>
+</section>
+
+    <!-- INIZIO FOOTER -->
+
+    <footer class="mt-auto bg-dark text-light border-top border-warning py-5 overflow-hidden">
+        <div class="container">
+            <div class="row g-4">
+                <!-- BRAND -->
+                <div class="col-12 col-md-4">
+                    <h5 class="text-warning fw-bold">Programmers' University</h5>
+                    <p class="text-light opacity-75">
+                        Formazione pratica per diventare developer pronti al mondo reale.
+                    </p>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="d-flex gap-3 footer-icons">
+                        <a href="#" class="text-light fs-5"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- CORSI -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-warning">Corsi</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li>
+                            <a href="#" class="text-light text-decoration-none">Frontend</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none">Backend</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none">Full Stack</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- NAVIGAZIONE -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-warning">Navigazione</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li>
+                            <a href="../index.html" class="text-light text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="../chiSiamo/chiSiamo.html" class="text-light text-decoration-none">Chi Siamo</a>
+                        </li>
+                        <li>
+                            <a href="./news.html" class="text-light text-decoration-none">News</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CONTATTI -->
+                <div class="col-12 col-md-4">
+                    <h6 class="text-warning">Contatti</h6>
+
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+                        Catania, Italia
+                    </p>
+
+                    <p class="mb-1">
+                        <i class="bi bi-envelope-fill text-warning me-2"></i>
+                        info@programmersuniversity.it
+                    </p>
+
+                    <p>
+                        <i class="bi bi-clock-fill text-warning me-2"></i>
+                        Lun - Ven | 9:00 - 18:00
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-warning opacity-25 my-4" />
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75">
+                <span>Code your future</span>
+                <span>© 2026 Programmers' University</span>
+            </div>
+        </div>
+    </footer>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./news.js"></script>
+  </body>
+
+</html>

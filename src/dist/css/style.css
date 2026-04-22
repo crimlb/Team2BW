@@ -11770,6 +11770,26 @@ textarea.form-control-lg {
   width: 150px;
 }
 
+/* Regole della pagina di news */
+/* --- Filtri --- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: #FFED00;
+  border-color: #C21111;
+}
+
+.filter-btn.active {
+  background: #FFED00;
+  color: #0B0C15;
 /* Regole pagina iNostriCorsi */
 .hero-image {
   height: auto;

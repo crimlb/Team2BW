@@ -1,0 +1,25 @@
+/* Regole della pagina di news */
+@use "colori" as *;
+
+
+/* --- Filtri --- */
+.filter-bar {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn { 
+    cursor: pointer;
+    transition: all 0.20s;
+}
+
+.filter-btn:hover {
+    background: $gialloTitoloBottoni;
+    border-color: $rosso;
+}
+
+.filter-btn.active { 
+    background: $gialloTitoloBottoni;
+    color: $neroSfondo;
+}
