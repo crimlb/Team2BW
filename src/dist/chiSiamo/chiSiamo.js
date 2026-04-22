@@ -1,9 +1,9 @@
 // DATI
-const campus = {
-    '1': 'Roma',
-    '2': 'Milano',
-    '3': 'Napoli'
-};
+const campus = [
+  {id:1, nome: 'Roma', indirizzo:'Roma — Via delle Tecnologie Digitali 42, 00144 Roma (RM)' },
+  {id:2, nome: 'Milano', indirizzo:'Milano — Viale Innovazione 85, 20126 Milano (MI)'},
+  {id:3, nome: 'Napoli', indirizzo:'Napoli — Via del Polo Tecnologico 17, 80143 Napoli (NA)'}
+];
 
 const corsi = {
     '1': 'Full Stack Web Development',
@@ -46,52 +46,30 @@ const profs = [
 ];
 
 // creazione card Campus
+const cardsContainer = document.querySelector('#cardsContainer')
 
-/* template 
-
-            <section
-              class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3"
-            >
+campus.forEach(c => {
+  
+  cardsContainer.innerHTML +=
+    
+    `<section class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3">
               <header class="border border-0 mt-3">
                 <h3 class="text-center text-warning fw-semibold display-6">
-                  Campus<br />Roma
+                  Campus<br />${c.nome}
                 </h3>
               </header>
               <main class="p-3 text-center">
-                <img
-                  class="img-fluid mb-3"
-                  src="../../assets/img/campus_roma.png"
-                  alt=""
-                />
-
-                <span class="text-white text-center"
-                  >Roma — Via delle Tecnologie Digitali 42, 00144 Roma
-                  (RM)</span
-                >
+                <img class="img-fluid mb-3" src="../../assets/img/campus_${c.nome}.png" alt=""/>
+                <span class="text-white text-center">${c.indirizzo}</span>
               </main>
               <footer class="p-3 border-box">
-                <div class="accordion" id="accordionRoma">
+                <div class="accordion" id="accordion${c.name}">
                   <div class="accordion-item rounded-0 campus-accordion-item">
                     <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Ingegneria Informatica
-                      </button>
+                      <button class="accordion-button collapsed bg-dark text-warning rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Ingegneria Informatica</button>
                     </h2>
-                    <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionRoma"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion${c.nome}">
+                      <div class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro">
                         <p class="my-2">
                           Un percorso completo per comprendere
                           <strong>sistemi informatici</strong>, dalla
@@ -102,10 +80,7 @@ const profs = [
                           formando professionisti capaci di risolvere problemi
                           complessi e costruire soluzioni scalabili.
                         </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
+                        <button type="button" class="btn btn-dark text-warning mx-auto mt-5 mb-3">
                           Vai alla pagina del Corso
                         </button>
                       </div>
@@ -188,8 +163,7 @@ const profs = [
                         </p>
                         <button
                           type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
+                          class="btn btn-dark text-warning mx-auto mt-5 mb-3">
                           Vai alla pagina del Corso
                         </button>
                       </div>
@@ -197,17 +171,20 @@ const profs = [
                   </div>
                 </div>
               </footer>
-            </section> */
+            </section>`
+
+
+})
 
 
 // carosello professori
 const carosello = document.getElementById('caroselloProfs')
 
 
-profs.forEach( p => {
+profs.forEach(p => {
 
-    carosello.innerHTML +=
-      `<div class="carousel-item" id="slideProf">
+  carosello.innerHTML +=
+    `<div class="carousel-item" id="slideProf">
             <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
             <div class="carousel-caption position-relative start-0">
                 <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
@@ -216,8 +193,8 @@ profs.forEach( p => {
             </div>
         </div>`
   
-     if (p.id === 1) {
-     const profActive = document.getElementById('slideProf')
-     profActive.classList.add("active")
+  if (p.id === 1) {
+    const profActive = document.getElementById('slideProf')
+    profActive.classList.add("active")
   }
-})
+});
