@@ -1,3 +1,5 @@
+@use "colori" as *;
+
 html, body {
   overflow-x: hidden;
 }
@@ -28,4 +30,14 @@ body.loading #content {
 
 .card-hover:hover {
     transform: translateY(-6px) scale(1.01);
+}
+
+.btnHome{
+    background-color: $neroSfondo;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $gialloTitoloBottoni;
+}
+.btnHome:hover {
+    background-color: $gialloTitoloBottoni;
+    color: $neroSfondo;
 }

@@ -11849,6 +11849,7 @@ textarea.form-control-lg {
 .slider-about-track {
   display: flex;
   width: max-content;
+  min-height: 250px;
   animation: sliderAbout 45s linear infinite;
 }
 
@@ -11885,7 +11886,7 @@ textarea.form-control-lg {
 }
 
 .footer-links a:hover {
-  color: #ffc107;
+  color: #FFED00;
   opacity: 1;
   transform: translateX(5px);
 }
@@ -11896,7 +11897,7 @@ textarea.form-control-lg {
 }
 
 .footer-icons a:hover {
-  color: #ffc107;
+  color: #FFED00;
   opacity: 1;
   transform: translateY(-3px) scale(1.15);
 }
@@ -11929,6 +11930,17 @@ body.loading #content {
 
 .card-hover:hover {
   transform: translateY(-6px) scale(1.01);
+}
+
+.btnHome {
+  background-color: #0B0C15;
+  border: 2px solid #FFED00;
+  color: #FFED00;
+}
+
+.btnHome:hover {
+  background-color: #FFED00;
+  color: #0B0C15;
 }
 
 /* Regole della pagina di news */
@@ -12354,6 +12366,48 @@ body.loading #content {
   .db-nav-link.active {
     border-bottom-color: #FFED00;
   }
+.btn-hero-prof {
+  background-color: #0B0C15;
+  border: 2px solid #FFED00;
+  color: #FFED00;
+  align-content: center;
+}
+
+.btn-hero-prof:hover {
+  background-color: #FFED00;
+  color: #0B0C15;
+}
+
+.btn-hero-campus {
+  background-color: #FFED00;
+  border: 2px solid #FFED00;
+  color: #0B0C15;
+  align-content: center;
+}
+
+.btn-hero-campus:hover {
+  background-color: #0B0C15;
+  color: #FFED00;
+  border: 2px solid #FFED00;
+}
+
+.card-campus {
+  transition: 0.5s ease;
+}
+
+.card-campus:hover {
+  transform: translate(0, -20px);
+}
+
+.btn-contatti {
+  background-color: #0B0C15;
+  border: 2px solid #FFED00;
+  color: #FFED00;
+}
+
+.btn-contatti:hover {
+  background-color: #FFED00;
+  color: #0B0C15;
 }
 
 /*# sourceMappingURL=style.css.map */

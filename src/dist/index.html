@@ -47,13 +47,13 @@
               <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
             </li>
             <li class="nav-item">
-              <a  href="./chiSiamo/chiSiamo.html" class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
+              <a href="./chiSiamo/chiSiamo.html" class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
             </li>
           </ul>
 
           <!-- Bottoni: full-width su mobile, auto su desktop -->
           <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0">
-            <button type="button" class="btn btn-dark btn-outline-light fw-bold border rounded-0" data-bs-toggle="modal"
+            <button type="button" class="btn btnHome fw-bold border rounded-0" data-bs-toggle="modal"
               data-bs-target="#exampleModalCenter">
               Login
             </button>
@@ -99,9 +99,9 @@
             <!-- MODALE REGISTRAZIONE -->
               <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
               aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-dialog modal-dialog-scrollable rounded">
                 <div class="modal-content rounded-0">
-                  <div class="modal-header bg-warning">
+                  <div class="modal-header bg-warning border border-dark border-2 rounded-0">
                     <h2 class="modal-title fs-5 fw-bold" id="exampleModalScrollableTitle">Iscriviti ai nostri corsi</h2>
                     <button type="button" class="btn-close btn-dark" data-bs-dismiss="modal"
                       aria-label="Close"></button>
@@ -153,7 +153,7 @@
  
  
                   </div>
-                  <div class="modal-footer bg-warning flex-wrap">
+                  <div class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0">
                     <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
                       data-bs-dismiss="modal">Annulla</button>
                     <button type="button" class="btn btn-dark rounded-0" id="btn-registrati">Registrati</button>
@@ -172,23 +172,23 @@
   <main id="content" class="container-fluid ">
     <!--INIZIO HERO-->
     <div class="hero-wrapper">
-      <div class="contenitore container col-xxl-8 px-4 py-5 hero-bg" style="
-              background: url(../assets/img/bgHero.webp)
+      <div class="position-absolute z-1 top-1 start-0 w-100 h-100 bg-dark opacity-50"></div>
+      <div class="contenitore container
+      col-xxl-8 px-4 py-5 hero-bg d-flex align-items-center
+            min-vh-100 min-vh-md-75" style="
+              background: url(../assets/img/backgroundHero.webp)
                 center/cover no-repeat;
-              min-height: 80vh;
+              max-height: 80vh;
               display: flex;
               align-items: center;">
-        <div class="row flex-lg-row-reverse align-items-center g-5">
-          <div class="col-10 col-sm-8 col-lg-6 contenitoreHero2">
-            <img src="../assets/img/immagineHero.png" class="immagineHero2 img-fluid mx-lg-auto hero-image"
-              alt="immagineHero" loading="lazy" />
-          </div>
+        <div class="row flex-lg-row align-items-center g-5 position-relative z-2">
+          <div class="col-10 col-sm-8 col-lg-6"></div>
           <div class="col-lg-6">
-            <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
+            <h1 class="display-1 fw-bold text-warning lh-1 mb-3 text-shadow">
               La tua carriera nel <span class="fw-bold">coding</span> inizia
               qui!
             </h1>
-            <p class="lead text-light">
+            <p class="lead text-light fw-semibold">
               Formazione intensiva, docenti esperti e collaborazioni con
               aziende tech per lanciare la tua carriera.
             </p>
@@ -241,53 +241,59 @@
       <div class="row justify-content-center g-4">
         <section class="py-5 bg-dark">
           <div class="container contenitore">
-            <div class="row text-center g-4">
+            <div class="row text-center g-4 justify-content-center">
               <!-- CARD 1 -->
               <div class="col-12 col-md-6 col-lg-4">
                 <div
-                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-auto">
-                  <img src="../assets/img/areaStudenti.webp"
+                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-100 d-flex flex-column">
+                  <img src="https://boommanagement.nl/wp-content/uploads/2025/01/workshop-2.jpg"
                     class="img-fluid shadow-sm mb-3 border border-warning border-1" />
-                  <h4 class="text-light mb-2 fw-bold">I nostri Corsi</h4>
-                  <p class="text-light opacity-75 mb-3">
-                    Percorsi pratici per diventare developer
-                  </p>
-                  <a href="./iNostriCorsi/iNostriCorsi.html"
+                  <div class="flex-grow-1 d-flex flex-column justify-content-start">
+                    <h4 class="text-light mb-2 fw-bold min-h-title">Prossimi Eventi</h4>
+                    <p class="text-light opacity-75 mb-3 min-h-text">
+                      Workshop, open day e incontri con mentor per iniziare la tua carriera nel tech.
+                    </p>
+                  </div>
+                  <button href="./news/news.html"
                     class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
-                    Scopri
-                  </a>
+                    Scopri</button>
                 </div>
               </div>
               <!-- CARD 2 -->
               <div class="col-12 col-md-6 col-lg-4">
                 <div
-                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-auto">
-                  <img src="../assets/img/segreteria.webp"
+                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-100 d-flex flex-column">
+                  <img src="https://www.acaweb.it/wp-content/uploads/2022/04/Formazione.jpg"
                     class="img-fluid shadow-sm mb-3 border border-warning border-1" />
-                  <h4 class="text-light mb-2 fw-bold">Chi Siamo</h4>
-                  <p class="text-light opacity-75 mb-3">
-                    Una community di sviluppatori e mentor
-                  </p>
-                  <a href="./chiSiamo/chiSiamo.html"
+                  <div class="flex-grow-1 d-flex flex-column justify-content-start">
+                    <h4 class="text-light mb-2 fw-bold min-h-title">Percorsi Formativi</h4>
+                    <p class="text-light opacity-75 mb-3 min-h-text">
+                      Programmi intensivi per diventare developer in pochi mesi
+                    </p>
+                  </div>
+                  <button href="./iNostriCorsi/iNostriCorsi.html"
                     class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
-                  </a>
+                  </button>
                 </div>
               </div>
               <!-- CARD 3 -->
               <div class="col-12 col-md-6 col-lg-4">
                 <div
-                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-auto">
-                  <img src="../assets/img/areaProfessori.webp"
+                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-100 d-flex flex-column">
+                  <img
+                    src="https://media.istockphoto.com/id/1366724877/it/foto/vista-posteriore-dellinsegnante-maturo-che-parla-con-il-suo-studente-durante-la-lezione-in.jpg?s=612x612&w=0&k=20&c=4y3xDJYS3-d3jZLrQTH0e-HschQW9Tc4KNF3n4_5kbM="
                     class="img-fluid shadow-sm mb-3 border border-warning border-1" />
-                  <h4 class="text-light mb-2 fw-bold">News</h4>
-                  <p class="text-light opacity-75 mb-3">
-                    Aggiornamenti, eventi e novità tech
-                  </p>
-                  <a href="./news/news.html"
-                    class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
+                  <div class="flex-grow-1 d-flex flex-column justify-content-start">
+                    <h4 class="text-light mb-2 fw-bold min-h-title">Mentor & Docenti</h4>
+                    <p class="text-light opacity-75 mb-3 min-h-text">
+                      Docenti attivi nel settore tech e supporto continuo
+                    </p>
+                  </div>
+                  <button href="./chiSiamo/chiSiamo.html#professori"
+                    class=" fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -298,9 +304,12 @@
     <!--FINE SEZIONE CARD -->
 
     <!-- INIZIO THE FEATURETTES -->
-    <div class="container marketing contenitore">
+    <div class="container marketing">
       <hr class="featurette-divider border border-warning opacity-50" />
       <!-- FEATURETTES 1 -->
+
+
+
       <div class="row featurette align-items-center">
         <div class="col-md-7 order-2 order-md-1">
           <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
@@ -316,29 +325,30 @@
                 <i class="bi bi-code-slash text-warning me-2"></i>
                 Full Stack Web Developer
               </div>
-              <span class="badge bg-warning text-dark rounded-0 fw-semibold">12 Mag</span>
+              <button class="badge bg-warning text-dark rounded-0 fw-semibold">12 Mag</button>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
               <div class="text-light">
                 <i class="bi bi-cpu text-warning me-2"></i>
                 Java Backend Developer
               </div>
-              <span class="badge bg-warning text-dark rounded-0 fw-semibold">3 Giu</span>
+              <button class="badge bg-warning text-dark rounded-0 fw-semibold">3 Giu</button>
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="text-light">
                 <i class="bi bi-graph-up text-warning me-2"></i>
                 Data Analysis
               </div>
-              <span class="badge bg-warning text-dark rounded-0 fw-semibold">10 Giu</span>
+              <button class="badge bg-warning text-dark rounded-0 fw-semibold">10 Giu</button>
             </div>
           </div>
-          <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
+          <a href="./iNostriCorsi/iNostriCorsi.html"
+            class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
             Vedi tutti i corsi
           </a>
         </div>
         <div class="col-md-5 order-1 order-md-2">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdEPFNY0iYbOPuUEBRahMcDlxNM8j4u8qRrg&s"
+          <img src="https://i.ytimg.com/vi/ncC2B1m9wYc/maxresdefault.jpg"
             class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
             alt="Corsi in partenza" />
         </div>
@@ -379,7 +389,7 @@
           </a>
         </div>
         <div class="col-md-5 order-1 order-md-1">
-          <img src="https://i.ytimg.com/vi/ncC2B1m9wYc/maxresdefault.jpg"
+          <img src="https://www.autel.it/wp-content/uploads/2022/01/2022.01.12-400x250.png"
             class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
             alt="Progetti reali" />
         </div>
@@ -420,7 +430,7 @@
           </a>
         </div>
         <div class="col-md-5 order-1 order-md-2">
-          <img src="https://picsum.photos/500"
+          <img src="https://edotto-prod-acl.s3.eu-central-1.amazonaws.com/56b0aabcfdb94d15a82f9448"
             class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
             alt="Career support" />
         </div>
@@ -443,10 +453,13 @@
 
           <!-- SOCIAL ICONS -->
           <div class="d-flex gap-3 footer-icons">
-            <a href="#" class="text-light fs-5"><i class="bi bi-github"></i></a>
-            <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-light fs-5"><i class="bi bi-envelope"></i></a>
+            <a href="https://github.com/" target="_blank" class="text-light fs-5"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="text-light fs-5"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="text-light fs-5"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://mail.google.com/" target="_blank" class="text-light fs-5"><i
+                class="bi bi-envelope"></i></a>
           </div>
         </div>
 
@@ -487,17 +500,27 @@
           <h6 class="text-warning">Contatti</h6>
 
           <p class="mb-1">
-            <i class="bi bi-geo-alt-fill text-warning me-2"></i>
-            Catania, Italia
+            <a href="./chiSiamo/chiSiamo.html#campusRoma"
+              class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"> Roma, Italia</a>
+          </p>
+          <p class="mb-1">
+            <a href="./chiSiamo/chiSiamo.html#campusMilano"
+              class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none">Milano, Italia</a>
+
+          </p>
+          <p class="mb-1">
+            <a href="./chiSiamo/chiSiamo.html#campusNapoli"
+              class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"> Napoli, Italia</a>
+
           </p>
 
           <p class="mb-1">
-            <i class="bi bi-envelope-fill text-warning me-2"></i>
+            <a class="bi bi-envelope-fill text-warning me-2"></a>
             info@programmersuniversity.it
           </p>
 
           <p>
-            <i class="bi bi-clock-fill text-warning me-2"></i>
+            <a class="bi bi-clock-fill text-warning me-2"></a>
             Lun - Ven | 9:00 - 18:00
           </p>
         </div>
