@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Studente — Programmers' University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="bg-dark text-light">
+
+  <header class="bg-warning border-bottom border-dark border-2 sticky-top px-3 py-2 d-flex align-items-center justify-content-between">
+    <a class="d-flex align-items-center gap-2 text-dark fw-bold text-decoration-none" href="../index.html">
+      <img src="../../assets/img/logo.webp" alt="Logo Programmers University" width="44" />
+      <span class="d-none d-sm-inline">Programmers' University</span>
+      <span class="d-inline d-sm-none">Progs' Uni</span>
+    </a>
+    <span class="badge bg-dark text-warning d-flex align-items-center gap-1 px-2 py-1 fw-bold">
+      <i class="bi bi-person-fill"></i> Area Studente
+    </span>
+  </header>
+
+  <div class="dashboard-wrapper">
+
+
+    <aside class="db-sidebar">
+      <div class="db-sidebar__header d-flex flex-column gap-2">
+        <div class="db-avatar-wrap" id="sidebar-avatar">PU</div>
+        <div>
+          <div class="fw-bold text-light small" id="sidebar-nome">Caricamento…</div>
+          <div class="db-sidebar__matricola text-warning" id="sidebar-matricola">—</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="db-nav-link active" data-section="sec-profilo">
+          <i class="bi bi-person-circle"></i> Profilo
+        </button>
+        <button class="db-nav-link" data-section="sec-corsi">
+          <i class="bi bi-journal-bookmark-fill"></i> I Miei Corsi
+        </button>
+        <button class="db-nav-link" data-section="sec-segreteria">
+          <i class="bi bi-building"></i> Segreteria
+        </button>
+        <button class="db-nav-link" data-section="sec-materiali">
+          <i class="bi bi-collection-play-fill"></i> Materiali
+        </button>
+        <button class="db-nav-link" data-section="sec-prenotazioni">
+          <i class="bi bi-calendar-check-fill"></i> Prenota Esame
+        </button>
+      </nav>
+
+      <div class="db-sidebar__footer">
+        <button class="btn-logout" id="btn-logout" type="button">
+          <i class="bi bi-box-arrow-left me-1"></i> Esci
+        </button>
+      </div>
+    </aside>
+
+    <main class="flex-grow-1 p-4 overflow-auto">
+
+      <section class="db-section active" id="sec-profilo">
+
+        <h1 class="fs-4 fw-bold text-warning border-bottom border-warning pb-2 mb-4">
+          <i class="bi bi-person-circle me-2"></i>Profilo Studente
+        </h1>
+
+        <div class="db-alert-iscrizione">
+          <strong><i class="bi bi-check-circle-fill me-1"></i>Iscrizione:</strong>
+          <span id="prof-stato">Attiva</span>
+          &bull; Anno accademico 2025/2026 &bull;
+          Corso: <strong id="prof-corso">—</strong>
+        </div>
+
+        <div class="d-flex gap-4 align-items-start flex-wrap mb-4">
+          <div class="db-profile-photo-area">
+            <div class="db-photo-placeholder" id="prof-avatar-grande">PU</div>
+            <button class="db-photo-edit" id="btn-foto-edit" type="button" aria-label="Cambia foto profilo">
+              <i class="bi bi-camera-fill"></i>
+            </button>
+            <input type="file" id="fotoInput" accept="image/*" />
+          </div>
+          <div>
+            <div class="fs-5 fw-bold text-warning mb-0">
+              <span id="prof-nome">—</span> <span id="prof-cognome">—</span>
+            </div>
+            <div class="text-secondary small mt-1">@<span id="prof-username">—</span></div>
+            <div class="text-secondary small mt-2">
+              Matricola: <span class="text-warning fw-bold" id="prof-matricola">—</span>
+            </div>
+            <div class="text-secondary small mt-1">
+              Iscritto dal: <span id="prof-iscritto">—</span> &bull; <span id="prof-anno">—</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Dati Anagrafici</p>
+        <div class="db-info-grid mb-4">
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Nome</div>
+            <div class="text-light fw-semibold" id="prof-nome-card">—</div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Cognome</div>
+            <div class="text-light fw-semibold" id="prof-cognome-card">—</div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Email</div>
+            <div class="text-light fw-semibold" id="prof-email">—</div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3 db-card--highlight">
+            <div class="db-card__label">Matricola</div>
+            <div class="text-warning fw-bold" id="prof-matricola-card">—</div>
+          </div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Informazioni Aggiuntive</p>
+        <div class="db-info-grid mb-3">
+          <div>
+            <div class="db-card__label mb-1">Data di Nascita</div>
+            <input type="date" id="input-datanascita" class="db-input" />
+          </div>
+          <div>
+            <div class="db-card__label mb-1">Telefono</div>
+            <input type="tel" id="input-telefono" class="db-input" placeholder="+39 000 000 0000" />
+          </div>
+          <div>
+            <div class="db-card__label mb-1">Indirizzo di Residenza</div>
+            <input type="text" id="input-indirizzo" class="db-input" placeholder="Via, Città, CAP" />
+          </div>
+        </div>
+        <button class="btn btn-warning rounded-0 fw-bold" id="btn-salva-profilo" type="button">
+          <i class="bi bi-floppy-fill me-1"></i> Salva Modifiche
+        </button>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Dati Salvati</p>
+        <div class="db-info-grid">
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Data di Nascita</div>
+            <div class="text-light fw-semibold" id="prof-datanascita">—</div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Telefono</div>
+            <div class="text-light fw-semibold" id="prof-telefono">—</div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Indirizzo</div>
+            <div class="text-light fw-semibold" id="prof-indirizzo">—</div>
+          </div>
+        </div>
+
+      </section>
+
+
+           SEZIONE 2 — CORSI & ESAMI
+      ════════════════════════════════════════════════════════ -->
+      <section class="db-section" id="sec-corsi">
+
+        <h1 class="fs-4 fw-bold text-warning border-bottom border-warning pb-2 mb-4">
+          <i class="bi bi-journal-bookmark-fill me-2"></i>I Miei Corsi ed Esami
+        </h1>
+
+        <div class="d-flex gap-2 mb-4 flex-wrap">
+          <div class="db-stat bg-secondary border border-grigio p-3 flex-fill">
+            <div class="fs-1 fw-bold text-warning lh-1" id="cfu-superati">0</div>
+            <div class="text-secondary text-uppercase small mt-1">CFU Conseguiti</div>
+          </div>
+          <div class="db-stat bg-secondary border border-grigio p-3 flex-fill">
+            <div class="fs-1 fw-bold text-warning lh-1" id="cfu-totali">0</div>
+            <div class="text-secondary text-uppercase small mt-1">CFU Totali</div>
+          </div>
+          <div class="db-stat bg-secondary border border-grigio p-3 flex-fill">
+            <div class="fs-1 fw-bold text-warning lh-1" id="media-voti">—</div>
+            <div class="text-secondary text-uppercase small mt-1">Media Voti</div>
+          </div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Piano di Studi</p>
+        <div id="corsi-container">
+          <div class="text-secondary small">Caricamento corsi…</div>
+        </div>
+
+      </section>
+
+      <section class="db-section" id="sec-segreteria">
+
+        <h1 class="fs-4 fw-bold text-warning border-bottom border-warning pb-2 mb-4">
+          <i class="bi bi-building me-2"></i>Segreteria Studenti
+        </h1>
+
+        <div class="db-alert-iscrizione">
+          <strong><i class="bi bi-info-circle-fill me-1"></i>Orari Segreteria:</strong>
+          Lunedì – Venerdì, 9:00 – 17:00 &bull;
+          <a href="mailto:segreteria@programmersuniversity.it">segreteria@programmersuniversity.it</a>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Documenti &amp; Certificati</p>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-person-fill text-warning"></i> Certificato di Iscrizione
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="db-doc-status">Disponibile</span>
+            <button class="db-doc-btn" type="button" data-toast="Certificato di iscrizione generato in PDF!">
+              <i class="bi bi-download me-1"></i>Scarica
+            </button>
+          </div>
+        </div>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-check-fill text-warning"></i> Dichiarazione di Frequenza
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="db-doc-status">Disponibile</span>
+            <button class="db-doc-btn" type="button" data-toast="Dichiarazione di frequenza generata!">
+              <i class="bi bi-download me-1"></i>Scarica
+            </button>
+          </div>
+        </div>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-text-fill text-warning"></i> Piano di Studi Ufficiale
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="db-doc-status">Disponibile</span>
+            <button class="db-doc-btn" type="button" data-toast="Piano di studi scaricato!">
+              <i class="bi bi-download me-1"></i>Scarica
+            </button>
+          </div>
+        </div>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-richtext-fill text-warning"></i> Libretto Universitario Digitale
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="db-doc-status">Disponibile</span>
+            <button class="db-doc-btn" type="button" data-toast="Libretto universitario scaricato!">
+              <i class="bi bi-download me-1"></i>Scarica
+            </button>
+          </div>
+        </div>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-excel-fill text-warning"></i> Autocertificazione di Laurea
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="db-doc-status db-doc-status--attesa">In elaborazione</span>
+            <button class="db-doc-btn" type="button" disabled>
+              <i class="bi bi-clock me-1"></i>Attesa
+            </button>
+          </div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Richieste &amp; Pratiche</p>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-pencil-square text-warning"></i> Richiesta Cambio Corso
+          </div>
+          <button class="db-doc-btn" type="button" data-toast="Richiesta inviata alla segreteria!">
+            <i class="bi bi-send me-1"></i>Invia Richiesta
+          </button>
+        </div>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-shield-check text-warning"></i> Sospensione degli Studi
+          </div>
+          <button class="db-doc-btn" type="button" data-toast="Modulo di sospensione inviato!">
+            <i class="bi bi-send me-1"></i>Invia Modulo
+          </button>
+        </div>
+
+        <div class="db-doc-row d-flex align-items-center justify-content-between bg-secondary border border-grigio mb-2 p-3 flex-wrap gap-2">
+          <div class="text-light fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-credit-card-2-front-fill text-warning"></i> Pagamento Tasse (Stripe)
+          </div>
+          <button class="db-doc-btn" type="button" data-toast="Reindirizzamento al portale pagamenti…">
+            <i class="bi bi-arrow-right me-1"></i>Vai al portale
+          </button>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Contatti Docenti</p>
+        <div class="db-info-grid">
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Coordinatore del Corso</div>
+            <div class="text-light fw-semibold">Prof. Marco Russo</div>
+            <div class="text-secondary small mt-1">
+              <i class="bi bi-envelope me-1"></i>russo@programmersuniversity.it
+            </div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Tutor Accademico</div>
+            <div class="text-light fw-semibold">Prof.ssa Laura Bianchi</div>
+            <div class="text-secondary small mt-1">
+              <i class="bi bi-envelope me-1"></i>bianchi@programmersuniversity.it
+            </div>
+          </div>
+          <div class="bg-secondary border border-grigio rounded-0 p-3">
+            <div class="db-card__label">Ufficio Segreteria</div>
+            <div class="text-light fw-semibold">Catania, Via Etnea 42</div>
+            <div class="text-secondary small mt-1">
+              <i class="bi bi-telephone me-1"></i>+39 095 000 0000
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="db-section" id="sec-materiali">
+
+        <h1 class="fs-4 fw-bold text-warning border-bottom border-warning pb-2 mb-4">
+          <i class="bi bi-collection-play-fill me-2"></i>Materiali Didattici Digitali
+        </h1>
+
+        <div class="db-alert-iscrizione">
+          <strong><i class="bi bi-info-circle-fill me-1"></i>Nota:</strong>
+          Materiali accessibili solo agli studenti iscritti e attivi. Rispetta il copyright.
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Video Lezioni</p>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Apertura video lezione in corso…">
+          <div class="db-mat-icon"><i class="bi bi-play-btn-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">Introduzione a JavaScript ES6</div>
+            <div class="text-secondary small">Prof. Russo &bull; 2h 15min &bull; Video HD</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </div>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Apertura video lezione in corso…">
+          <div class="db-mat-icon"><i class="bi bi-play-btn-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">CSS Grid &amp; Flexbox Masterclass</div>
+            <div class="text-secondary small">Prof.ssa Bianchi &bull; 1h 45min &bull; Video HD</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </div>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Apertura video lezione in corso…">
+          <div class="db-mat-icon"><i class="bi bi-play-btn-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">React Hooks &amp; State Management</div>
+            <div class="text-secondary small">Prof. Gallo &bull; 3h 00min &bull; Video HD</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Slide &amp; Documentazione PDF</p>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Download PDF avviato!">
+          <div class="db-mat-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">Slide: Algoritmi e Strutture Dati</div>
+            <div class="text-secondary small">PDF &bull; 87 slides &bull; 4.2 MB</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-download"></i></div>
+        </div>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Download PDF avviato!">
+          <div class="db-mat-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">Guida completa a Node.js</div>
+            <div class="text-secondary small">PDF &bull; 120 pagine &bull; 6.8 MB</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-download"></i></div>
+        </div>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Download PDF avviato!">
+          <div class="db-mat-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">Cheat Sheet Bootstrap 5</div>
+            <div class="text-secondary small">PDF &bull; 12 pagine &bull; 1.1 MB</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-download"></i></div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Repository &amp; Esercizi Pratici</p>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Apertura repository GitHub privato…">
+          <div class="db-mat-icon"><i class="bi bi-github"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">Repo Esercizi — Full Stack 2026</div>
+            <div class="text-secondary small">GitHub Private &bull; 32 esercizi &bull; Aggiornato oggi</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </div>
+
+        <div class="db-materiale-card d-flex align-items-center gap-3 bg-secondary border border-grigio mb-2 p-3" data-toast="Apertura sandbox JavaScript online…">
+          <div class="db-mat-icon"><i class="bi bi-terminal-fill"></i></div>
+          <div>
+            <div class="text-light fw-semibold small">Sandbox Online — JavaScript Playground</div>
+            <div class="text-secondary small">Ambiente online &bull; Nessuna installazione richiesta</div>
+          </div>
+          <div class="text-warning ms-auto flex-shrink-0"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </div>
+
+      </section>
+
+      <section class="db-section" id="sec-prenotazioni">
+
+        <h1 class="fs-4 fw-bold text-warning border-bottom border-warning pb-2 mb-4">
+          <i class="bi bi-calendar-check-fill me-2"></i>Prenotazione Esami
+        </h1>
+
+        <div class="db-alert-iscrizione">
+          <strong><i class="bi bi-alarm-fill me-1"></i>Scadenza prenotazioni:</strong>
+          Entro 7 giorni dalla data dell'esame &bull; Cancellazione entro 48h dalla prova.
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Sessione Maggio – Giugno 2026</p>
+        <div id="prenotazioni-container">
+          <div class="text-secondary small">Caricamento sessioni…</div>
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Le Mie Prenotazioni</p>
+        <div class="text-secondary small py-2" id="riepilogo-prenotazioni">
+          Nessuna prenotazione effettuata.
+        </div>
+
+        <p class="db-subtitle small fw-bold text-secondary text-uppercase mt-4 mb-2">Regolamento Esami</p>
+        <div class="bg-secondary border border-grigio rounded-0 p-3 text-secondary small lh-lg">
+          <i class="bi bi-dot text-warning"></i> Presentarsi almeno 15 minuti prima.<br>
+          <i class="bi bi-dot text-warning"></i> Portare documento d'identità e libretto universitario.<br>
+          <i class="bi bi-dot text-warning"></i> Non è possibile sostenere l'esame senza prenotazione.<br>
+          <i class="bi bi-dot text-warning"></i> Il voto può essere rifiutato entro 3 giorni dalla pubblicazione.<br>
+          <i class="bi bi-dot text-warning"></i> Max 2 tentativi per ogni esame per sessione.
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <div class="db-toast" id="db-toast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <span class="db-toast-msg"></span>
+  </div>
+
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./utente.js"></script>
+  <script src="./dashboardScript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+
+@use './colori' as *;
+@use './fonts' as *;
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: calc(100vh - 58px);
+}
+
+.db-sidebar {
+  width: 240px;
+  min-width: 240px;
+  background-color: $grigioScuroCard;
+  border-right: 2px solid $gialloTitoloBottoni;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 58px;
+  height: calc(100vh - 58px);
+  overflow-y: auto;
+
+  &__header {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba($gialloTitoloBottoni, 0.2);
+  }
+
+  &__matricola { font-size: 0.7rem; }
+
+  &__footer {
+    padding: 1rem;
+    border-top: 1px solid rgba($gialloTitoloBottoni, 0.15);
+  }
+}
+
+.db-avatar-wrap {
+  width: 64px;
+  height: 64px;
+  border: 2px solid $gialloTitoloBottoni;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $gialloTitoloBottoni;
+  background-color: $grigio;
+  flex-shrink: 0;
+
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+
+ 
+.db-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: rgba($bianco, 0.65);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: $source-code;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-left-color 0.15s;
+
+  i { width: 18px; text-align: center; }
+
+  &:hover {
+    background: rgba($gialloTitoloBottoni, 0.08);
+    color: $gialloTitoloBottoni;
+    border-left-color: rgba($gialloTitoloBottoni, 0.4);
+  }
+
+  &.active {
+    background: rgba($gialloTitoloBottoni, 0.12);
+    color: $gialloTitoloBottoni;
+    border-left-color: $gialloTitoloBottoni;
+  }
+}
+
+.btn-logout {
+  width: 100%;
+  background: transparent;
+  border: 1px solid $rosso;
+  color: $rosso;
+  padding: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: $source-code;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover { background: $rosso; color: $bianco; }
+}
+
+.db-section        { display: none;  }
+.db-section.active { display: block; }
+
+.db-subtitle {
+  letter-spacing: 0.06em;
+}
+
+.db-alert-iscrizione {
+  border-left: 4px solid $gialloTitoloBottoni;
+  border: 1px solid rgba($gialloTitoloBottoni, 0.3);
+  border-left-width: 4px;
+  padding: 0.85rem 1.25rem;
+  background: rgba($gialloTitoloBottoni, 0.06);
+  color: $bianco;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+
+  strong { color: $gialloTitoloBottoni; }
+  a { color: $gialloTitoloBottoni; text-decoration: none; &:hover { text-decoration: underline; } }
+}
+
+.db-card--highlight { border-color: $gialloTitoloBottoni !important; }
+
+.db-card__label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $grigioChiaro;
+  margin-bottom: 0.2rem;
+}
+
+.db-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+}
+
+.db-profile-photo-area {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.db-photo-placeholder {
+  width: 110px;
+  height: 110px;
+  border: 2px solid $gialloTitoloBottoni;
+  background-color: $grigio;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $gialloTitoloBottoni;
+  overflow: hidden;
+
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+
+.db-photo-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $gialloTitoloBottoni;
+  color: $neroSfondo;
+  border: none;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: $source-code;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  &:hover { opacity: 0.8; }
+}
+
+#fotoInput { display: none; }
+
+.db-input {
+  width: 100%;
+  background: $neroSfondo;
+  border: 1px solid $grigio;
+  color: $bianco;
+  padding: 0.4rem 0.6rem;
+  font-family: $source-code;
+  font-size: 0.85rem;
+  transition: border-color 0.15s;
+
+  &:focus { outline: none; border-color: $gialloTitoloBottoni; }
+  &::placeholder { color: $grigioChiaro; opacity: 0.7; }
+}
+
+.db-stat {
+  border-top: 3px solid $gialloTitoloBottoni;
+}
+
+.db-corso-card {
+  border-top: 3px solid $gialloTitoloBottoni;
+  transition: border-color 0.15s;
+  &:hover { border-color: $gialloTitoloBottoni; }
+}
+
+.db-corso-stato--superato     { color: #22c55e; }
+.db-corso-stato--in-corso     { color: $gialloTitoloBottoni; }
+.db-corso-stato--da-sostenere { color: $grigioChiaro; }
+
+.db-progress {
+  height: 4px;
+  background-color: $grigio;
+  overflow: hidden;
+  margin-top: 0.75rem;
+
+  &__bar {
+    height: 4px;
+    background-color: $gialloTitoloBottoni;
+    transition: width 0.5s ease;
+  }
+}
+
+.db-doc-row {
+  transition: border-color 0.15s;
+  &:hover { border-color: $gialloTitoloBottoni !important; }
+}
+
+.db-doc-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  background: rgba($gialloTitoloBottoni, 0.12);
+  color: $gialloTitoloBottoni;
+
+  &--attesa {
+    background: rgba($grigio, 0.3);
+    color: $grigioChiaro;
+  }
+}
+
+.db-doc-btn {
+  background: transparent;
+  border: 1px solid $grigio;
+  color: $grigioChiaro;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: $source-code;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover:not(:disabled) { border-color: $gialloTitoloBottoni; color: $gialloTitoloBottoni; }
+  &:disabled { opacity: 0.35; cursor: not-allowed; }
+}
+
+.db-materiale-card {
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.1s;
+  &:hover { border-color: $gialloTitoloBottoni !important; transform: translateX(4px); }
+}
+
+.db-mat-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: $gialloTitoloBottoni;
+  background: rgba($gialloTitoloBottoni, 0.08);
+  border: 1px solid rgba($gialloTitoloBottoni, 0.25);
+}
+
+.db-prenotazione-slot {
+  border-left: 3px solid $gialloTitoloBottoni !important;
+}
+
+.btn-prenota {
+  background: $gialloTitoloBottoni;
+  color: $neroSfondo;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: $source-code;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+
+  &:hover:not(:disabled) { opacity: 0.85; }
+
+  &.prenotato {
+    background: transparent;
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    cursor: default;
+  }
+}
+
+.db-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: $grigioScuroCard;
+  border: 1px solid $gialloTitoloBottoni;
+  color: $bianco;
+  font-size: 0.82rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+
+  &.show { opacity: 1; transform: translateY(0); }
+  i { color: $gialloTitoloBottoni; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper { flex-direction: column; }
+
+  .db-sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 2px solid $gialloTitoloBottoni;
+
+    &__header { flex-direction: row; align-items: center; }
+    &__footer  { display: none; }
+
+    nav { display: flex; overflow-x: auto; }
+  }
+
+  .db-nav-link {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    &.active { border-bottom-color: $gialloTitoloBottoni; }
+  }
+}
