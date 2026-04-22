@@ -11966,6 +11966,406 @@ body.loading #content {
 }
 
 /* Regole pagina iNostriCorsi */
+.dashboard-wrapper {
+  display: flex;
+  min-height: calc(100vh - 58px);
+}
+
+.db-sidebar {
+  width: 240px;
+  min-width: 240px;
+  background-color: #2E2F37;
+  border-right: 2px solid #FFED00;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 58px;
+  height: calc(100vh - 58px);
+  overflow-y: auto;
+}
+.db-sidebar__header {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid rgba(255, 237, 0, 0.2);
+}
+.db-sidebar__matricola {
+  font-size: 0.7rem;
+}
+.db-sidebar__footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 237, 0, 0.15);
+}
+
+.db-avatar-wrap {
+  width: 64px;
+  height: 64px;
+  border: 2px solid #FFED00;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFED00;
+  background-color: #4A5565;
+  flex-shrink: 0;
+}
+.db-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.db-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-left-color 0.15s;
+}
+.db-nav-link i {
+  width: 18px;
+  text-align: center;
+}
+.db-nav-link:hover {
+  background: rgba(255, 237, 0, 0.08);
+  color: #FFED00;
+  border-left-color: rgba(255, 237, 0, 0.4);
+}
+.db-nav-link.active {
+  background: rgba(255, 237, 0, 0.12);
+  color: #FFED00;
+  border-left-color: #FFED00;
+}
+
+.btn-logout {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #C21111;
+  color: #C21111;
+  padding: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-logout:hover {
+  background: #C21111;
+  color: #ffffff;
+}
+
+.db-section {
+  display: none;
+}
+
+.db-section.active {
+  display: block;
+}
+
+.db-subtitle {
+  letter-spacing: 0.06em;
+}
+
+.db-alert-iscrizione {
+  border-left: 4px solid #FFED00;
+  border: 1px solid rgba(255, 237, 0, 0.3);
+  border-left-width: 4px;
+  padding: 0.85rem 1.25rem;
+  background: rgba(255, 237, 0, 0.06);
+  color: #ffffff;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+.db-alert-iscrizione strong {
+  color: #FFED00;
+}
+.db-alert-iscrizione a {
+  color: #FFED00;
+  text-decoration: none;
+}
+.db-alert-iscrizione a:hover {
+  text-decoration: underline;
+}
+
+.db-card--highlight {
+  border-color: #FFED00 !important;
+}
+
+.db-card__label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #A4A5A9;
+  margin-bottom: 0.2rem;
+}
+
+.db-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+}
+
+.db-profile-photo-area {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.db-photo-placeholder {
+  width: 110px;
+  height: 110px;
+  border: 2px solid #FFED00;
+  background-color: #4A5565;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFED00;
+  overflow: hidden;
+}
+.db-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.db-photo-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #FFED00;
+  color: #0B0C15;
+  border: none;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.db-photo-edit:hover {
+  opacity: 0.8;
+}
+
+#fotoInput {
+  display: none;
+}
+
+.db-input {
+  width: 100%;
+  background: #0B0C15;
+  border: 1px solid #4A5565;
+  color: #ffffff;
+  padding: 0.4rem 0.6rem;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.85rem;
+  transition: border-color 0.15s;
+}
+.db-input:focus {
+  outline: none;
+  border-color: #FFED00;
+}
+.db-input::placeholder {
+  color: #A4A5A9;
+  opacity: 0.7;
+}
+
+.db-stat {
+  border-top: 3px solid #FFED00;
+}
+
+.db-corso-card {
+  border-top: 3px solid #FFED00;
+  transition: border-color 0.15s;
+}
+.db-corso-card:hover {
+  border-color: #FFED00;
+}
+
+.db-corso-stato--superato {
+  color: #22c55e;
+}
+
+.db-corso-stato--in-corso {
+  color: #FFED00;
+}
+
+.db-corso-stato--da-sostenere {
+  color: #A4A5A9;
+}
+
+.db-progress {
+  height: 4px;
+  background-color: #4A5565;
+  overflow: hidden;
+  margin-top: 0.75rem;
+}
+.db-progress__bar {
+  height: 4px;
+  background-color: #FFED00;
+  transition: width 0.5s ease;
+}
+
+.db-doc-row {
+  transition: border-color 0.15s;
+}
+.db-doc-row:hover {
+  border-color: #FFED00 !important;
+}
+
+.db-doc-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  background: rgba(255, 237, 0, 0.12);
+  color: #FFED00;
+}
+.db-doc-status--attesa {
+  background: rgba(74, 85, 101, 0.3);
+  color: #A4A5A9;
+}
+
+.db-doc-btn {
+  background: transparent;
+  border: 1px solid #4A5565;
+  color: #A4A5A9;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.db-doc-btn:hover:not(:disabled) {
+  border-color: #FFED00;
+  color: #FFED00;
+}
+.db-doc-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.db-materiale-card {
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.1s;
+}
+.db-materiale-card:hover {
+  border-color: #FFED00 !important;
+  transform: translateX(4px);
+}
+
+.db-mat-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #FFED00;
+  background: rgba(255, 237, 0, 0.08);
+  border: 1px solid rgba(255, 237, 0, 0.25);
+}
+
+.db-prenotazione-slot {
+  border-left: 3px solid #FFED00 !important;
+}
+
+.btn-prenota {
+  background: #FFED00;
+  color: #0B0C15;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.btn-prenota:hover:not(:disabled) {
+  opacity: 0.85;
+}
+.btn-prenota.prenotato {
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  cursor: default;
+}
+
+.db-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #2E2F37;
+  border: 1px solid #FFED00;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.db-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.db-toast i {
+  color: #FFED00;
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    flex-direction: column;
+  }
+  .db-sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 2px solid #FFED00;
+  }
+  .db-sidebar__header {
+    flex-direction: row;
+    align-items: center;
+  }
+  .db-sidebar__footer {
+    display: none;
+  }
+  .db-sidebar nav {
+    display: flex;
+    overflow-x: auto;
+  }
+  .db-nav-link {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+  .db-nav-link.active {
+    border-bottom-color: #FFED00;
+  }
 .btn-hero-prof {
   background-color: #0B0C15;
   border: 2px solid #FFED00;

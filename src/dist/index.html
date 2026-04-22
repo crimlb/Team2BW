@@ -58,7 +58,7 @@
               Login
             </button>
             <!-- MODALE LOGIN -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+           <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content rounded-0">
@@ -68,11 +68,14 @@
                       aria-label="Close"></button>
                   </div>
                   <div class="modal-body bg-dark text-light">
-                    <div class="input-group mb-3 mt-3 w-100">
-                      <input type="text" class="form-control rounded-0" id="floatingInput5" placeholder="*Nome Utente">
+                    <div id="login-error" class="alert alert-danger rounded-0 d-none py-2 small fw-bold">
+                      Credenziali non valide. Controlla username e password.
                     </div>
                     <div class="input-group mb-3 mt-3 w-100">
-                      <input type="password" class="form-control rounded-0" id="floatingPassword3"
+                      <input type="text" class="form-control rounded-0" id="login-username" placeholder="*Nome Utente">              
+                    </div>
+                    <div class="input-group mb-3 mt-3 w-100">
+                      <input type="password" class="form-control rounded-0" id="login-password"
                         placeholder="*Password">
                     </div>
                   </div>
@@ -83,7 +86,7 @@
                     </div>
                     <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
                       data-bs-dismiss="modal">Annulla</button>
-                    <button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">Accedi</button>
+                    <button type="button" class="btn btn-dark rounded-0" id="btn-login-accedi">Accedi</button>
                   </div>
                 </div>
               </div>
@@ -94,7 +97,7 @@
               Iscrizione
             </button>
             <!-- MODALE REGISTRAZIONE -->
-            <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
+              <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
               aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable rounded">
                 <div class="modal-content rounded-0">
@@ -105,30 +108,30 @@
                   </div>
                   <div class="modal-body bg-dark text-light">
                     <div class="bd-example m-0 border-0">
+                      <div id="reg-error" class="alert alert-danger rounded-0 d-none py-2 small fw-bold mb-3">
+                        Compila tutti i campi obbligatori e accetta i termini.
+                      </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="text" class="form-control rounded-0" id="inputGroup-sizing-default"
+                        <input type="text" class="form-control rounded-0" id="reg-username"
                           placeholder="*Nome Utente">
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="text" class="form-control rounded-0" id="inputGroup-sizing-default"
+                        <input type="text" class="form-control rounded-0" id="reg-nome"
                           placeholder="*Nome">
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="text" class="form-control rounded-0" id="floatingInput1" placeholder="*Cognome">
-
+                        <input type="text" class="form-control rounded-0" id="reg-cognome" placeholder="*Cognome">
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="email" class="form-control rounded-0" id="floatingPassword1"
+                        <input type="email" class="form-control rounded-0" id="reg-email"
                           placeholder="example@email.it">
-
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="password" class="form-control rounded-0" id="floatingInput3"
+                        <input type="password" class="form-control rounded-0" id="reg-password"
                           placeholder="*Password">
-
                       </div>
-                      <select class="form-select form-select-lg mb-3 rounded-0" aria-label="Large select example">
-                        <option selected="">Cosa ti piacerebbe studiare?</option>
+                      <select class="form-select form-select-lg mb-3 rounded-0" id="reg-corso" aria-label="Scelta corso">
+                        <option value="">Cosa ti piacerebbe studiare?</option>
                         <option value="1">Voglio iniziare da zero</option>
                         <option value="2">Voglio diventare sviluppatore web</option>
                         <option value="3">Voglio sviluppare app mobile</option>
@@ -137,23 +140,23 @@
                         <option value="6">Non sono sicuro, voglio orientarmi</option>
                       </select>
                       <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" value="" id="reg-check-termini">
                         <a href="">*Accetto i termini e le condizioni d’uso, dichiaro inoltre di essere maggiorenne e
                           che i dati da me inseriti, validi per la fatturazione, sono veritieri e reali</a>
                       </div>
                       <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" value="" id="reg-check-privacy">
                         <a href="">*Ho preso visione dell'informativa privacy e acconsento al trattamento dei miei dati
                           personali per le finalità ivi indicate</a>
                       </div>
                     </div>
-
-
+ 
+ 
                   </div>
                   <div class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0">
                     <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
                       data-bs-dismiss="modal">Annulla</button>
-                    <button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">Registrati</button>
+                    <button type="button" class="btn btn-dark rounded-0" id="btn-registrati">Registrati</button>
                   </div>
                 </div>
               </div>
@@ -533,7 +536,7 @@
     </div>
   </footer>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
+  <script src="./dashboard/utente.js"></script>
+  <script src="./script.js"></script></body>
 
 </html>
