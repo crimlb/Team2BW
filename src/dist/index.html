@@ -171,35 +171,36 @@
   <main id="content" class="container-fluid ">
     <!--INIZIO HERO-->
     <div class="hero-wrapper">
-        <div class="contenitore container col-xxl-8 px-4 py-5 hero-bg" style="
+      <div class="contenitore container col-xxl-8 px-4 py-5 hero-bg" style="
               background: url(&quot;../assets/img/bgHero.webp&quot;)
                 center/cover no-repeat;
               min-height: 80vh;
               display: flex;
               align-items: center;
             ">
-          <div class="row flex-lg-row-reverse align-items-center g-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-              <img src="" class="immagini img-fluid mx-lg-auto hero-image" alt="Temi Bootstrap" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
-              <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
-                La tua carriera nel <span class="fw-bold">coding</span> inizia
-                qui!
-              </h1>
-              <p class="lead text-light">
-                Formazione intensiva, docenti esperti e collaborazioni con
-                aziende tech per lanciare la tua carriera.
-              </p>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button"
-                  class="fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press rounded-0">
-                  Scopri il corso che fa per te!
-                </button>
-              </div>
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="../assets/img/immagineHero.png" class="immagini img-fluid mx-lg-auto hero-image"
+              alt="immagineHero" loading="lazy" />
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
+              La tua carriera nel <span class="fw-bold">coding</span> inizia
+              qui!
+            </h1>
+            <p class="lead text-light">
+              Formazione intensiva, docenti esperti e collaborazioni con
+              aziende tech per lanciare la tua carriera.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button"
+                class="fw-bold btn btn-warning btn-lg px-5 py-3 fw-semibold shadow btn-press rounded-0">
+                Scopri il corso che fa per te!
+              </button>
             </div>
           </div>
         </div>
+      </div>
     </div>
     <!-- ======================================= CAROSELLO SLIDE =================================================== -->
     <section class="slider-main">
@@ -235,55 +236,56 @@
           class="d-block sliderCardDimensione border border-1 border-warning" />
       </div>
     </section>
-
-    <div class="container contenitore">
-      <!-- 3 colonne di reindirizzamento -->
-      <!-- ========================================SEZIONE CARD==================================================== -->
+    <!-- SEZIONE CARD-->
+    <div class="container">
       <div class="row justify-content-center g-4">
         <section class="py-5 bg-dark">
           <div class="container contenitore">
             <div class="row text-center g-4">
-              <div class="col-lg-4">
-                <!-- =========================================CARD 1==================================================== -->
-                <div class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
-                  <img src="../assets/img/areaStudenti.webp" alt=""
-                    class="immagini img-fluid shadow-sm mb-4 border border-warning border-1" />
-                  <h4 class="text-light mb-3 fw-bold">I nostri Corsi</h4>
-                  <p class="text-light opacity-75">
+              <!-- CARD 1 -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <div
+                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-auto">
+                  <img src="../assets/img/areaStudenti.webp"
+                    class="img-fluid shadow-sm mb-3 border border-warning border-1" />
+                  <h4 class="text-light mb-2 fw-bold">I nostri Corsi</h4>
+                  <p class="text-light opacity-75 mb-3">
                     Percorsi pratici per diventare developer
                   </p>
                   <a data-page="iNostriCorsi/iNostriCorsi"
-                    class="fw-bold btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 rounded-0">
+                    class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
                   </a>
                 </div>
               </div>
-              <!-- =========================================CARD 2==================================================== -->
-              <div class="col-lg-4">
-                <div class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
-                  <img src="../assets/img/segreteria.webp" alt=""
-                    class="immagini img-fluid shadow-sm mb-4 border border-warning border-1" />
-                  <h4 class="text-light mb-3 fw-bold">Chi Siamo</h4>
-                  <p class="text-light opacity-75">
+              <!-- CARD 2 -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <div
+                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-auto">
+                  <img src="../assets/img/segreteria.webp"
+                    class="img-fluid shadow-sm mb-3 border border-warning border-1" />
+                  <h4 class="text-light mb-2 fw-bold">Chi Siamo</h4>
+                  <p class="text-light opacity-75 mb-3">
                     Una community di sviluppatori e mentor
                   </p>
                   <a data-page="chiSiamo/chiSiamo"
-                    class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold rounded-0">
+                    class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
                   </a>
                 </div>
               </div>
-              <!-- =========================================CARD 3==================================================== -->
-              <div class="col-lg-4">
-                <div class="p-5 bg-secondary h-100 shadow-sm card-hover text-center border border-grigio border-3">
-                  <img src="../assets/img/areaProfessori.webp" alt=""
-                    class="immagini img-fluid shadow-sm mb-4 border border-warning border-1" />
-                  <h4 class="text-light mb-3 fw-bold">News</h4>
-                  <p class="text-light opacity-75">
+              <!-- CARD 3 -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <div
+                  class="p-3 p-lg-5 bg-secondary shadow-sm card-hover text-center border border-grigio border-3 h-auto">
+                  <img src="../assets/img/areaProfessori.webp"
+                    class="img-fluid shadow-sm mb-3 border border-warning border-1" />
+                  <h4 class="text-light mb-2 fw-bold">News</h4>
+                  <p class="text-light opacity-75 mb-3">
                     Aggiornamenti, eventi e novità tech
                   </p>
                   <a data-page="news/news"
-                    class="btn btn-warning btn-lg px-4 mt-3 btn-press border border-dark border-1 fw-bold rounded-0">
+                    class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
                   </a>
                 </div>
@@ -293,12 +295,12 @@
         </section>
       </div>
     </div>
-    <!-- =========================================FINE SEZIONE CARD ==================================================== -->
+    <!--FINE SEZIONE CARD -->
 
-    <!-- ========================================INIZIO THE FEATURETTES ==================================================== -->
+    <!-- INIZIO THE FEATURETTES -->
     <div class="container marketing contenitore">
       <hr class="featurette-divider border border-warning opacity-50" />
-      <!-- ========================================FEATURETTES 1 ==================================================== -->
+      <!-- FEATURETTES 1 -->
       <div class="row featurette align-items-center">
         <div class="col-md-7 order-2 order-md-1">
           <h2 class="featurette-heading fw-normal lh-1 text-warning fw-bold">
@@ -343,7 +345,7 @@
       </div>
       <hr class="featurette-divider border border-warning opacity-50" />
 
-      <!-- ========================================FEATURETTES 2 ==================================================== -->
+      <!-- FEATURETTES 2 -->
 
       <div class="row featurette align-items-center">
         <div class="col-md-7 order-2 order-md-2">
@@ -384,7 +386,7 @@
       </div>
       <hr class="featurette-divider border border-warning opacity-50" />
 
-      <!-- ========================================FEATURETTES 3 ==================================================== -->
+      <!--FEATURETTES 3 -->
 
       <div class="row featurette align-items-center">
         <div class="col-md-7 order-2 order-md-1">
@@ -427,7 +429,7 @@
     </div>
   </main>
 
-  <!-- ================================================ FOOTER =========================================================== -->
+  <!--  FOOTER  -->
 
   <footer class="mt-auto bg-dark text-light border-top border-warning py-5 overflow-hidden">
     <div class="container">
