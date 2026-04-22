@@ -71,25 +71,35 @@ const carosello = document.getElementById('caroselloProfs')
 
 
 profs.forEach( p => {
-    
-    let id = p.id
-    let nome = p.nome
-    let materia = p.materia
-    let motto = p.motto
 
-    const slideProf = document.createElement('div');
+  // const sliderProf = document.createElement('div')
+  
+  if (p = profs[0]) {
 
-    slideProf.innerHTML +=
-        `<div class="carousel-item active">
-            <img src="../../assets/img/prof_square_${id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
+    carosello.innerHTML =
+      `<div class="carousel-item active">
+            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
             <div class="carousel-caption position-relative start-0">
-                <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">$</h5>
-                <p class="m-auto text-dark-gray">' + nome + '</p>
-                <p class="m-auto text-dark-gray">' + materia + '</p>
+                <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
+                <p class="m-auto text-dark-gray">${p.nome}</p>
+                <p class="m-auto text-dark-gray">${p.materia}</p>
             </div>
         </div>`
-    
+  } else if (p != profs[0]){
 
-    carosello.appendChild(slideProf)
+      carosello.innerHTML =
+      `<div class="carousel-item">
+            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
+            <div class="carousel-caption position-relative start-0">
+                <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
+                <p class="m-auto text-dark-gray">${p.nome}</p>
+                <p class="m-auto text-dark-gray">${p.materia}</p>
+            </div>
+        </div>`
+  }
+  
+  // carosello.appendChild(sliderProf)
+
+
 
 })
