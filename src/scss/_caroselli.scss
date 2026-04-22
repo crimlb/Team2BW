@@ -1,0 +1,99 @@
+
+// carosello homepage
+
+.carosello {
+    margin-top: 50px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.slider-card {
+    display: flex;
+    gap: clamp(8px, 2vw, 24px);
+    width: max-content;
+    animation: slider 25s linear infinite;
+    padding-bottom: 1rem;
+}
+
+.slider-card::-webkit-scrollbar {
+  display: none; /* opzionale: nasconde scrollbar */
+}
+
+.sliderCardDimensione {
+    width: clamp(140px, 18vw, 30rem);
+    /* responsive automatico */
+    flex-shrink: 0;
+}
+
+
+@keyframes slider {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width:1024px){
+    .sliderCardDimensione {
+        width: 40rem;
+    }
+}
+
+// carosello chiSiamo
+
+.slider-about-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-about-track {
+    display: flex;
+    width: max-content;
+    animation: sliderAbout 45s linear infinite;
+}
+
+.slider-about-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+
+}
+
+
+
+@keyframes sliderAbout {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 10px));
+    }
+}
+
+.carousel-item {
+    transition: transform 5s ease;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 600px;
+    width: 100%;
+}
+
+.carousel-item {
+    position: relative;
+}

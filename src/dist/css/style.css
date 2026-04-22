@@ -11790,9 +11790,78 @@ textarea.form-control-lg {
 .filter-btn.active {
   background: #FFED00;
   color: #0B0C15;
+/* Regole pagina iNostriCorsi */
+.hero-image {
+  height: auto;
+  width: 50rem;
+  z-index: 2;
 }
 
-/* Regole pagina iNostriCorsi */
+.contenitore {
+  width: 100%;
+  max-width: 100%;
+}
+
+.immagineHero2 {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  align-self: flex-end; /* la spinge in basso */
+}
+
+.hero-bg .col-lg-6:first-child {
+  display: flex;
+  align-items: flex-end;
+}
+
+.carosello {
+  margin-top: 50px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.slider-main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.slider-card {
+  display: flex;
+  gap: clamp(8px, 2vw, 24px);
+  width: max-content;
+  animation: slider 25s linear infinite;
+  padding-bottom: 1rem;
+}
+
+.slider-card::-webkit-scrollbar {
+  display: none; /* opzionale: nasconde scrollbar */
+}
+
+.sliderCardDimensione {
+  width: clamp(140px, 18vw, 30rem);
+  /* responsive automatico */
+  flex-shrink: 0;
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sliderCardDimensione {
+    width: 40rem;
+  }
+}
 .slider-about-wrapper {
   overflow: hidden;
   width: 100%;
@@ -11831,92 +11900,6 @@ textarea.form-control-lg {
   position: relative;
 }
 
-body {
-  background-color: #4A5565;
-  width: 100%;
-  max-width: 100%;
-}
-
-body.loading #content {
-  opacity: 0;
-}
-
-#content {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  margin-top: 5px;
-}
-
-#content.fade-out {
-  opacity: 0;
-}
-
-#content.fade-in {
-  opacity: 1;
-}
-
-.carosello {
-  margin-top: 50px;
-  overflow: visible;
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 2;
-}
-
-/* IMMAGINE PRINCIPALE */
-.hero-image {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  max-height: 420px;
-  object-fit: cover;
-  z-index: 2;
-}
-
-.slider-main {
-  overflow: hidden;
-  display: block;
-}
-
-.slider-card {
-  display: flex;
-  gap: 9px;
-  width: max-content;
-  animation: slider 60s linear infinite;
-}
-
-.slider-card video {
-  flex-shrink: 0;
-}
-
-.sliderCardDimensione {
-  width: 30rem;
-  border: 3px solid #FFED00;
-}
-
-@keyframes slider {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-.card-hover {
-  transition: all 0.2s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-6px) scale(1.01);
-}
-
-.hero-wrapper .contenitore {
-  position: relative;
-  z-index: 2;
-}
-
 .footer-links a {
   transition: 0.2s ease;
   opacity: 0.75;
@@ -11938,5 +11921,37 @@ body.loading #content {
   opacity: 1;
   transform: translateY(-3px) scale(1.15);
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+body.loading #content {
+  opacity: 0;
+}
+
+#content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+#content.fade-out {
+  opacity: 0;
+}
+
+#content.fade-in {
+  opacity: 1;
+}
+
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* Regole pagina iNostriCorsi */
 
 /*# sourceMappingURL=style.css.map */
