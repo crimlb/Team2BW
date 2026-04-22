@@ -1,2 +1,43 @@
+@use "colori" as *;
 
+.btn-hero-prof {
+    background-color: $neroSfondo;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $gialloTitoloBottoni;
+    align-content: center;
+}
 
+.btn-hero-prof:hover {
+    background-color: $gialloTitoloBottoni;
+    color: $neroSfondo;
+}
+
+.btn-hero-campus {
+    background-color: $gialloTitoloBottoni;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $neroSfondo;
+    align-content: center;
+}
+
+.btn-hero-campus:hover {
+    background-color: $neroSfondo;
+    color: $gialloTitoloBottoni;
+    border: 2px solid $gialloTitoloBottoni;
+}
+
+.card-campus {
+    transition: 0.5s ease;
+}
+
+.card-campus:hover{
+    transform:translate(0,-20px);
+}
+.btn-contatti{
+    background-color: $neroSfondo;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $gialloTitoloBottoni;
+}
+.btn-contatti:hover {
+    background-color: $gialloTitoloBottoni;
+    color: $neroSfondo;
+}
