@@ -63,6 +63,7 @@
 .slider-about-track {
     display: flex;
     width: max-content;
+    min-height: 250px;
     animation: sliderAbout 45s linear infinite;
 }
 
