@@ -26,12 +26,12 @@ function verificaLogin(username, password) {
 
 function creaUtente(username, nome, cognome, email, password, corso) {
   const corsi = {
-    '1': 'Fondamenti del Coding',
-    '2': 'Full Stack Web Developer',
+    '1': 'Full Stack Web Developer',
+    '2': 'Java SpringBoot Backend',
     '3': 'Mobile App Developer',
     '4': 'AI & Machine Learning',
-    '5': 'Advanced Developer',
-    '6': 'Orientamento Tecnologico'
+    '5': 'Data Analyst',
+    '6': 'Cybersecurity'
   };
   return {
     matricola: 'PU-' + new Date().getFullYear() + '-' + Math.floor(100000 + Math.random() * 900000),
