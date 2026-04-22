@@ -45,61 +45,179 @@ const profs = [
 
 ];
 
-// template
+// creazione card Campus
 
-/*                 <div class="carousel-item active">
-                  <img
-                    src="../../assets/img/prof_square_1.png"
-                    class="m-auto mb-5 d-block w-50 rounded-circle"
-                    alt="..."
-                  />
-                  <div class="carousel-caption position-relative start-0">
-                    <h5
-                      class="m-auto display fs-6 fw-bold col-8 text-light mb-3"
+/* template 
+
+            <section
+              class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3"
+            >
+              <header class="border border-0 mt-3">
+                <h3 class="text-center text-warning fw-semibold display-6">
+                  Campus<br />Roma
+                </h3>
+              </header>
+              <main class="p-3 text-center">
+                <img
+                  class="img-fluid mb-3"
+                  src="../../assets/img/campus_roma.png"
+                  alt=""
+                />
+
+                <span class="text-white text-center"
+                  >Roma — Via delle Tecnologie Digitali 42, 00144 Roma
+                  (RM)</span
+                >
+              </main>
+              <footer class="p-3 border-box">
+                <div class="accordion" id="accordionRoma">
+                  <div class="accordion-item rounded-0 campus-accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed bg-dark text-warning rounded-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Ingegneria Informatica
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionRoma"
                     >
-                      "Capire la logica è più importante che memorizzare il
-                      codice."
-                    </h5>
-                    <p class="m-auto text-dark-gray">Giulia Ferri</p>
-                    <p class="m-auto text-dark-gray">
-                      Insegnante di Programmazione Base
-                    </p>
+                      <div
+                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
+                      >
+                        <p class="my-2">
+                          Un percorso completo per comprendere
+                          <strong>sistemi informatici</strong>, dalla
+                          programmazione alle architetture software.<br /><br />
+                          Imparerai a progettare applicazioni, gestire database
+                          e ottimizzare le performance.<br /><br />
+                          Il corso unisce <strong>teoria e pratica</strong>,
+                          formando professionisti capaci di risolvere problemi
+                          complessi e costruire soluzioni scalabili.
+                        </p>
+                        <button
+                          type="button"
+                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
+                        >
+                          Vai alla pagina del Corso
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div> */
+                  <div class="accordion-item rounded-0 campus-accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed bg-dark text-warning rounded-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Ingegneria dell'Automazione
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionRoma"
+                    >
+                      <div
+                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
+                      >
+                        <p class="my-2">
+                          Un percorso che integra
+                          <strong
+                            >software, elettronica e sistemi automatici</strong
+                          >
+                          per il controllo dei processi industriali.<br /><br />
+                          Imparerai a sviluppare robotica, sistemi intelligenti
+                          e automazioni.<br /><br />
+                          Formerai competenze per ottimizzare produzione e
+                          processi con tecnologie moderne.
+                        </p>
+                        <button
+                          type="button"
+                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
+                        >
+                          Vai alla pagina del Corso
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item rounded-0 campus-accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed bg-dark text-warning rounded-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Ingegneria del Software
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionRoma"
+                    >
+                      <div
+                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
+                      >
+                        <p class="my-2">
+                          <strong>Ingegneria del Software</strong><br /><br />
+                          Un corso focalizzato sulla
+                          <strong
+                            >progettazione e sviluppo di applicazioni
+                            software</strong
+                          >
+                          di qualità.<br /><br />
+                          Imparerai metodologie, pattern e strumenti per creare
+                          sistemi robusti e scalabili.<br /><br />
+                          Acquisirai competenze per lavorare in team e gestire
+                          progetti complessi.
+                        </p>
+                        <button
+                          type="button"
+                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
+                        >
+                          Vai alla pagina del Corso
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </section> */
 
+
+// carosello professori
 const carosello = document.getElementById('caroselloProfs')
 
 
 profs.forEach( p => {
 
-  // const sliderProf = document.createElement('div')
+    carosello.innerHTML +=
+      `<div class="carousel-item" id="slideProf">
+            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
+            <div class="carousel-caption position-relative start-0">
+                <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
+                <p class="m-auto text-dark-gray">${p.nome}</p>
+                <p class="m-auto text-dark-gray">${p.materia}</p>
+            </div>
+        </div>`
   
-  if (p = profs[0]) {
-
-    carosello.innerHTML =
-      `<div class="carousel-item active">
-            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
-            <div class="carousel-caption position-relative start-0">
-                <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
-                <p class="m-auto text-dark-gray">${p.nome}</p>
-                <p class="m-auto text-dark-gray">${p.materia}</p>
-            </div>
-        </div>`
-  } else if (p != profs[0]){
-
-      carosello.innerHTML =
-      `<div class="carousel-item">
-            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
-            <div class="carousel-caption position-relative start-0">
-                <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
-                <p class="m-auto text-dark-gray">${p.nome}</p>
-                <p class="m-auto text-dark-gray">${p.materia}</p>
-            </div>
-        </div>`
+     if (p.id === 1) {
+     const profActive = document.getElementById('slideProf')
+     profActive.classList.add("active")
   }
-  
-  // carosello.appendChild(sliderProf)
-
-
-
 })
