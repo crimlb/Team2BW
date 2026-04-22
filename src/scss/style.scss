@@ -3,10 +3,10 @@
 
 
 
-$font-family-base : "Source Code Pro",
-monospace;
-
-@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ($theme-colors: ("secondary": $grigioScuroCard,
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
+  
+$theme-colors: (
+      "secondary": $grigioScuroCard,
       "warning": $gialloTitoloBottoni, // titoli e bottoni 
       "danger": $rosso,
       "light": $bianco, // testo normale
@@ -16,130 +16,21 @@ monospace;
 
    ),
 
-   $font-family-base: $font-family-base);
+   $font-family-base: $source-code,
+   );
 
-@use "./navbar";
+  //componenti home 
+@use "navbar";
+@use "hero";
+@use "caroselli";
+@use "footer";
+
+ // style pagine default
+@use "homepage";
 @use "news";
 @use "iNostriCorsi";
 @use "chiSiamo";
 
 
-body {
-   background-color: $grigio;
-   width: 100%;
-   max-width: 100%;
-}
-
-body.loading #content {
-   opacity: 0;
-}
 
 
-#content {
-   opacity: 1;
-   transition: opacity 0.3s ease-in-out;
-   margin-top: 5px;
-}
-
-#content.fade-out {
-   opacity: 0;
-}
-
-#content.fade-in {
-   opacity: 1;
-}
-
-.carosello {
-   margin-top: 50px;
-   overflow: visible;
-   text-align: center;
-   width: 100%;
-   max-width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   position: relative;
-   z-index: 2;
-}
-
-/* IMMAGINE PRINCIPALE */
-.hero-image {
-   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-   max-height: 420px;
-   object-fit: cover;
-   z-index: 2;
-}
-
-
-
-
-
-.slider-main {
-   overflow: hidden;
-   display: block;
-}
-
-.slider-card {
-   display: flex;
-   gap: 9px;
-   width: max-content;
-   animation: slider 60s linear infinite;
-}
-
-.slider-card video {
-   flex-shrink: 0;
-}
-
-.sliderCardDimensione {
-   width: 30rem;
-   border: 3px solid $gialloTitoloBottoni;
-}
-
-
-@keyframes slider {
-   from {
-      transform: translateX(0);
-   }
-
-   to {
-      transform: translateX(-50%);
-   }
-}
-
-.card-hover {
-   transition: all 0.2s ease;
-}
-
-.card-hover:hover {
-   transform: translateY(-6px) scale(1.01);
-}
-
-
-.hero-wrapper .contenitore {
-   position: relative;
-   z-index: 2;
-}
-
-
-
-// ================================================FOOTER=============================================
-.footer-links a {
-   transition: 0.2s ease;
-   opacity: 0.75;
-}
-
-.footer-links a:hover {
-   color: #ffc107;
-   opacity: 1;
-   transform: translateX(5px);
-}
-
-.footer-icons a {
-   transition: 0.2s ease;
-   opacity: 0.7;
-}
-
-.footer-icons a:hover {
-   color: #ffc107;
-   opacity: 1;
-   transform: translateY(-3px) scale(1.15);
-}
