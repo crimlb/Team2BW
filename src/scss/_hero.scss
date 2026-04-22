@@ -4,4 +4,23 @@
     z-index: 2;
 }
 
+.contenitore{
+    width: 100%;
+    max-width: 100%;
+}
 
+.immagineHero2 {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  align-self: flex-end; /* la spinge in basso */
+}
+
+.hero-bg .col-lg-6:first-child {
+  display: flex;
+  align-items: flex-end;
+}
+
+// .contenitoreHero2{
+   
+// }

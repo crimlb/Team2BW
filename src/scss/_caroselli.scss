@@ -19,21 +19,21 @@
 }
 
 .slider-card {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+    display: flex;
+    gap: clamp(8px, 2vw, 24px);
+    width: max-content;
+    animation: slider 25s linear infinite;
+    padding-bottom: 1rem;
 }
+
 .slider-card::-webkit-scrollbar {
   display: none; /* opzionale: nasconde scrollbar */
 }
 
-
 .sliderCardDimensione {
-   flex: 0 0 auto;
-  width: 90%;
-  max-width: 100%;
-  height: auto;
+    width: clamp(140px, 18vw, 30rem);
+    /* responsive automatico */
+    flex-shrink: 0;
 }
 
 
@@ -47,6 +47,11 @@
     }
 }
 
+@media screen and (min-width:1024px){
+    .sliderCardDimensione {
+        width: 40rem;
+    }
+}
 
 // carosello chiSiamo
 

@@ -11770,48 +11770,32 @@ textarea.form-control-lg {
   width: 150px;
 }
 
-/* .hero-image {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    max-height: 420px;
-    object-fit: cover;
-    z-index: 2;
-} */
-/* 
- .hero-wrapper{
-    width: 100%;
-    max-height: 600px;
-
-}
-
-.hero-content {
-    top:5%;
-    left: 8%;
-    max-width: 300px;
-    transform: scale(0.75);
-
-}
-
-.hero-bg {
-
-} */
-.hero-wrapper .contenitore {
-  position: relative;
+.hero-image {
+  height: auto;
+  width: 50rem;
   z-index: 2;
+}
+
+.contenitore {
   width: 100%;
   max-width: 100%;
 }
 
-/* IMMAGINE PRINCIPALE */
-.hero-image {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  max-height: 420px;
-  object-fit: cover;
-  z-index: 2;
+.immagineHero2 {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  align-self: flex-end; /* la spinge in basso */
+}
+
+.hero-bg .col-lg-6:first-child {
+  display: flex;
+  align-items: flex-end;
 }
 
 .carosello {
   margin-top: 50px;
-  overflow: visible;
+  overflow: hidden;
   text-align: center;
   width: 100%;
   max-width: 100%;
@@ -11822,23 +11806,26 @@ textarea.form-control-lg {
 }
 
 .slider-main {
-  overflow: hidden;
-  display: block;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .slider-card {
   display: flex;
-  gap: 9px;
+  gap: clamp(8px, 2vw, 24px);
   width: max-content;
-  animation: slider 60s linear infinite;
+  animation: slider 25s linear infinite;
+  padding-bottom: 1rem;
 }
 
-.slider-card video {
-  flex-shrink: 0;
+.slider-card::-webkit-scrollbar {
+  display: none; /* opzionale: nasconde scrollbar */
 }
 
 .sliderCardDimensione {
-  width: 30rem;
+  width: clamp(140px, 18vw, 30rem);
+  /* responsive automatico */
+  flex-shrink: 0;
 }
 
 @keyframes slider {
@@ -11847,6 +11834,11 @@ textarea.form-control-lg {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sliderCardDimensione {
+    width: 40rem;
   }
 }
 .slider-about-wrapper {
@@ -11909,9 +11901,8 @@ textarea.form-control-lg {
   transform: translateY(-3px) scale(1.15);
 }
 
-body {
-  width: 100%;
-  max-width: 100%;
+html, body {
+  overflow-x: hidden;
 }
 
 body.loading #content {
