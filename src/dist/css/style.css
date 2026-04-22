@@ -11886,7 +11886,7 @@ textarea.form-control-lg {
 }
 
 .footer-links a:hover {
-  color: #ffc107;
+  color: #FFED00;
   opacity: 1;
   transform: translateX(5px);
 }
@@ -11897,7 +11897,7 @@ textarea.form-control-lg {
 }
 
 .footer-icons a:hover {
-  color: #ffc107;
+  color: #FFED00;
   opacity: 1;
   transform: translateY(-3px) scale(1.15);
 }
@@ -11930,6 +11930,17 @@ body.loading #content {
 
 .card-hover:hover {
   transform: translateY(-6px) scale(1.01);
+}
+
+.btnHome {
+  background-color: #0B0C15;
+  border: 2px solid #FFED00;
+  color: #FFED00;
+}
+
+.btnHome:hover {
+  background-color: #FFED00;
+  color: #0B0C15;
 }
 
 /* Regole della pagina di news */
