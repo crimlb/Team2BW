@@ -38,17 +38,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
           <ul class="navbar-nav align-items-lg-center gap-1 me-lg-2 mt-2 mt-lg-0">
             <li class="nav-item">
-              <a href="./news/news.html" class="nav-link px-2 text-dark fw-bold">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
-            </li>
-            <li class="nav-item">
               <a href="./chiSiamo/chiSiamo.html" class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
             </li>
+            <li class="nav-item">
+              <a href="./iNostriCorsi/iNostriCorsi.html" class="nav-link px-2 text-dark fw-bold">Corsi</a>
+            </li>
+            <li class="nav-item">
+              <a href="./news/news.html" class="nav-link px-2 text-dark fw-bold">News</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./chiSiamo/chiSiamo.html#contatti" class="nav-link px-2 text-dark fw-bold">Contatti</a>
+            </li>
+
           </ul>
 
           <!-- Bottoni: full-width su mobile, auto su desktop -->
@@ -58,7 +60,7 @@
               Login
             </button>
             <!-- MODALE LOGIN -->
-           <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content rounded-0">
@@ -72,11 +74,10 @@
                       Credenziali non valide. Controlla username e password.
                     </div>
                     <div class="input-group mb-3 mt-3 w-100">
-                      <input type="text" class="form-control rounded-0" id="login-username" placeholder="*Nome Utente">              
+                      <input type="text" class="form-control rounded-0" id="login-username" placeholder="*Nome Utente">
                     </div>
                     <div class="input-group mb-3 mt-3 w-100">
-                      <input type="password" class="form-control rounded-0" id="login-password"
-                        placeholder="*Password">
+                      <input type="password" class="form-control rounded-0" id="login-password" placeholder="*Password">
                     </div>
                   </div>
                   <div class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0">
@@ -97,7 +98,7 @@
               Iscrizione
             </button>
             <!-- MODALE REGISTRAZIONE -->
-              <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
               aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable rounded">
                 <div class="modal-content rounded-0">
@@ -112,12 +113,10 @@
                         Compila tutti i campi obbligatori e accetta i termini.
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="text" class="form-control rounded-0" id="reg-username"
-                          placeholder="*Nome Utente">
+                        <input type="text" class="form-control rounded-0" id="reg-username" placeholder="*Nome Utente">
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="text" class="form-control rounded-0" id="reg-nome"
-                          placeholder="*Nome">
+                        <input type="text" class="form-control rounded-0" id="reg-nome" placeholder="*Nome">
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
                         <input type="text" class="form-control rounded-0" id="reg-cognome" placeholder="*Cognome">
@@ -127,10 +126,10 @@
                           placeholder="example@email.it">
                       </div>
                       <div class="input-group input-group-lg w-100 mb-3">
-                        <input type="password" class="form-control rounded-0" id="reg-password"
-                          placeholder="*Password">
+                        <input type="password" class="form-control rounded-0" id="reg-password" placeholder="*Password">
                       </div>
-                      <select class="form-select form-select-lg mb-3 rounded-0" id="reg-corso" aria-label="Scelta corso">
+                      <select class="form-select form-select-lg mb-3 rounded-0" id="reg-corso"
+                        aria-label="Scelta corso">
                         <option value="">Cosa ti piacerebbe studiare?</option>
                         <option value="1">Voglio iniziare da zero</option>
                         <option value="2">Voglio diventare sviluppatore web</option>
@@ -150,8 +149,8 @@
                           personali per le finalità ivi indicate</a>
                       </div>
                     </div>
- 
- 
+
+
                   </div>
                   <div class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0">
                     <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
@@ -172,20 +171,13 @@
   <main id="content" class="container-fluid ">
     <!--INIZIO HERO-->
     <div class="hero-wrapper">
-      <div class="position-absolute z-1 top-1 start-0 w-100 h-100 bg-dark opacity-50"></div>
-      <div class="contenitore container
-      col-xxl-8 px-4 py-5 hero-bg d-flex align-items-center
-            min-vh-100 min-vh-md-75" style="
-              background: url(../assets/img/backgroundHero.webp)
-                center/cover no-repeat;
-              max-height: 80vh;
-              display: flex;
-              align-items: center;">
-        <div class="row flex-lg-row align-items-center g-5 position-relative z-2">
-          <div class="col-10 col-sm-8 col-lg-6"></div>
-          <div class="col-lg-6">
+      <div class="position-absolute z-1 top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+      <div class="contenitore container col-xxl-8 px-4 py-5 hero-bg d-flex align-items-center">
+        <div class="row flex-lg-row align-items-center g-5 position-relative z-2 w-100">
+          <div class="col-sm-8 col-lg-6 d-none d-lg-block"></div>
+          <div class="col-12 col-lg-6">
             <h1 class="display-1 fw-bold text-warning lh-1 mb-3 text-shadow">
-              La tua carriera nel <span class="fw-bold">coding</span> inizia
+              La tua carriera nel <span class="fw-bolder">coding</span> inizia
               qui!
             </h1>
             <p class="lead text-light fw-semibold">
@@ -254,9 +246,8 @@
                       Workshop, open day e incontri con mentor per iniziare la tua carriera nel tech.
                     </p>
                   </div>
-                  <button href="./news/news.html"
-                    class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
-                    Scopri</button>
+                  <a class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0"
+                    href="../dist/news/news.html">Scopri</a>
                 </div>
               </div>
               <!-- CARD 2 -->
@@ -271,10 +262,10 @@
                       Programmi intensivi per diventare developer in pochi mesi
                     </p>
                   </div>
-                  <button href="./iNostriCorsi/iNostriCorsi.html"
+                  <a href="./iNostriCorsi/iNostriCorsi.html"
                     class="fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
-                  </button>
+                  </a>
                 </div>
               </div>
               <!-- CARD 3 -->
@@ -290,10 +281,10 @@
                       Docenti attivi nel settore tech e supporto continuo
                     </p>
                   </div>
-                  <button href="./chiSiamo/chiSiamo.html#professori"
+                  <a href="./chiSiamo/chiSiamo.html#professori"
                     class=" fw-bold btn btn-warning btn-lg px-4 btn-press border border-dark rounded-0">
                     Scopri
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -384,14 +375,27 @@
               Portfolio pronto per le aziende
             </div>
           </div>
-          <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
-            Scopri il metodo
-          </a>
+
         </div>
         <div class="col-md-5 order-1 order-md-1">
           <img src="https://www.autel.it/wp-content/uploads/2022/01/2022.01.12-400x250.png"
             class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
             alt="Progetti reali" />
+        </div>
+      </div>
+      <p class="d-inline-flex gap-1 justify-content-end w-100">
+        <a class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0"
+          data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+          aria-controls="collapseExample">
+          Scopri il metodo
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body bg-secondary rounded-0 p-4 shadow-sm text-light border border-grigio border-2">
+          Il nostro metodo, migliorato edizione dopo edizione, è fortemente basato sulla pratica e sul
+          learning by doing.
+          Ha già aiutato migliaia di studenti ad acquisire nuove competenze grazie a un percorso
+          ben strutturato e seguito in tutte le fasi di apprendimento per velocizzare l'inserimento al lavoro.
         </div>
       </div>
       <hr class="featurette-divider border border-warning opacity-50" />
@@ -425,14 +429,32 @@
               Network con aziende partner
             </div>
           </div>
-          <a href="#" class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0">
-            Inizia la tua carriera
-          </a>
         </div>
         <div class="col-md-5 order-1 order-md-2">
           <img src="https://edotto-prod-acl.s3.eu-central-1.amazonaws.com/56b0aabcfdb94d15a82f9448"
             class="featurette-image immagini img-fluid mx-auto shadow border border-warning" loading="lazy"
             alt="Career support" />
+        </div>
+      </div>
+      <p class="d-inline-flex gap-1 w-100">
+        <a class="btn btn-warning mt-3 fw-semibold btn-press border border-dark fw-bold rounded-0"
+          data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
+          aria-controls="collapseExample2">
+          Inizia la tua carriera
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body bg-secondary rounded-0 p-4 shadow-sm text-light border border-grigio border-2">
+          Molti pensano che imparare a programmare sia fine a sé stesso.
+          In realtà, è uno strumento concreto per costruire il proprio futuro professionale.
+
+          Entrare nel mondo del lavoro oggi richiede competenze pratiche, progetti reali e la capacità di distinguersi.
+          Per questo non ti lasciamo solo dopo la formazione.
+
+          Ti supportiamo nella creazione del tuo portfolio, nella preparazione ai colloqui e nell’ingresso nel mondo del
+          lavoro.
+          Il nostro obiettivo non è solo insegnarti a programmare, ma aiutarti a trasformare queste competenze in una
+          vera opportunità professionale.
         </div>
       </div>
       <hr class="featurette-divider" />
@@ -468,13 +490,14 @@
           <h6 class="text-warning">Corsi</h6>
           <ul class="list-unstyled footer-links">
             <li>
-              <a href="#" class="text-light text-decoration-none">Frontend</a>
+              <a href="./iNostriCorsi/iNostriCorsi.html#fullstack" class="text-light text-decoration-none">Full
+                Stack</a>
             </li>
             <li>
-              <a href="#" class="text-light text-decoration-none">Backend</a>
+              <a href="./iNostriCorsi/iNostriCorsi.html#frontend" class="text-light text-decoration-none">Frontend</a>
             </li>
             <li>
-              <a href="#" class="text-light text-decoration-none">Full Stack</a>
+              <a href="./iNostriCorsi/iNostriCorsi.html#backend" class="text-light text-decoration-none">Backend</a>
             </li>
           </ul>
         </div>
@@ -500,16 +523,16 @@
           <h6 class="text-warning">Contatti</h6>
 
           <p class="mb-1">
-            <a href="./chiSiamo/chiSiamo.html#campusRoma"
+            <a href="./chiSiamo/chiSiamo.html#campusroma"
               class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"> Roma, Italia</a>
           </p>
           <p class="mb-1">
-            <a href="./chiSiamo/chiSiamo.html#campusMilano"
+            <a href="./chiSiamo/chiSiamo.html#campusmilano"
               class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none">Milano, Italia</a>
 
           </p>
           <p class="mb-1">
-            <a href="./chiSiamo/chiSiamo.html#campusNapoli"
+            <a href="./chiSiamo/chiSiamo.html#campusnapoli"
               class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"> Napoli, Italia</a>
 
           </p>
@@ -537,6 +560,7 @@
   </footer>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./dashboard/utente.js"></script>
-  <script src="./script.js"></script></body>
+  <script src="./script.js"></script>
+</body>
 
 </html>
