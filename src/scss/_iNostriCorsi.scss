@@ -41,32 +41,49 @@
 }
 
 
-.hero-wrapper {
-position: relative; // fondamentale per l'overlay assoluto
-overflow: hidden;
+.hero-image {
+    height: auto;
+    width: 50rem;
+    z-index: 2;
 }
-//   @media (max-width: 576px) {
-//     overflow: visible;
-//   }
-// }
 
-// .hero-bg{
-//   background: url("") center/cover no-repeat;
-//   min-height: 100vh;
+.contenitore{
+    width: 100%;
+    max-width: 100%;
+}
 
 
-// @media (max-width: 992px){
-//     min-height: 70vh;
-//     background-position: 70% center;
-//   }
+.hero-wrapper {
+  position: relative; // fondamentale per l'overlay assoluto
+  overflow: hidden;
 
-//   @media (max-width: 576px) {
-//     min-height: 100svh;
-//     background-size: cover;
-//     background-position: 65% center;
-//     display: flex !important;
-//     align-items: center !important;
-//     padding-bottom: 3rem; 
-//   }
+  @media (max-width: 576px) {
+    overflow: visible;
+  }
+}
+
+.hero-bg{
+  background: url("../../assets/img/pattern-bg-corsi-reduced-light.png") center/cover no-repeat;
+  min-height: 100vh;
+
+
+@media (max-width: 992px){
+    min-height: 70vh;
+    background-position: 70% center;
+  }
+
+  @media (max-width: 576px) {
+    min-height: 100svh;
+    background-size: cover;
+    background-position: 65% center;
+    display: flex !important;
+    align-items: center !important;
+    padding-bottom: 3rem; 
+  }
+
+}
+.img-accordion{
+    width: 300px;
+}
 
 // }
