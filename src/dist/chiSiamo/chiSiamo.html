@@ -499,7 +499,7 @@
           </h2>
 
           <div
-            class="d-flex flex-column flex-md-row container-fluid flex-wrap w-100 gap-5 gap-md-0 gap-lg-5 justify-content-between align-items-start mt-5"
+            class="d-flex flex-column flex-md-row container-fluid flex-wrap w-100 gap-5 gap-md-0 gap-lg-5 justify-content-evenly align-items-start mt-5"
             id="cardsContainer"
           >
             <!-- contenuto dinamico -->
@@ -507,7 +507,7 @@
         </section>
 
         <!-- Sezione professori-->
-        <section class="my-5 py-5" id="professori">
+        <section class="my-5 py-5" id="professori ">
           <h2 class="display-3 text-warning text-center mb-5 fw-bold">
             I nostri Professori
           </h2>
@@ -553,7 +553,7 @@
           </div>
         </section>
 
-        <section class="px-3 pb-5">
+        <section class="px-3 pb-5" id="contatti">
           <h2 class="text-warning text-center display-3 fw-bold">Contattaci</h2>
           <div class="container-fluid mt-5 col-10 col-md-8 col-lg-6 m-auto">
             <form class="d-flex flex-column gap-3 w-100">
@@ -561,15 +561,24 @@
                 type="text"
                 class="form-control rounded-0"
                 placeholder="Nome"
+                id="contatti-nome"
               />
               <input
                 type="text"
                 class="form-control rounded-0"
                 placeholder="Cognome"
+                id="contatti-cognome"
+              />
+              <input
+                type="email"
+                class="form-control rounded-0"
+                placeholder="la-tua@email.com"
+                id="contatti-email"
               />
               <select
                 class="form-select rounded-0"
                 aria-label="Default select example"
+                id="contatti-select"
               >
                 <option selected>Per cosa vuoi avere informazioni?</option>
                 <option value="ingegneria_informatica">
@@ -598,6 +607,7 @@
                 class="form-control rounded-0"
                 placeholder="Scrivi qui il tuo messaggio"
                 rows="8"
+                id="contatti-msg"
               ></textarea>
               <button
                 type="button"
