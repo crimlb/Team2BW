@@ -1,12 +1,12 @@
 .hero-image {
-    height: auto;
-    width: 50rem;
-    z-index: 2;
+  height: auto;
+  width: 50rem;
+  z-index: 2;
 }
 
-.contenitore{
-    width: 100%;
-    max-width: 100%;
+.contenitore {
+  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -19,23 +19,21 @@
   }
 }
 
-.hero-bg{
+.hero-bg {
   background: url("../../assets/img/backgroundHero.webp") center/cover no-repeat;
-  min-height: 100vh;
+background-size: contain;
 
-
-@media (max-width: 992px){
-    min-height: 70vh;
-    background-position: 70% center;
+  @media (max-width: 992px) {
+        background-position: center;
+        background-size: contain;
+        text-align: right;
   }
 
   @media (max-width: 576px) {
-    min-height: 100svh;
-    background-size: cover;
-    background-position: 65% center;
+    background-size: contain;
+    background-position: center;
     display: flex !important;
     align-items: center !important;
-    padding-bottom: 3rem; 
   }
 
 }
