@@ -201,8 +201,10 @@ const cardsContainer = document.querySelector("#cardsContainer");
 campus.forEach((c) => {
   const vociAccordion = desc_corsi.filter((vc) => vc.campus == c.id);
 
-  cardsContainer.innerHTML += `<section class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3 id="campus${c.nome}">
-              <header class="border border-0 mt-3">
+  //  const cName = c.nome.trimAll();
+
+  cardsContainer.innerHTML += `<section class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3" id="campus${c.nome.toLowerCase()}">
+              <header class='border border-0 mt-3'>
                 <h3 class="text-center text-warning fw-semibold display-6">
                 Campus<br />${c.nome}
                 </h3>
@@ -218,13 +220,16 @@ campus.forEach((c) => {
               </footer>
             </section>`;
 
+  console.log(c.nome.toLowerCase());
+
   const accordionCampus = document.getElementById(`accordion${c.nome}`);
 
   vociAccordion.forEach((vc) => {
     const collapseId = `collapse-${c.id}-${vc.corso}`;
     const prof = profs.find((p) => p.id === vc.prof);
 
-    accordionCampus.innerHTML += `                  <div class="accordion-item rounded-0 campus-accordion-item">
+    accordionCampus.innerHTML += `                  
+                    <div class="accordion-item rounded-0 campus-accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed bg-dark text-warning rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="true" aria-controls="${collapseId}">${corsi[vc.corso]}</button>
                     </h2>

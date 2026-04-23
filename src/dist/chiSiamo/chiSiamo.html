@@ -61,22 +61,31 @@
             >
               <li class="nav-item">
                 <a
+                  href="./chiSiamo.html"
+                  class="nav-link px-2 text-dark fw-bold"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="nav-link px-2 text-dark fw-bold"
+                  >Corsi</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
                   href="../news/news.html"
                   class="nav-link px-2 text-dark fw-bold"
                   >News</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
-              </li>
+
               <li class="nav-item">
                 <a
-                  href="./chiSiamo.html"
+                  href="./chiSiamo.html#contatti"
                   class="nav-link px-2 text-dark fw-bold"
-                  >Chi Siamo</a
+                  >Contatti</a
                 >
               </li>
             </ul>
@@ -87,7 +96,7 @@
             >
               <button
                 type="button"
-                class="btn btn-dark btn-outline-light fw-bold border rounded-0"
+                class="btn btnHome fw-bold border rounded-0"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModalCenter"
               >
@@ -103,7 +112,9 @@
               >
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content rounded-0">
-                    <div class="modal-header bg-warning">
+                    <div
+                      class="modal-header bg-warning border border-dark border-2 rounded-0"
+                    >
                       <h1
                         class="modal-title fs-5 fw-bold"
                         id="exampleModalCenterTitle"
@@ -118,26 +129,32 @@
                       ></button>
                     </div>
                     <div class="modal-body bg-dark text-light">
-                      <div class="input-group mb-3 w-100">
+                      <div
+                        id="login-error"
+                        class="alert alert-danger rounded-0 d-none py-2 small fw-bold"
+                      >
+                        Credenziali non valide. Controlla username e password.
+                      </div>
+                      <div class="input-group mb-3 mt-3 w-100">
                         <input
                           type="text"
                           class="form-control rounded-0"
-                          id="floatingInput5"
-                          placeholder="Nome Utente"
+                          id="login-username"
+                          placeholder="*Nome Utente"
                         />
-                        <label for="floatingInput6">Nome Utente</label>
                       </div>
-                      <div class="input-group mb-3 w-100">
+                      <div class="input-group mb-3 mt-3 w-100">
                         <input
                           type="password"
                           class="form-control rounded-0"
-                          id="floatingPassword3"
-                          placeholder="Password"
+                          id="login-password"
+                          placeholder="*Password"
                         />
-                        <label for="floatingPassword4">Password</label>
                       </div>
                     </div>
-                    <div class="modal-footer bg-warning flex-wrap">
+                    <div
+                      class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0"
+                    >
                       <div class="form-check me-auto">
                         <input
                           class="form-check-input text-dark"
@@ -157,7 +174,7 @@
                       <button
                         type="button"
                         class="btn btn-dark rounded-0"
-                        data-bs-dismiss="modal"
+                        id="btn-login-accedi"
                       >
                         Accedi
                       </button>
@@ -182,9 +199,11 @@
                 aria-labelledby="exampleModalScrollableTitle"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-dialog modal-dialog-scrollable rounded">
                   <div class="modal-content rounded-0">
-                    <div class="modal-header bg-warning">
+                    <div
+                      class="modal-header bg-warning border border-dark border-2 rounded-0"
+                    >
                       <h2
                         class="modal-title fs-5 fw-bold"
                         id="exampleModalScrollableTitle"
@@ -200,11 +219,17 @@
                     </div>
                     <div class="modal-body bg-dark text-light">
                       <div class="bd-example m-0 border-0">
+                        <div
+                          id="reg-error"
+                          class="alert alert-danger rounded-0 d-none py-2 small fw-bold mb-3"
+                        >
+                          Compila tutti i campi obbligatori e accetta i termini.
+                        </div>
                         <div class="input-group input-group-lg w-100 mb-3">
                           <input
                             type="text"
                             class="form-control rounded-0"
-                            id="inputGroup-sizing-default"
+                            id="reg-username"
                             placeholder="*Nome Utente"
                           />
                         </div>
@@ -212,7 +237,7 @@
                           <input
                             type="text"
                             class="form-control rounded-0"
-                            id="inputGroup-sizing-default"
+                            id="reg-nome"
                             placeholder="*Nome"
                           />
                         </div>
@@ -220,7 +245,7 @@
                           <input
                             type="text"
                             class="form-control rounded-0"
-                            id="floatingInput1"
+                            id="reg-cognome"
                             placeholder="*Cognome"
                           />
                         </div>
@@ -228,7 +253,7 @@
                           <input
                             type="email"
                             class="form-control rounded-0"
-                            id="floatingPassword1"
+                            id="reg-email"
                             placeholder="example@email.it"
                           />
                         </div>
@@ -236,17 +261,16 @@
                           <input
                             type="password"
                             class="form-control rounded-0"
-                            id="floatingInput3"
+                            id="reg-password"
                             placeholder="*Password"
                           />
                         </div>
                         <select
                           class="form-select form-select-lg mb-3 rounded-0"
-                          aria-label="Large select example"
+                          id="reg-corso"
+                          aria-label="Scelta corso"
                         >
-                          <option selected="">
-                            Cosa ti piacerebbe studiare?
-                          </option>
+                          <option value="">Cosa ti piacerebbe studiare?</option>
                           <option value="1">Voglio iniziare da zero</option>
                           <option value="2">
                             Voglio diventare sviluppatore web
@@ -267,7 +291,7 @@
                             class="form-check-input"
                             type="checkbox"
                             value=""
-                            id="defaultCheck1"
+                            id="reg-check-termini"
                           />
                           <a href=""
                             >*Accetto i termini e le condizioni d’uso, dichiaro
@@ -281,7 +305,7 @@
                             class="form-check-input"
                             type="checkbox"
                             value=""
-                            id="defaultCheck1"
+                            id="reg-check-privacy"
                           />
                           <a href=""
                             >*Ho preso visione dell'informativa privacy e
@@ -291,7 +315,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="modal-footer bg-warning flex-wrap">
+                    <div
+                      class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0"
+                    >
                       <button
                         type="button"
                         class="btn btn-outline-dark fw-bold rounded-0"
@@ -302,7 +328,7 @@
                       <button
                         type="button"
                         class="btn btn-dark rounded-0"
-                        data-bs-dismiss="modal"
+                        id="btn-registrati"
                       >
                         Registrati
                       </button>
@@ -507,7 +533,7 @@
         </section>
 
         <!-- Sezione professori-->
-        <section class="my-5 py-5" id="professori ">
+        <section class="my-5 py-5" id="professori">
           <h2 class="display-3 text-warning text-center mb-5 fw-bold">
             I nostri Professori
           </h2>
@@ -654,16 +680,28 @@
 
             <!-- SOCIAL ICONS -->
             <div class="d-flex gap-3 footer-icons">
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-github"></i
               ></a>
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-linkedin"></i
               ></a>
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-instagram"></i
               ></a>
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://mail.google.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-envelope"></i
               ></a>
             </div>
@@ -671,17 +709,48 @@
 
           <!-- CORSI -->
           <div class="col-6 col-md-2">
-            <h6 class="text-warning">Corsi</h6>
+            <h6 class="text-warning">I nostri Corsi</h6>
             <ul class="list-unstyled footer-links">
               <li>
-                <a href="#" class="text-light text-decoration-none">Frontend</a>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Full Stack Web Development</a
+                >
               </li>
               <li>
-                <a href="#" class="text-light text-decoration-none">Backend</a>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Java SpringBoot Backend</a
+                >
               </li>
               <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Full Stack</a
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Mobile App Developer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >AI & Machine Learning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Data Analyst</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Cybersecurity</a
                 >
               </li>
             </ul>
@@ -698,7 +767,7 @@
               </li>
               <li>
                 <a
-                  href="../chiSiamo/chiSiamo.html"
+                  href="./chiSiamo.html"
                   class="text-light text-decoration-none"
                   >Chi Siamo</a
                 >
@@ -718,17 +787,36 @@
             <h6 class="text-warning">Contatti</h6>
 
             <p class="mb-1">
-              <i class="bi bi-geo-alt-fill text-warning me-2"></i>
-              Catania, Italia
+              <a
+                href="chiSiamo.html#campusroma"
+                class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"
+              >
+                Roma, Italia</a
+              >
+            </p>
+            <p class="mb-1">
+              <a
+                href="chiSiamo.html#campusmilano"
+                class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"
+                >Milano, Italia</a
+              >
+            </p>
+            <p class="mb-1">
+              <a
+                href="chiSiamo.html#campusnapoli"
+                class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"
+              >
+                Napoli, Italia</a
+              >
             </p>
 
             <p class="mb-1">
-              <i class="bi bi-envelope-fill text-warning me-2"></i>
+              <a class="bi bi-envelope-fill text-warning me-2"></a>
               info@programmersuniversity.it
             </p>
 
             <p>
-              <i class="bi bi-clock-fill text-warning me-2"></i>
+              <a class="bi bi-clock-fill text-warning me-2"></a>
               Lun - Ven | 9:00 - 18:00
             </p>
           </div>
@@ -740,12 +828,12 @@
           class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75"
         >
           <span>Code your future</span>
-          <span>© 2026 Programmers' University</span>
+          <span>Â© 2026 Programmers' University</span>
         </div>
       </div>
     </footer>
 
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="chiSiamo.js"></script>
+    <script src="./chiSiamo.js"></script>
   </body>
 </html>
