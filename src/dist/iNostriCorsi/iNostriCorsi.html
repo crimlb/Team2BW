@@ -276,18 +276,13 @@
       </nav>
     </header>
 
-    <main id="content" class="container-fluid p-0 m-0 bg-dark">
-      <div class="hero-wrapper bg-dark">
-        <div class="hero-bg bg-dark m-0">
+    <main id="content" class="container-fluid p-0 m-0 bg-dark min-vh-100 align-content-center">
+      <div class="hero-wrapper bg-dark d-flex align-content-start">
+        <div class="hero-bg bg-dark m-0 ">
           <div class="contenitore container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5">
               <div class="col-10 col-sm-8 col-lg-6">
-                <!-- <img
-                  src="../assets/img/bgHero.webp"
-                  class="immagini img-fluid mx-lg-auto hero-image"
-                  alt="Temi Bootstrap"
-                  loading="lazy"
-                /> -->
+                
               </div>
               <div class="col-lg-6">
                 <h1 class="display-1 fw-bold text-warning lh-1 mb-3">
@@ -303,12 +298,12 @@
         </div>
       </div>
       <div class="accordion-wrapper container-fluid m-0 p-3">
-        <div class="accordion border-light" id="accordionFlushExample">
-          <div class="accordion-item align-items-center rounded-0">
+        <div class="accordion d-flex flex-column bg-dark gap-3 flex-lg-row border-light justify-content-evenly m-auto p-sm-5 align-items-start" id="accordionFlushExample">
+          <div class="accordion-item flex-wrap rounded-0">
             <h2 class="accordion-header">
 
               <button
-                class="accordion-button collapsed bg-dark text-warning fs-3 fw-bold justify-content-center flex-column"
+                class="accordion-button collapsed bg-dark text-warning fs-3 fw-bold justify-content-center "
                 type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                 aria-controls="flush-collapseOne">
@@ -318,7 +313,7 @@
             </h2>
             <div id="flush-collapseOne"
               class="accordion-collapse bg-dark collapse "
-              data-bs-parent="#accordionFlushExample">
+              >
               <div class="accordion-body bg-dark text-light ">
                 <ul class="list-unstyled text-light bg-dark">
                   <li><a class="nav-link" href="#">Corso 1</a></li>
@@ -327,28 +322,53 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header text-center">
+          <div class="accordion-item  flex-wrap rounded-0">
+            <h2 class="accordion-header align-content-center">
+
               <button
-                class="accordion-button collapsed bg-dark text-warning fs-3 fw-bold border-light"
+                class="accordion-button collapsed bg-dark text-warning fs-3 fw-bold  flex-column"
                 type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo" aria-expanded="false"
                 aria-controls="flush-collapseTwo">
-                Frontend development
+                <i class="bi bi-stack"></i> <br>
+                Fullstack development
               </button>
             </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse "
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body bg-dark border-light">
-                <ul class="list-unstyled text-light">
+            <div id="flush-collapseTwo"
+              class="accordion-collapse bg-dark collapse "
+             
+              >
+              <div class="accordion-body bg-dark text-light ">
+                <ul class="list-unstyled text-light bg-dark">
                   <li><a class="nav-link" href="#">Corso 1</a></li>
                   <li><a class="nav-link" href="#">Corso 2</a></li>
-
                 </ul>
               </div>
             </div>
           </div>
+          <div class="accordion-item flex-wrap  rounded-0">
+            <h2 class="accordion-header">
 
+              <button
+                class="accordion-button collapsed bg-dark text-warning fs-3 fw-bold justify-content-center flex-column"
+                type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                aria-controls="flush-collapseThree">
+                <i class="bi bi-stack"></i> <br>
+                Fullstack development
+              </button>
+            </h2>
+            <div id="flush-collapseThree"
+              class="accordion-collapse bg-dark collapse "
+              >
+              <div class="accordion-body bg-dark text-light ">
+                <ul class="list-unstyled text-light bg-dark">
+                  <li><a class="nav-link" href="#">Corso 1</a></li>
+                  <li><a class="nav-link" href="#">Corso 2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
       </main>
@@ -449,9 +469,6 @@
           </div>
         </div>
       </footer>
-
-      <script
-        src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
       <script
         src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </body>
