@@ -32,12 +32,24 @@
 .card-campus:hover{
     transform:translate(0,-20px);
 }
-.btn-contatti{
+.btn-richiesta{
     background-color: $neroSfondo;
     border: 2px solid $gialloTitoloBottoni;
     color: $gialloTitoloBottoni;
 }
-.btn-contatti:hover {
+.btn-richiesta:hover {
     background-color: $gialloTitoloBottoni;
     color: $neroSfondo;
+}
+
+.btn-reset {
+    background-color: $gialloTitoloBottoni;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $neroSfondo;
+}
+
+.btn-reset:hover {
+    background-color: $neroSfondo;
+    border: 2px solid $rosso;
+    color: $rosso;
 }
