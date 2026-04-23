@@ -268,7 +268,12 @@ profs.forEach((p) => {
 // validazione form contatti
 
 const form = document.querySelector("#contatti");
-const errBox = document.querySelector("#errBox");
+const errBoxNome = document.querySelector("#errBoxNome");
+const errBoxCognome = document.querySelector("#errBoxCognome");
+const errBoxEmail = document.querySelector("#errBoxEmail");
+const errBoxSelect = document.querySelector("#errBoxSelect");
+const errBoxMsg = document.querySelector("#errBoxMsg");
+const msgBox = document.querySelector("#msgBox");
 
 function validaNome(nome) {
   if (!nome) {
@@ -326,14 +331,60 @@ function validaSelezione(select) {
   return null;
 }
 
-function mostraErrori(errori) {
-  errBox.innerHTML = `<p class="d-flex flex-column flex-lg-row m-auto gap-3 justify-content-evenly flex-wrap">
-    ${errori.map((e) => `<span class="text-danger m-auto border border-2 border-danger fw-bold p-3">${e}</span>`).join("")}
-    </p>`;
+function mostraErrori(dati) {
+  const errori = [];
+
+  const errNome = validaNome(dati.nome);
+  if (errNome) {
+    errBoxNome.innerHTML = `<span class="justify-content-center text-danger d-flex flex-fill border border-2 border-danger fw-bold p-3">${errNome}</span>`;
+    errori.push(errNome);
+  }
+
+  const errCognome = validaCognome(dati.cognome);
+  if (errCognome) {
+    errBoxCognome.innerHTML = `<span class="justify-content-center text-danger d-flex flex-fill border border-2 border-danger fw-bold p-3">${errCognome}</span>`;
+    errori.push(errCognome);
+  }
+
+  const errEmail = validaEmail(dati.email);
+  if (errEmail) {
+    errBoxEmail.innerHTML = `<span class="justify-content-center text-danger d-flex flex-fill border border-2 border-danger fw-bold p-3">${errEmail}</span>`;
+    errori.push(errEmail);
+  }
+
+  const errSelect = validaSelezione(dati.select);
+  if (errSelect) {
+    errBoxSelect.innerHTML = `<span class="justify-content-center text-danger d-flex flex-fill border border-2 border-danger fw-bold p-3">${errSelect}</span>`;
+    errori.push(errSelect);
+  }
+
+  const errMsg = validaMsg(dati.msg);
+  if (errMsg) {
+    errBoxMsg.innerHTML = `<span class="justify-content-center text-danger d-flex flex-fill border border-2 border-danger fw-bold p-3">${errMsg}</span>`;
+    errori.push(errMsg);
+  }
+
+  return errori;
+}
+
+function msgOk() {
+  msgBox.innerHTML = `
+    <span class="text-success d-flex text-center justify-content-center border border-2 border-success fw-bold p-3">
+      Messaggio inviato correttamente!
+    </span>
+  `;
 }
 
 function pulisciErrBox() {
-  errBox.innerHTML = "";
+  errBoxNome.innerHTML = "";
+  errBoxCognome.innerHTML = "";
+  errBoxEmail.innerHTML = "";
+  errBoxSelect.innerHTML = "";
+  errBoxMsg.innerHTML = "";
+}
+
+function pulisciMsgOk() {
+  msgBox.innerHTML = "";
 }
 
 //Event listener bottoni
@@ -344,6 +395,9 @@ form.addEventListener("reset", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  pulisciErrBox();
+  pulisciMsgOk();
+
   const dati = {
     nome: form.querySelector("#contatti-nome").value.trim(),
     cognome: form.querySelector("#contatti-cognome").value.trim(),
@@ -352,18 +406,12 @@ form.addEventListener("submit", (e) => {
     msg: form.querySelector("#contatti-msg").value,
   };
 
-  const errori = [
-    validaNome(dati.nome),
-    validaCognome(dati.cognome),
-    validaEmail(dati.email),
-    validaSelezione(dati.select),
-    validaMsg(dati.msg),
-  ];
+  const errori = mostraErrori(dati);
 
   if (errori.length > 0) {
-    mostraErrori(errori);
     return;
   }
 
+  msgOk();
   form.reset();
 });
