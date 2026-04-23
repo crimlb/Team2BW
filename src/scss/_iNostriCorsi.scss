@@ -1,1 +1,9 @@
 /* Regole pagina iNostriCorsi */
+@use "colori" as *;
+
+
+
+.nav-link:hover,.nav-link:active{
+    color: var($rosso)!important;
+}
+
