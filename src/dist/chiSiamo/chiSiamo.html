@@ -553,10 +553,16 @@
           </div>
         </section>
 
-        <section class="px-3 pb-5" id="contatti">
+        <section class="px-3 pb-5">
           <h2 class="text-warning text-center display-3 fw-bold">Contattaci</h2>
+
+          <div
+            class="d-flex flex-column flex-lg-row m-auto gap-3 justify-content-evenly flex-wrap"
+            id="errBox"
+          ></div>
+
           <div class="container-fluid mt-5 col-10 col-md-8 col-lg-6 m-auto">
-            <form class="d-flex flex-column gap-3 w-100">
+            <form class="d-flex flex-column gap-3 w-100" id="contatti">
               <input
                 type="text"
                 class="form-control rounded-0"
@@ -580,7 +586,9 @@
                 aria-label="Default select example"
                 id="contatti-select"
               >
-                <option selected>Per cosa vuoi avere informazioni?</option>
+                <option selected value="default">
+                  Per cosa vuoi avere informazioni?
+                </option>
                 <option value="ingegneria_informatica">
                   Ingegneria Informatica
                 </option>
@@ -609,12 +617,22 @@
                 rows="8"
                 id="contatti-msg"
               ></textarea>
-              <button
-                type="button"
-                class="btn fw-bold p-3 d-block rounded-0 btn-contatti"
+              <div
+                class="d-flex flex-column flex-md-row gap-3 container-fluid justify-content-evenly"
               >
-                Invia la tua richiesta
-              </button>
+                <button
+                  type="submit"
+                  class="btn fw-bold rounded-0 btn-richiesta col-md-5"
+                >
+                  Invia la tua richiesta
+                </button>
+                <button
+                  type="reset"
+                  class="btn fw-bold rounded-0 btn-reset col-md-5"
+                >
+                  Reset
+                </button>
+              </div>
             </form>
           </div>
         </section>

@@ -11999,15 +11999,27 @@ body.loading #content {
   transform: translate(0, -20px);
 }
 
-.btn-contatti {
+.btn-richiesta {
   background-color: #0B0C15;
   border: 2px solid #FFED00;
   color: #FFED00;
 }
 
-.btn-contatti:hover {
+.btn-richiesta:hover {
   background-color: #FFED00;
   color: #0B0C15;
+}
+
+.btn-reset {
+  background-color: #FFED00;
+  border: 2px solid #FFED00;
+  color: #0B0C15;
+}
+
+.btn-reset:hover {
+  background-color: #0B0C15;
+  border: 2px solid #C21111;
+  color: #C21111;
 }
 
 .dashboard-wrapper {
