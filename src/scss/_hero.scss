@@ -22,6 +22,7 @@
 .hero-bg {
   background: url("../../assets/img/backgroundHero.webp") center/cover no-repeat;
 background-size: contain;
+ background-position: center;
 
   @media (max-width: 992px) {
         background-position: center;

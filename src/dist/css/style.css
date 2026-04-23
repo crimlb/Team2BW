@@ -34,14 +34,14 @@
   --bs-warning: #FFED00;
   --bs-danger: #C21111;
   --bs-light: #ffffff;
-  --bs-dark: #0B0C15;
+  --bs-dark: #06060B;
   --bs-grigioChiaro: #A4A5A9;
   --bs-grigio: #4A5565;
   --bs-secondary-rgb: 46, 47, 55;
   --bs-warning-rgb: 255, 237, 0;
   --bs-danger-rgb: 194, 17, 17;
   --bs-light-rgb: 255, 255, 255;
-  --bs-dark-rgb: 11, 12, 21;
+  --bs-dark-rgb: 6, 6, 11;
   --bs-grigioChiaro-rgb: 164, 165, 169;
   --bs-grigio-rgb: 74, 85, 101;
   --bs-primary-text-emphasis: rgb(5.2, 44, 101.2);
@@ -3037,19 +3037,19 @@ textarea.form-control-lg {
 
 .btn-dark {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #0B0C15;
-  --bs-btn-border-color: #0B0C15;
+  --bs-btn-bg: #06060B;
+  --bs-btn-border-color: #06060B;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(47.6, 48.45, 56.1);
-  --bs-btn-hover-border-color: rgb(35.4, 36.3, 44.4);
-  --bs-btn-focus-shadow-rgb: 48, 48, 56;
+  --bs-btn-hover-bg: rgb(43.35, 43.35, 47.6);
+  --bs-btn-hover-border-color: rgb(30.9, 30.9, 35.4);
+  --bs-btn-focus-shadow-rgb: 43, 43, 48;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(59.8, 60.6, 67.8);
-  --bs-btn-active-border-color: rgb(35.4, 36.3, 44.4);
+  --bs-btn-active-bg: rgb(55.8, 55.8, 59.8);
+  --bs-btn-active-border-color: rgb(30.9, 30.9, 35.4);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0B0C15;
-  --bs-btn-disabled-border-color: #0B0C15;
+  --bs-btn-disabled-bg: #06060B;
+  --bs-btn-disabled-border-color: #06060B;
 }
 
 .btn-grigioChiaro {
@@ -3155,19 +3155,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-dark {
-  --bs-btn-color: #0B0C15;
-  --bs-btn-border-color: #0B0C15;
+  --bs-btn-color: #06060B;
+  --bs-btn-border-color: #06060B;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0B0C15;
-  --bs-btn-hover-border-color: #0B0C15;
-  --bs-btn-focus-shadow-rgb: 11, 12, 21;
+  --bs-btn-hover-bg: #06060B;
+  --bs-btn-hover-border-color: #06060B;
+  --bs-btn-focus-shadow-rgb: 6, 6, 11;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0B0C15;
-  --bs-btn-active-border-color: #0B0C15;
+  --bs-btn-active-bg: #06060B;
+  --bs-btn-active-border-color: #06060B;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0B0C15;
+  --bs-btn-disabled-color: #06060B;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0B0C15;
+  --bs-btn-disabled-border-color: #06060B;
   --bs-gradient: none;
 }
 
@@ -6778,8 +6778,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-dark:hover, .link-dark:focus {
-  color: RGBA(9, 10, 17, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(9, 10, 17, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(5, 5, 9, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(5, 5, 9, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-grigioChiaro {
@@ -11794,6 +11794,7 @@ textarea.form-control-lg {
 .hero-bg {
   background: url("../../assets/img/backgroundHero.webp") center/cover no-repeat;
   background-size: contain;
+  background-position: center;
 }
 @media (max-width: 992px) {
   .hero-bg {
@@ -11951,14 +11952,14 @@ body.loading #content {
 }
 
 .btnHome {
-  background-color: #0B0C15;
+  background-color: #06060B;
   border: 2px solid #FFED00;
   color: #FFED00;
 }
 
 .btnHome:hover {
   background-color: #FFED00;
-  color: #0B0C15;
+  color: #06060B;
 }
 
 /* Regole della pagina di news */
@@ -11980,12 +11981,12 @@ body.loading #content {
 
 .filter-btn.active {
   background: #FFED00;
-  color: #0B0C15;
+  color: #06060B;
 }
 
 /* Regole pagina iNostriCorsi */
 .btn-hero-prof {
-  background-color: #0B0C15;
+  background-color: #06060B;
   border: 2px solid #FFED00;
   color: #FFED00;
   align-content: center;
@@ -11993,18 +11994,18 @@ body.loading #content {
 
 .btn-hero-prof:hover {
   background-color: #FFED00;
-  color: #0B0C15;
+  color: #06060B;
 }
 
 .btn-hero-campus {
   background-color: #FFED00;
   border: 2px solid #FFED00;
-  color: #0B0C15;
+  color: #06060B;
   align-content: center;
 }
 
 .btn-hero-campus:hover {
-  background-color: #0B0C15;
+  background-color: #06060B;
   color: #FFED00;
   border: 2px solid #FFED00;
 }
@@ -12018,14 +12019,14 @@ body.loading #content {
 }
 
 .btn-contatti {
-  background-color: #0B0C15;
+  background-color: #06060B;
   border: 2px solid #FFED00;
   color: #FFED00;
 }
 
 .btn-contatti:hover {
   background-color: #FFED00;
-  color: #0B0C15;
+  color: #06060B;
 }
 
 .dashboard-wrapper {
@@ -12210,7 +12211,7 @@ body.loading #content {
   bottom: 0;
   right: 0;
   background-color: #FFED00;
-  color: #0B0C15;
+  color: #06060B;
   border: none;
   padding: 0.2rem 0.45rem;
   font-size: 0.7rem;
@@ -12229,7 +12230,7 @@ body.loading #content {
 
 .db-input {
   width: 100%;
-  background: #0B0C15;
+  background: #06060B;
   border: 1px solid #4A5565;
   color: #ffffff;
   padding: 0.4rem 0.6rem;
@@ -12350,7 +12351,7 @@ body.loading #content {
 
 .btn-prenota {
   background: #FFED00;
-  color: #0B0C15;
+  color: #06060B;
   border: none;
   padding: 0.4rem 0.9rem;
   font-size: 0.78rem;
