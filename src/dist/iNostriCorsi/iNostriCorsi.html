@@ -15,266 +15,154 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header
-      class="p-1 text-bg-warning border border-dark border-2 intestazione">
-      <!---->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <!-- Logo + Titolo -->
-          <a
-            class="navbar-brand d-flex align-items-center gap-2 text-dark fw-bold fs-5"
-            href="../index.html">
-            <img
-              id="logo"
-              src="../../assets/img/logo.webp"
-              alt="logoUniversitario" />
-            <span class="d-none d-sm-inline fs-4">Programmers' University</span>
-            <span class="d-inline d-sm-none fs-6">Progs' Uni</span>
-          </a>
+    <header class="p-1 text-bg-warning border border-dark border-2 intestazione">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Logo + Titolo -->
+        <a class="navbar-brand d-flex align-items-center gap-2 text-dark fw-bold fs-5" href="../index.html">
+          <img id="logo" src="../../assets/img/logo.webp" alt="logoUniversitario" />
+          <span class="d-none d-sm-inline fs-4">Programmers' University</span>
+          <span class="d-inline d-sm-none fs-6">Progs' Uni</span>
+        </a>
 
-          <!-- Hamburger -->
-          <button
-            class="navbar-toggler border-dark"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <!-- Hamburger -->
+        <button class="navbar-toggler border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <!-- Link + Bottoni -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarMenu">
-            <ul
-              class="navbar-nav align-items-lg-center gap-1 me-lg-2 mt-2 mt-lg-0">
-              <li class="nav-item">
-                <a data-page="news/news"
-                  class="nav-link px-2 text-dark fw-bold">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="./chiSiamo/chiSiamo.html"
-                  class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
-              </li>
-            </ul>
+        <!-- Link + Bottoni -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <ul class="navbar-nav align-items-lg-center gap-1 me-lg-2 mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a href="../chiSiamo/chiSiamo.html" class="nav-link px-2 text-dark fw-bold">Chi Siamo</a>
+            </li>
+            <li class="nav-item">
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="nav-link px-2 text-dark fw-bold">Corsi</a>
+            </li>
+            <li class="nav-item">
+              <a href="../news/news.html" class="nav-link px-2 text-dark fw-bold">News</a>
+            </li>
 
-            <!-- Bottoni: full-width su mobile, auto su desktop -->
-            <div
-              class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0">
-              <button
-                type="button"
-                class="btn btn-dark btn-outline-light fw-bold border rounded-0"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter">
-                Login
-              </button>
-              <!-- MODALE LOGIN -->
-              <div
-                class="modal fade"
-                id="exampleModalCenter"
-                tabindex="-1"
-                aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content rounded-0">
-                    <div class="modal-header bg-warning">
-                      <h1
-                        class="modal-title fs-5 fw-bold"
-                        id="exampleModalCenterTitle">
-                        Login
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close btn-dark"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+            <li class="nav-item">
+              <a href="../chiSiamo/chiSiamo.html#contatti" class="nav-link px-2 text-dark fw-bold">Contatti</a>
+            </li>
+
+          </ul>
+
+          <!-- Bottoni: full-width su mobile, auto su desktop -->
+          <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0 mb-2 mb-lg-0">
+            <button type="button" class="btn btnHome fw-bold border rounded-0" data-bs-toggle="modal"
+              data-bs-target="#exampleModalCenter">
+              Login
+            </button>
+            <!-- MODALE LOGIN -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                  <div class="modal-header bg-warning border border-dark border-2 rounded-0">
+                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalCenterTitle">Login</h1>
+                    <button type="button" class="btn-close btn-dark" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-dark text-light">
+                    <div id="login-error" class="alert alert-danger rounded-0 d-none py-2 small fw-bold">
+                      Credenziali non valide. Controlla username e password.
                     </div>
-                    <div class="modal-body bg-dark text-light">
-                      <div class="input-group mb-3 w-100">
-                        <input
-                          type="text"
-                          class="form-control rounded-0"
-                          id="floatingInput5"
-                          placeholder="Nome Utente" />
-                        <label for="floatingInput6">Nome Utente</label>
-                      </div>
-                      <div class="input-group mb-3 w-100">
-                        <input
-                          type="password"
-                          class="form-control rounded-0"
-                          id="floatingPassword3"
-                          placeholder="Password" />
-                        <label for="floatingPassword4">Password</label>
-                      </div>
+                    <div class="input-group mb-3 mt-3 w-100">
+                      <input type="text" class="form-control rounded-0" id="login-username" placeholder="*Nome Utente">
                     </div>
-                    <div class="modal-footer bg-warning flex-wrap">
-                      <div class="form-check me-auto">
-                        <input
-                          class="form-check-input text-dark"
-                          type="checkbox"
-                          value
-                          id="defaultCheck1" />
-                        <a href>Ricordami</a>
-                      </div>
-                      <button
-                        type="button"
-                        class="btn btn-outline-dark fw-bold rounded-0"
-                        data-bs-dismiss="modal">
-                        Annulla
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-dark rounded-0"
-                        data-bs-dismiss="modal">
-                        Accedi
-                      </button>
+                    <div class="input-group mb-3 mt-3 w-100">
+                      <input type="password" class="form-control rounded-0" id="login-password" placeholder="*Password">
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- FINE MODALE LOGIN -->
-              <button
-                type="button"
-                class="btn btn-outline-dark fw-bold rounded-0"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModalScrollable">
-                Iscrizione
-              </button>
-              <!-- MODALE REGISTRAZIONE -->
-              <div
-                class="modal fade"
-                id="exampleModalScrollable"
-                tabindex="-1"
-                aria-labelledby="exampleModalScrollableTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                  <div class="modal-content rounded-0">
-                    <div class="modal-header bg-warning">
-                      <h2
-                        class="modal-title fs-5 fw-bold"
-                        id="exampleModalScrollableTitle">
-                        Iscriviti ai nostri corsi
-                      </h2>
-                      <button
-                        type="button"
-                        class="btn-close btn-dark"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                  <div class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0">
+                    <div class="form-check me-auto">
+                      <input class="form-check-input text-dark" type="checkbox" value="" id="defaultCheck1">
+                      <a href="">Ricordami</a>
                     </div>
-                    <div class="modal-body bg-dark text-light">
-                      <div class="bd-example m-0 border-0">
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="text"
-                            class="form-control rounded-0"
-                            id="inputGroup-sizing-default"
-                            placeholder="*Nome Utente" />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="text"
-                            class="form-control rounded-0"
-                            id="inputGroup-sizing-default"
-                            placeholder="*Nome" />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="text"
-                            class="form-control rounded-0"
-                            id="floatingInput1"
-                            placeholder="*Cognome" />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="email"
-                            class="form-control rounded-0"
-                            id="floatingPassword1"
-                            placeholder="example@email.it" />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="password"
-                            class="form-control rounded-0"
-                            id="floatingInput3"
-                            placeholder="*Password" />
-                        </div>
-                        <select
-                          class="form-select form-select-lg mb-3 rounded-0"
-                          aria-label="Large select example">
-                          <option selected>
-                            Cosa ti piacerebbe studiare?
-                          </option>
-                          <option value="1">Voglio iniziare da zero</option>
-                          <option value="2">
-                            Voglio diventare sviluppatore web
-                          </option>
-                          <option value="3">
-                            Voglio sviluppare app mobile
-                          </option>
-                          <option value="4">Voglio lavorare con l'IA</option>
-                          <option value="5">
-                            Voglio migliorare le mie competenze
-                          </option>
-                          <option value="6">
-                            Non sono sicuro, voglio orientarmi
-                          </option>
-                        </select>
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value
-                            id="defaultCheck1" />
-                          <a href>*Accetto i termini e le condizioni d’uso,
-                            dichiaro
-                            inoltre di essere maggiorenne e che i dati da me
-                            inseriti, validi per la fatturazione, sono veritieri
-                            e reali</a>
-                        </div>
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value
-                            id="defaultCheck1" />
-                          <a href>*Ho preso visione dell'informativa privacy e
-                            acconsento al trattamento dei miei dati personali
-                            per le finalità ivi indicate</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer bg-warning flex-wrap">
-                      <button
-                        type="button"
-                        class="btn btn-outline-dark fw-bold rounded-0"
-                        data-bs-dismiss="modal">
-                        Annulla
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-dark rounded-0"
-                        data-bs-dismiss="modal">
-                        Registrati
-                      </button>
-                    </div>
+                    <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
+                      data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-dark rounded-0" id="btn-login-accedi">Accedi</button>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- FINE MODALE REGISTRAZIONE -->
+            <!-- FINE MODALE LOGIN -->
+            <button type="button" class="btn btn-outline-dark fw-bold rounded-0" data-bs-toggle="modal"
+              data-bs-target="#exampleModalScrollable">
+              Iscrizione
+            </button>
+            <!-- MODALE REGISTRAZIONE -->
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1"
+              aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable rounded">
+                <div class="modal-content rounded-0">
+                  <div class="modal-header bg-warning border border-dark border-2 rounded-0">
+                    <h2 class="modal-title fs-5 fw-bold" id="exampleModalScrollableTitle">Iscriviti ai nostri corsi</h2>
+                    <button type="button" class="btn-close btn-dark" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-dark text-light">
+                    <div class="bd-example m-0 border-0">
+                      <div id="reg-error" class="alert alert-danger rounded-0 d-none py-2 small fw-bold mb-3">
+                        Compila tutti i campi obbligatori e accetta i termini.
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="text" class="form-control rounded-0" id="reg-username" placeholder="*Nome Utente">
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="text" class="form-control rounded-0" id="reg-nome" placeholder="*Nome">
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="text" class="form-control rounded-0" id="reg-cognome" placeholder="*Cognome">
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="email" class="form-control rounded-0" id="reg-email"
+                          placeholder="example@email.it">
+                      </div>
+                      <div class="input-group input-group-lg w-100 mb-3">
+                        <input type="password" class="form-control rounded-0" id="reg-password" placeholder="*Password">
+                      </div>
+                      <select class="form-select form-select-lg mb-3 rounded-0" id="reg-corso"
+                        aria-label="Scelta corso">
+                        <option value="">Cosa ti piacerebbe studiare?</option>
+                        <option value="1">Voglio iniziare da zero</option>
+                        <option value="2">Voglio diventare sviluppatore web</option>
+                        <option value="3">Voglio sviluppare app mobile</option>
+                        <option value="4">Voglio lavorare con l'IA</option>
+                        <option value="5">Voglio migliorare le mie competenze</option>
+                        <option value="6">Non sono sicuro, voglio orientarmi</option>
+                      </select>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="reg-check-termini">
+                        <a href="">*Accetto i termini e le condizioni d’uso, dichiaro inoltre di essere maggiorenne e
+                          che i dati da me inseriti, validi per la fatturazione, sono veritieri e reali</a>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="reg-check-privacy">
+                        <a href="">*Ho preso visione dell'informativa privacy e acconsento al trattamento dei miei dati
+                          personali per le finalità ivi indicate</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0">
+                    <button type="button" class="btn btn-outline-dark fw-bold rounded-0"
+                      data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-dark rounded-0" id="btn-registrati">Registrati</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- FINE MODALE REGISTRAZIONE -->
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
     <main id="content" class=" p-0 m-0 bg-dark min-vh-100">
       <!--INIZIO HERO-->
@@ -307,10 +195,10 @@
           id="accordionFlushExample">
           <div
             class="accordion-item flex-wrap rounded-0 border border-2 border-warning">
-            <h2 class="accordion-header">
+            <h2 class="accordion-header align-content-center">
 
               <button
-                class="accordion-button collapsed bg-secondary text-warning fs-1 fw-bold justify-content-center py-5"
+                class="accordion-button collapsed bg-secondary text-warning fs-1 fw-bold justify-content-center py-5 h-100"
                 type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                 aria-controls="flush-collapseOne">
@@ -334,16 +222,17 @@
           </div>
           <div
             class="accordion-item flex-wrap rounded-0 border border-2 border-warning">
-            <h2 class="accordion-header align-content-center"></h2>
+            <h2 class="accordion-header align-content-center">
 
             <button
-              class="accordion-button collapsed bg-secondary text-warning fs-1 fw-bold justify-content-center py-5"
+              class="accordion-button collapsed bg-secondary text-warning fs-1 fw-bold justify-content-center  h-100 py-5"
               type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo" aria-expanded="false"
               aria-controls="flush-collapseTwo">
               <i class="bi bi-code-slash display-1 bg-dark p-2"></i>
               Frontend <br> development
             </button>
+            </h2>
 
             <div id="flush-collapseTwo"
               class="accordion-collapse bg-dark collapse ">
@@ -358,14 +247,14 @@
           </div>
           <div
             class="accordion-item flex-wrap  rounded-0 border border-2 border-warning">
-            <h2 class="accordion-header">
+            <h2 class="accordion-header align-content-center">
 
               <button
-                class="accordion-button collapsed bg-secondary text-warning fs-1 fw-bold justify-content-center py-5"
+                class="accordion-button collapsed bg-secondary text-warning fs-1 fw-bold justify-content-center  h-100 py-5"
                 type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseThree" aria-expanded="false"
                 aria-controls="flush-collapseThree">
-                <i class="bi bi-braces bg-dark  display-1 p-2"></i>
+                <i class="bi bi-braces bg-dark display-1 p-2"></i>
                 Backend <br> development
               </button>
             </h2>
@@ -568,103 +457,113 @@
 
             </main>
 
-            <footer
-              class="mt-auto bg-dark text-light border-top border-warning py-5 overflow-hidden">
-              <div class="container">
-                <div class="row g-4">
-                  <!-- BRAND -->
-                  <div class="col-12 col-md-4">
-                    <h5 class="text-warning fw-bold">Programmers'
-                      University</h5>
-                    <p class="text-light opacity-75">
-                      Formazione pratica per diventare developer pronti al mondo
-                      reale.
-                    </p>
+            <footer class="mt-auto bg-dark text-light border-top border-warning py-5 overflow-hidden">
+    <div class="container">
+      <div class="row g-4">
+        <!-- BRAND -->
+        <div class="col-12 col-md-4">
+          <h5 class="text-warning fw-bold">Programmers' University</h5>
+          <p class="text-light opacity-75">
+            Formazione pratica per diventare developer pronti al mondo reale.
+          </p>
 
-                    <!-- SOCIAL ICONS -->
-                    <div class="d-flex gap-3 footer-icons">
-                      <a href="#" class="text-light fs-5"><i
-                          class="bi bi-github"></i></a>
-                      <a href="#" class="text-light fs-5"><i
-                          class="bi bi-linkedin"></i></a>
-                      <a href="#" class="text-light fs-5"><i
-                          class="bi bi-instagram"></i></a>
-                      <a href="#" class="text-light fs-5"><i
-                          class="bi bi-envelope"></i></a>
-                    </div>
-                  </div>
+          <!-- SOCIAL ICONS -->
+          <div class="d-flex gap-3 footer-icons">
+            <a href="https://github.com/" target="_blank" class="text-light fs-5"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="text-light fs-5"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="text-light fs-5"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://mail.google.com/" target="_blank" class="text-light fs-5"><i
+                class="bi bi-envelope"></i></a>
+          </div>
+        </div>
 
-                  <!-- CORSI -->
-                  <div class="col-6 col-md-2">
-                    <h6 class="text-warning">Corsi</h6>
-                    <ul class="list-unstyled footer-links">
-                      <li>
-                        <a href="#"
-                          class="text-light text-decoration-none">Frontend</a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          class="text-light text-decoration-none">Backend</a>
-                      </li>
-                      <li>
-                        <a href="#" class="text-light text-decoration-none">Full
-                          Stack</a>
-                      </li>
-                    </ul>
-                  </div>
+        <!-- CORSI -->
+        <div class="col-6 col-md-2">
+          <h6 class="text-warning">I nostri Corsi</h6>
+          <ul class="list-unstyled footer-links">
+            <li>
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="text-light text-decoration-none">Full Stack Web
+                Development</a>
+            </li>
+            <li>
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="text-light text-decoration-none">Java SpringBoot
+                Backend</a>
+            </li>
+            <li>
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="text-light text-decoration-none">Mobile App
+                Developer</a>
+            </li>
+            <li>
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="text-light text-decoration-none">AI & Machine
+                Learning</a>
+            </li>
+            <li>
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="text-light text-decoration-none">Data Analyst</a>
+            </li>
+            <li>
+              <a href="../iNostriCorsi/iNostriCorsi.html" class="text-light text-decoration-none">Cybersecurity</a>
+            </li>
+          </ul>
+        </div>
 
-                  <!-- NAVIGAZIONE -->
-                  <div class="col-6 col-md-2">
-                    <h6 class="text-warning">Navigazione</h6>
-                    <ul class="list-unstyled footer-links">
-                      <li>
-                        <a
-                          href="../dist/index.html"
-                          class="text-light text-decoration-none">Home</a>
-                      </li>
-                      <li>
-                        <a
-                          href="./chiSiamo/chiSiamo.html"
-                          class="text-light text-decoration-none">Chi Siamo</a>
-                      </li>
-                      <li>
-                        <a
-                          href="./news/news.html"
-                          class="text-light text-decoration-none">News</a>
-                      </li>
-                    </ul>
-                  </div>
+        <!-- NAVIGAZIONE -->
+        <div class="col-6 col-md-2">
+          <h6 class="text-warning">Navigazione</h6>
+          <ul class="list-unstyled footer-links">
+            <li>
+              <a href="../index.html" class="text-light text-decoration-none">Home</a>
+            </li>
+            <li>
+              <a href="../chiSiamo/chiSiamo.html" class="text-light text-decoration-none">Chi Siamo</a>
+            </li>
+            <li>
+              <a href="../news/news.html" class="text-light text-decoration-none">News</a>
+            </li>
+          </ul>
+        </div>
 
-                  <!-- CONTATTI -->
-                  <div class="col-12 col-md-4">
-                    <h6 class="text-warning">Contatti</h6>
+        <!-- CONTATTI -->
+        <div class="col-12 col-md-4">
+          <h6 class="text-warning">Contatti</h6>
 
-                    <p class="mb-1">
-                      <i class="bi bi-geo-alt-fill text-warning me-2"></i>
-                      Catania, Italia
-                    </p>
+          <p class="mb-1">
+            <a href="../chiSiamo/chiSiamo.html#campusroma"
+              class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"> Roma, Italia</a>
+          </p>
+          <p class="mb-1">
+            <a href="../chiSiamo/chiSiamo.html#campusmilano"
+              class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none">Milano, Italia</a>
 
-                    <p class="mb-1">
-                      <i class="bi bi-envelope-fill text-warning me-2"></i>
-                      info@programmersuniversity.it
-                    </p>
+          </p>
+          <p class="mb-1">
+            <a href="../chiSiamo/chiSiamo.html#campusnapoli"
+              class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"> Napoli, Italia</a>
 
-                    <p>
-                      <i class="bi bi-clock-fill text-warning me-2"></i>
-                      Lun - Ven | 9:00 - 18:00
-                    </p>
-                  </div>
-                </div>
+          </p>
 
-                <hr class="border-warning opacity-25 my-4" />
+          <p class="mb-1">
+            <a class="bi bi-envelope-fill text-warning me-2"></a>
+            info@programmersuniversity.it
+          </p>
 
-                <div
-                  class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75">
-                  <span>Code your future</span>
-                  <span>Â© 2026 Programmers' University</span>
-                </div>
-              </div>
-            </footer>
+          <p>
+            <a class="bi bi-clock-fill text-warning me-2"></a>
+            Lun - Ven | 9:00 - 18:00
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-warning opacity-25 my-4" />
+
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75">
+        <span>Code your future</span>
+        <span>Â© 2026 Programmers' University</span>
+      </div>
+    </div>
+  </footer>
             <script
               src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
           </body>
