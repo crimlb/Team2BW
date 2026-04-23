@@ -16,6 +16,51 @@ const articoli = [
 
 ];
 
+const eventiContenitore = document.querySelector("#eventi")
+eventi.forEach(e => {
+  eventiContenitore.innerHTML += `
+  <article class="event-card d-flex flex-column border border-3 border-white text-white p-3" data-category="workshop">
+    <header class="d-flex flex-row gap-5 mb-3">
+        <span>${e.categoria}</span>
+        <span>${e.data}</span>
+    </header>
+    <main>
+        <h3 class="text-warning fw-bold">
+           ${e.titolo}
+        </h3>
+        <div class="text-white">
+            <span>${e.orario}</span>
+            <span>${e.aula}</span>
+        </div>
+        <button class="btn border border-warning rounded-0 mt-3 fw-bold text-warning" href="#">
+            Iscriviti al workshop
+        </button>
+    </main>
+</article>
+  
+  `
+
+
+
+});
+
+const articoliContenitore = document.querySelector("#articoli")
+articoli.forEach(a => {
+  articoliContenitore.innerHTML += `
+  <article class="article-card d-flex flex-column border border-2 border-warning p-3" data-category="tecnologia">
+    <h3 class="fs-3 text-warning fw-medium">
+        ${a.titolo}
+    </h3>
+    <p class="text-white">
+       ${a.desc}
+    </p>
+    <div class="text-white">
+        <span>${a.autore}</span>
+        <span>${a.data}</span>
+        <a class="text-danger text-decoration-none" href="#">Leggi →</a>
+    </div>
+</article>`
+})
 
 function filtraCategorie(category) {
   const items = document.querySelectorAll(".event-card, .article-card");
