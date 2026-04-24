@@ -92,3 +92,15 @@
   border-color: #ffc107 !important;
   outline: none !important;
 }
+
+.btn-corsi {
+  background-color: $gialloTitoloBottoni;
+  border: 2px solid $gialloTitoloBottoni;
+  color: $neroSfondo;
+}
+
+.btn-corsi:hover {
+  background-color: $neroSfondo;
+  border: 2px solid $gialloTitoloBottoni;
+  color: $gialloTitoloBottoni;
+}

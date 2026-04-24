@@ -12168,6 +12168,18 @@ body.loading #content {
   outline: none !important;
 }
 
+.btn-corsi {
+  background-color: #FFED00;
+  border: 2px solid #FFED00;
+  color: #06060B;
+}
+
+.btn-corsi:hover {
+  background-color: #06060B;
+  border: 2px solid #FFED00;
+  color: #FFED00;
+}
+
 .btn-hero-prof {
   background-color: #06060B;
   border: 2px solid #FFED00;
