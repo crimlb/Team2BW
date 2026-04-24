@@ -37,6 +37,7 @@
   --bs-dark: #06060B;
   --bs-grigioChiaro: #A4A5A9;
   --bs-grigio: #4A5565;
+  --bs-success: #21a81d;
   --bs-secondary-rgb: 46, 47, 55;
   --bs-warning-rgb: 255, 237, 0;
   --bs-danger-rgb: 194, 17, 17;
@@ -44,6 +45,7 @@
   --bs-dark-rgb: 6, 6, 11;
   --bs-grigioChiaro-rgb: 164, 165, 169;
   --bs-grigio-rgb: 74, 85, 101;
+  --bs-success-rgb: 33, 168, 29;
   --bs-primary-text-emphasis: rgb(5.2, 44, 101.2);
   --bs-secondary-text-emphasis: rgb(43.2, 46.8, 50);
   --bs-success-text-emphasis: rgb(10, 54, 33.6);
@@ -3086,6 +3088,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #4A5565;
 }
 
+.btn-success {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #21a81d;
+  --bs-btn-border-color: #21a81d;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(66.3, 181.05, 62.9);
+  --bs-btn-hover-border-color: rgb(55.2, 176.7, 51.6);
+  --bs-btn-focus-shadow-rgb: 28, 143, 25;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: rgb(77.4, 185.4, 74.2);
+  --bs-btn-active-border-color: rgb(55.2, 176.7, 51.6);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #21a81d;
+  --bs-btn-disabled-border-color: #21a81d;
+}
+
 .btn-outline-secondary {
   --bs-btn-color: #2E2F37;
   --bs-btn-border-color: #2E2F37;
@@ -3202,6 +3221,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #4A5565;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #4A5565;
+  --bs-gradient: none;
+}
+
+.btn-outline-success {
+  --bs-btn-color: #21a81d;
+  --bs-btn-border-color: #21a81d;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #21a81d;
+  --bs-btn-hover-border-color: #21a81d;
+  --bs-btn-focus-shadow-rgb: 33, 168, 29;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #21a81d;
+  --bs-btn-active-border-color: #21a81d;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #21a81d;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #21a81d;
   --bs-gradient: none;
 }
 
@@ -4823,6 +4859,13 @@ textarea.form-control-lg {
   --bs-alert-link-color: var(--bs-grigio-text-emphasis);
 }
 
+.alert-success {
+  --bs-alert-color: var(--bs-success-text-emphasis);
+  --bs-alert-bg: var(--bs-success-bg-subtle);
+  --bs-alert-border-color: var(--bs-success-border-subtle);
+  --bs-alert-link-color: var(--bs-success-text-emphasis);
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: var(--bs-progress-height);
@@ -5213,6 +5256,19 @@ textarea.form-control-lg {
   --bs-list-group-active-color: var(--bs-grigio-bg-subtle);
   --bs-list-group-active-bg: var(--bs-grigio-text-emphasis);
   --bs-list-group-active-border-color: var(--bs-grigio-text-emphasis);
+}
+
+.list-group-item-success {
+  --bs-list-group-color: var(--bs-success-text-emphasis);
+  --bs-list-group-bg: var(--bs-success-bg-subtle);
+  --bs-list-group-border-color: var(--bs-success-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-success-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-success-border-subtle);
+  --bs-list-group-active-color: var(--bs-success-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-success-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-success-text-emphasis);
 }
 
 .btn-close {
@@ -6737,6 +6793,11 @@ textarea.form-control-lg {
   background-color: RGBA(var(--bs-grigio-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-success {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-success-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
 .link-secondary {
   color: RGBA(var(--bs-secondary-rgb), var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
@@ -6798,6 +6859,15 @@ textarea.form-control-lg {
 .link-grigio:hover, .link-grigio:focus {
   color: RGBA(59, 68, 81, var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(59, 68, 81, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-success {
+  color: RGBA(var(--bs-success-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-success-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-success:hover, .link-success:focus {
+  color: RGBA(77, 185, 74, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(77, 185, 74, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis {
@@ -7231,6 +7301,10 @@ textarea.form-control-lg {
   --bs-focus-ring-color: rgba(var(--bs-grigio-rgb), var(--bs-focus-ring-opacity));
 }
 
+.focus-ring-success {
+  --bs-focus-ring-color: rgba(var(--bs-success-rgb), var(--bs-focus-ring-opacity));
+}
+
 .position-static {
   position: static !important;
 }
@@ -7384,6 +7458,11 @@ textarea.form-control-lg {
 .border-grigio {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-grigio-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-success {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-black {
@@ -8332,6 +8411,11 @@ textarea.form-control-lg {
   color: rgba(var(--bs-grigio-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-success {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-black {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
@@ -8529,6 +8613,11 @@ textarea.form-control-lg {
   text-decoration-color: rgba(var(--bs-grigio-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
+.link-underline-success {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-success-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
 .link-underline {
   --bs-link-underline-opacity: 1;
   text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
@@ -8615,6 +8704,11 @@ textarea.form-control-lg {
 .bg-grigio {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-grigio-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
@@ -11793,25 +11887,30 @@ textarea.form-control-lg {
 
 .hero-bg {
   background: url("../../assets/img/backgroundHero.webp") center/cover no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 @media (max-width: 992px) {
   .hero-bg {
-    background-position: center;
-    background-size: contain;
+    background-position: right;
+    background-size: cover;
     text-align: right;
   }
 }
 @media (max-width: 576px) {
   .hero-bg {
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: right;
     display: flex !important;
     align-items: center !important;
   }
 }
 
+@media (max-width: 576px) {
+  .testo-hero {
+    text-align: center;
+  }
+}
 .carosello {
   margin-top: 50px;
   overflow: hidden;
@@ -11985,12 +12084,92 @@ body.loading #content {
 }
 
 /* Regole pagina iNostriCorsi */
+.nav-link:hover, .nav-link:active {
+  color: var(#C21111) !important;
+}
+
+.contenitore {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 1. Rimuove la freccia in ogni stato (chiuso e aperto) */
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+  display: none !important;
+  content: none !important;
+  background-image: none !important;
+}
+
+/* 2. Rimuove il padding extra che Bootstrap riserva alla freccia a destra */
+.accordion-button {
+  padding-right: 1.25rem !important; /* Pareggia il padding sinistro */
+  text-align: center;
+}
+
+/* 3. Forza la centratura del contenuto Flex */
+.accordion-button {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero-image {
+  height: auto;
+  width: 50rem;
+  z-index: 2;
+}
+
+.contenitore {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .hero-wrapper {
+    overflow: visible;
+  }
+}
+
+.hero-bg1 {
+  background: url("../../assets/img/pattern-bg-corsi-reduced-light.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+@media (max-width: 992px) {
+  .hero-bg1 {
+    min-height: 70vh;
+    background-position: 70% center;
+  }
+}
+@media (max-width: 576px) {
+  .hero-bg1 {
+    min-height: 100svh;
+    background-size: cover;
+    background-position: 65% center;
+    display: flex !important;
+    align-items: center !important;
+    padding-bottom: 3rem;
+  }
+}
+
+.img-accordion {
+  width: 300px;
+}
+
+/* Rimuove l'alone blu e mette quello giallo */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.4) !important;
+  border-color: #ffc107 !important;
+  outline: none !important;
+}
+
 .btn-hero-prof {
-<<<<<<< feature/news2
-  background-color: #0B0C15;
-=======
   background-color: #06060B;
->>>>>>> main
   border: 2px solid #FFED00;
   color: #FFED00;
   align-content: center;
@@ -11998,30 +12177,18 @@ body.loading #content {
 
 .btn-hero-prof:hover {
   background-color: #FFED00;
-<<<<<<< feature/news2
-  color: #0B0C15;
-=======
   color: #06060B;
->>>>>>> main
 }
 
 .btn-hero-campus {
   background-color: #FFED00;
   border: 2px solid #FFED00;
-<<<<<<< feature/news2
-  color: #0B0C15;
-=======
   color: #06060B;
->>>>>>> main
   align-content: center;
 }
 
 .btn-hero-campus:hover {
-<<<<<<< feature/news2
-  background-color: #0B0C15;
-=======
   background-color: #06060B;
->>>>>>> main
   color: #FFED00;
   border: 2px solid #FFED00;
 }
@@ -12034,23 +12201,27 @@ body.loading #content {
   transform: translate(0, -20px);
 }
 
-.btn-contatti {
-<<<<<<< feature/news2
-  background-color: #0B0C15;
-=======
+.btn-richiesta {
   background-color: #06060B;
->>>>>>> main
   border: 2px solid #FFED00;
   color: #FFED00;
 }
 
-.btn-contatti:hover {
+.btn-richiesta:hover {
   background-color: #FFED00;
-<<<<<<< feature/news2
-  color: #0B0C15;
-=======
   color: #06060B;
->>>>>>> main
+}
+
+.btn-reset {
+  background-color: #FFED00;
+  border: 2px solid #FFED00;
+  color: #06060B;
+}
+
+.btn-reset:hover {
+  background-color: #06060B;
+  border: 2px solid #C21111;
+  color: #C21111;
 }
 
 .dashboard-wrapper {
