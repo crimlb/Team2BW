@@ -388,6 +388,14 @@ function pulisciErrBox() {
   errBoxMsg.innerHTML = "";
 }
 
+function pulisciContatti(form) {
+  form.querySelector("#contatti-nome").value = "";
+  form.querySelector("#contatti-cognome").value = "";
+  form.querySelector("#contatti-email").value = "";
+  form.querySelector("#contatti-select").value = "";
+  form.querySelector("#contatti-msg").value = "";
+}
+
 function pulisciMsgOk() {
   msgBox.innerHTML = "";
 }
@@ -418,5 +426,6 @@ form.addEventListener("submit", (e) => {
   }
 
   msgOk();
+  pulisciContatti(form);
   form.reset();
 });
