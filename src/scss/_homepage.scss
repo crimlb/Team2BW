@@ -42,3 +42,15 @@ body.loading #content {
     color: $neroSfondo;
 }
 
+.btn-hero-home {
+    background-color: $gialloTitoloBottoni;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $neroSfondo;
+}
+
+.btn-hero-home:hover {
+    background-color: $neroSfondo;
+    border: 2px solid $gialloTitoloBottoni;
+    color: $gialloTitoloBottoni;
+}
+ 

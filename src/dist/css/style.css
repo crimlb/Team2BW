@@ -12061,6 +12061,18 @@ body.loading #content {
   color: #06060B;
 }
 
+.btn-hero-home {
+  background-color: #FFED00;
+  border: 2px solid #FFED00;
+  color: #06060B;
+}
+
+.btn-hero-home:hover {
+  background-color: #06060B;
+  border: 2px solid #FFED00;
+  color: #FFED00;
+}
+
 /* Regole della pagina di news */
 /* --- Filtri --- */
 .filter-bar {
