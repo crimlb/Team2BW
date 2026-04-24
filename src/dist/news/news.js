@@ -1,3 +1,4 @@
+<<<<<<< feature/news2
 const eventi = [
   { id: 1, titolo: 'Introduzione a React — da zero al primo componente', categoria: 'Workshop', data: '05 maggio', orario: 'Ore 14:00 – 17:00', aula: 'Aula B3, Polo Informatico' },
   { id: 2, titolo: 'Seminar: AI Generativa e LLM — applicazioni pratiche nel 2025', categoria: 'Tecnologia', data: '09 maggio', orario: 'Ore 10:30 – 12:30', aula: 'Aula Magna' },
@@ -67,16 +68,40 @@ function filtraCategorie(categoria) {
       btn.classList.add('active');
     }
   });
+=======
+
+
+function filtraCategorie(category) {
+  const items = document.querySelectorAll(".event-card, .article-card");
+  const buttons = document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+>>>>>>> main
 
   items.forEach(item => {
     const itemCategory = item.dataset.category;
 
+<<<<<<< feature/news2
     if (categoria === "tutti" || itemCategory === categoria.toLowerCase()) {
       item.classList.remove('d-none');
       item.classList.add('d-blok');
     } else {
       item.classList.remove('d-blok');
       item.classList.add('d-none');
+=======
+
+      
+    if (category === "tutti" || itemCategory === category.toLowerCase()) {
+      item.classList.add('d-block');
+      item.classList.remove('d-none')
+      console.log(item)
+    } else {
+      item.classList.add('d-none');
+      item.classList.remove('d-block');
+>>>>>>> main
     }
   });
 }

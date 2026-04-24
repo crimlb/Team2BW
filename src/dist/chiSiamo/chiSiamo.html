@@ -61,22 +61,31 @@
             >
               <li class="nav-item">
                 <a
+                  href="./chiSiamo.html"
+                  class="nav-link px-2 text-dark fw-bold"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="nav-link px-2 text-dark fw-bold"
+                  >Corsi</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
                   href="../news/news.html"
                   class="nav-link px-2 text-dark fw-bold"
                   >News</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Eventi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-dark fw-bold">Link Rapidi</a>
-              </li>
+
               <li class="nav-item">
                 <a
-                  href="./chiSiamo.html"
+                  href="./chiSiamo.html#contatti"
                   class="nav-link px-2 text-dark fw-bold"
-                  >Chi Siamo</a
+                  >Contatti</a
                 >
               </li>
             </ul>
@@ -87,7 +96,7 @@
             >
               <button
                 type="button"
-                class="btn btn-dark btn-outline-light fw-bold border rounded-0"
+                class="btn btnHome fw-bold border rounded-0"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModalCenter"
               >
@@ -103,7 +112,9 @@
               >
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content rounded-0">
-                    <div class="modal-header bg-warning">
+                    <div
+                      class="modal-header bg-warning border border-dark border-2 rounded-0"
+                    >
                       <h1
                         class="modal-title fs-5 fw-bold"
                         id="exampleModalCenterTitle"
@@ -118,26 +129,32 @@
                       ></button>
                     </div>
                     <div class="modal-body bg-dark text-light">
-                      <div class="input-group mb-3 w-100">
+                      <div
+                        id="login-error"
+                        class="alert alert-danger rounded-0 d-none py-2 small fw-bold"
+                      >
+                        Credenziali non valide. Controlla username e password.
+                      </div>
+                      <div class="input-group mb-3 mt-3 w-100">
                         <input
                           type="text"
                           class="form-control rounded-0"
-                          id="floatingInput5"
-                          placeholder="Nome Utente"
+                          id="login-username"
+                          placeholder="*Nome Utente"
                         />
-                        <label for="floatingInput6">Nome Utente</label>
                       </div>
-                      <div class="input-group mb-3 w-100">
+                      <div class="input-group mb-3 mt-3 w-100">
                         <input
                           type="password"
                           class="form-control rounded-0"
-                          id="floatingPassword3"
-                          placeholder="Password"
+                          id="login-password"
+                          placeholder="*Password"
                         />
-                        <label for="floatingPassword4">Password</label>
                       </div>
                     </div>
-                    <div class="modal-footer bg-warning flex-wrap">
+                    <div
+                      class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0"
+                    >
                       <div class="form-check me-auto">
                         <input
                           class="form-check-input text-dark"
@@ -157,7 +174,7 @@
                       <button
                         type="button"
                         class="btn btn-dark rounded-0"
-                        data-bs-dismiss="modal"
+                        id="btn-login-accedi"
                       >
                         Accedi
                       </button>
@@ -182,9 +199,11 @@
                 aria-labelledby="exampleModalScrollableTitle"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-dialog modal-dialog-scrollable rounded">
                   <div class="modal-content rounded-0">
-                    <div class="modal-header bg-warning">
+                    <div
+                      class="modal-header bg-warning border border-dark border-2 rounded-0"
+                    >
                       <h2
                         class="modal-title fs-5 fw-bold"
                         id="exampleModalScrollableTitle"
@@ -200,11 +219,17 @@
                     </div>
                     <div class="modal-body bg-dark text-light">
                       <div class="bd-example m-0 border-0">
+                        <div
+                          id="reg-error"
+                          class="alert alert-danger rounded-0 d-none py-2 small fw-bold mb-3"
+                        >
+                          Compila tutti i campi obbligatori e accetta i termini.
+                        </div>
                         <div class="input-group input-group-lg w-100 mb-3">
                           <input
                             type="text"
                             class="form-control rounded-0"
-                            id="inputGroup-sizing-default"
+                            id="reg-username"
                             placeholder="*Nome Utente"
                           />
                         </div>
@@ -212,7 +237,7 @@
                           <input
                             type="text"
                             class="form-control rounded-0"
-                            id="inputGroup-sizing-default"
+                            id="reg-nome"
                             placeholder="*Nome"
                           />
                         </div>
@@ -220,7 +245,7 @@
                           <input
                             type="text"
                             class="form-control rounded-0"
-                            id="floatingInput1"
+                            id="reg-cognome"
                             placeholder="*Cognome"
                           />
                         </div>
@@ -228,7 +253,7 @@
                           <input
                             type="email"
                             class="form-control rounded-0"
-                            id="floatingPassword1"
+                            id="reg-email"
                             placeholder="example@email.it"
                           />
                         </div>
@@ -236,17 +261,16 @@
                           <input
                             type="password"
                             class="form-control rounded-0"
-                            id="floatingInput3"
+                            id="reg-password"
                             placeholder="*Password"
                           />
                         </div>
                         <select
                           class="form-select form-select-lg mb-3 rounded-0"
-                          aria-label="Large select example"
+                          id="reg-corso"
+                          aria-label="Scelta corso"
                         >
-                          <option selected="">
-                            Cosa ti piacerebbe studiare?
-                          </option>
+                          <option value="">Cosa ti piacerebbe studiare?</option>
                           <option value="1">Voglio iniziare da zero</option>
                           <option value="2">
                             Voglio diventare sviluppatore web
@@ -267,7 +291,7 @@
                             class="form-check-input"
                             type="checkbox"
                             value=""
-                            id="defaultCheck1"
+                            id="reg-check-termini"
                           />
                           <a href=""
                             >*Accetto i termini e le condizioni d’uso, dichiaro
@@ -281,7 +305,7 @@
                             class="form-check-input"
                             type="checkbox"
                             value=""
-                            id="defaultCheck1"
+                            id="reg-check-privacy"
                           />
                           <a href=""
                             >*Ho preso visione dell'informativa privacy e
@@ -291,7 +315,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="modal-footer bg-warning flex-wrap">
+                    <div
+                      class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0"
+                    >
                       <button
                         type="button"
                         class="btn btn-outline-dark fw-bold rounded-0"
@@ -302,7 +328,7 @@
                       <button
                         type="button"
                         class="btn btn-dark rounded-0"
-                        data-bs-dismiss="modal"
+                        id="btn-registrati"
                       >
                         Registrati
                       </button>
@@ -499,473 +525,10 @@
           </h2>
 
           <div
-            class="d-flex flex-column flex-md-row container-fluid flex-wrap w-100 gap-5 gap-md-0 gap-lg-5 justify-content-between align-items-start mt-5"
-            id="cardsCampusContainer"
+            class="d-flex flex-column flex-md-row container-fluid flex-wrap w-100 gap-5 gap-md-0 gap-lg-5 justify-content-evenly align-items-start mt-5"
+            id="cardsContainer"
           >
-            <section
-              class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3"
-            >
-              <header class="border border-0 mt-3">
-                <h3 class="text-center text-warning fw-semibold display-6">
-                  Campus<br />Roma
-                </h3>
-              </header>
-              <main class="p-3 text-center">
-                <img
-                  class="img-fluid mb-3"
-                  src="../../assets/img/campus_roma.png"
-                  alt=""
-                />
-
-                <span class="text-white text-center"
-                  >Roma — Via delle Tecnologie Digitali 42, 00144 Roma
-                  (RM)</span
-                >
-              </main>
-              <footer class="p-3 border-box">
-                <div class="accordion" id="accordionRoma">
-                  <div class="accordion-item rounded-0 campus-accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Ingegneria Informatica
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionRoma"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un percorso completo per comprendere
-                          <strong>sistemi informatici</strong>, dalla
-                          programmazione alle architetture software.<br /><br />
-                          Imparerai a progettare applicazioni, gestire database
-                          e ottimizzare le performance.<br /><br />
-                          Il corso unisce <strong>teoria e pratica</strong>,
-                          formando professionisti capaci di risolvere problemi
-                          complessi e costruire soluzioni scalabili.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item rounded-0 campus-accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        Ingegneria dell'Automazione
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionRoma"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un percorso che integra
-                          <strong
-                            >software, elettronica e sistemi automatici</strong
-                          >
-                          per il controllo dei processi industriali.<br /><br />
-                          Imparerai a sviluppare robotica, sistemi intelligenti
-                          e automazioni.<br /><br />
-                          Formerai competenze per ottimizzare produzione e
-                          processi con tecnologie moderne.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item rounded-0 campus-accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        Ingegneria del Software
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionRoma"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          <strong>Ingegneria del Software</strong><br /><br />
-                          Un corso focalizzato sulla
-                          <strong
-                            >progettazione e sviluppo di applicazioni
-                            software</strong
-                          >
-                          di qualità.<br /><br />
-                          Imparerai metodologie, pattern e strumenti per creare
-                          sistemi robusti e scalabili.<br /><br />
-                          Acquisirai competenze per lavorare in team e gestire
-                          progetti complessi.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </section>
-
-            <section
-              class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3"
-            >
-              <header class="border border-0 mt-3">
-                <h3 class="text-center text-warning fw-semibold display-6">
-                  Campus<br />Milano
-                </h3>
-              </header>
-              <main class="p-3 text-center">
-                <img
-                  class="img-fluid mb-3"
-                  src="../../assets/img/campus_roma.png"
-                  alt=""
-                />
-                <span class="text-white text-center"
-                  >Milano — Viale Innovazione 85, 20126 Milano (MI)
-                </span>
-              </main>
-              <footer class="d-flex flex-column p-3">
-                <div class="accordion" id="accordionMilano">
-                  <div class="accordion-item rounded-0">
-                    <h2 class="accordion-header d-block d-lg-none">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="true"
-                        aria-controls="collapseFour"
-                      >
-                        Design<br />Development
-                      </button>
-                    </h2>
-                    <h2 class="accordion-header d-none d-lg-block">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="true"
-                        aria-controls="collapseFour"
-                      >
-                        Design Development
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionMilano"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un percorso dedicato alla creazione di
-                          <strong>interfacce web moderne e responsive</strong
-                          >.<br /><br />
-                          Imparerai a progettare layout, migliorare l’esperienza
-                          utente e curare l’aspetto visivo dei siti.<br /><br />
-                          Userai strumenti e tecnologie per comunicare in modo
-                          chiaro e coinvolgente.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item rounded-0">
-                    <h2 class="accordion-header d-block d-lg-none">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        Marketing<br />Development
-                      </button>
-                    </h2>
-                    <h2 class="accordion-header d-none d-lg-block">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        Markenting Development
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionMilano"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un corso orientato alla
-                          <strong>promozione digitale</strong> di prodotti e
-                          servizi online.<br /><br />
-                          Imparerai SEO, advertising e strategie social.<br /><br />
-                          Analizzerai dati e performance per costruire campagne
-                          efficaci e aumentare visibilità e risultati.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item rounded-0">
-                    <h2 class="accordion-header d-block d-lg-none">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix"
-                        aria-expanded="false"
-                        aria-controls="collapseSix"
-                      >
-                        Development<br />Operations
-                      </button>
-                    </h2>
-                    <h2 class="accordion-header d-none d-lg-block">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix"
-                        aria-expanded="false"
-                        aria-controls="collapseSix"
-                      >
-                        Development Operations
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseSix"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionMilano"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un percorso dedicato all’integrazione tra
-                          <strong
-                            >sviluppo software e gestione infrastrutture</strong
-                          >.<br /><br />
-                          Imparerai automazione, deployment e monitoraggio.<br /><br />
-                          Renderai il ciclo di sviluppo più veloce, efficiente e
-                          affidabile.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </section>
-
-            <section
-              class="card-campus border-grigio border border-3 bg-secondary col-md-4 col-lg-3"
-            >
-              <header class="border border-0 mt-3">
-                <h3 class="text-center text-warning fw-semibold display-6">
-                  Campus<br />Napoli
-                </h3>
-              </header>
-              <main class="p-3 text-center">
-                <img
-                  class="img-fluid mb-3"
-                  src="../../assets/img/campus_roma.png"
-                  alt=""
-                />
-                <span class="text-white"
-                  >Napoli — Via del Polo Tecnologico 17, 80143 Napoli (NA)</span
-                >
-              </main>
-              <footer class="d-flex flex-column p-3">
-                <div class="accordion" id="accordionNapoli">
-                  <div class="accordion-item rounded-0">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSeven"
-                        aria-expanded="true"
-                        aria-controls="collapseSeven"
-                      >
-                        Full-Stack Development
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseSeven"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionNapoli"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          <strong>Full-Stack Development</strong><br /><br />
-                          Un corso che ti forma come sviluppatore
-                          <strong>completo lato frontend e backend</strong
-                          >.<br /><br />
-                          Imparerai a gestire interfaccia, logica e database.<br /><br />
-                          Costruirai applicazioni web complete con una visione a
-                          360 gradi dello sviluppo.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item rounded-0">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseEight"
-                        aria-expanded="false"
-                        aria-controls="collapseEight"
-                      >
-                        Front-End Development
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseEight"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionNapoli"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un percorso focalizzato sulla
-                          <strong>creazione dell’interfaccia utente</strong> e
-                          sull’esperienza web.<br /><br />
-                          Imparerai HTML, CSS, JavaScript e framework
-                          moderni.<br /><br />
-                          Svilupperai interfacce dinamiche, responsive e
-                          intuitive.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item rounded-0">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed bg-dark text-warning rounded-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseNine"
-                        aria-expanded="false"
-                        aria-controls="collapseNine"
-                      >
-                        Back-End Development
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseNine"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionNapoli"
-                    >
-                      <div
-                        class="accordion-body d-flex flex-column justify-content-center bg-grigioChiaro"
-                      >
-                        <p class="my-2">
-                          Un corso dedicato alla
-                          <strong>logica server, database e API</strong
-                          >.<br /><br />
-                          Imparerai a costruire sistemi sicuri, performanti e
-                          scalabili.<br /><br />
-                          Gestirai dati e funzionalità fondamentali per il
-                          funzionamento delle applicazioni moderne.
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-dark text-warning mx-auto mt-5 mb-3"
-                        >
-                          Vai alla pagina del Corso
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </section>
+            <!-- contenuto dinamico -->
           </div>
         </section>
 
@@ -1018,23 +581,39 @@
 
         <section class="px-3 pb-5" id="contatti">
           <h2 class="text-warning text-center display-3 fw-bold">Contattaci</h2>
+
           <div class="container-fluid mt-5 col-10 col-md-8 col-lg-6 m-auto">
-            <form class="d-flex flex-column gap-3 w-100">
+            <form class="d-flex flex-column gap-3 w-100" id="contatti">
+              <div id="msgBox"></div>
               <input
                 type="text"
                 class="form-control rounded-0"
                 placeholder="Nome"
+                id="contatti-nome"
               />
+              <div id="errBoxNome"></div>
               <input
                 type="text"
                 class="form-control rounded-0"
                 placeholder="Cognome"
+                id="contatti-cognome"
               />
+              <div id="errBoxCognome"></div>
+              <input
+                type="email"
+                class="form-control rounded-0"
+                placeholder="la-tua@email.com"
+                id="contatti-email"
+              />
+              <div id="errBoxEmail"></div>
               <select
                 class="form-select rounded-0"
                 aria-label="Default select example"
+                id="contatti-select"
               >
-                <option selected>Per cosa vuoi avere informazioni?</option>
+                <option selected value="default">
+                  Per cosa vuoi avere informazioni?
+                </option>
                 <option value="ingegneria_informatica">
                   Ingegneria Informatica
                 </option>
@@ -1057,17 +636,30 @@
                   Back-End Development
                 </option>
               </select>
+              <div id="errBoxSelect"></div>
               <textarea
                 class="form-control rounded-0"
                 placeholder="Scrivi qui il tuo messaggio"
                 rows="8"
+                id="contatti-msg"
               ></textarea>
-              <button
-                type="button"
-                class="btn fw-bold p-3 d-block rounded-0 btn-contatti"
+              <div id="errBoxMsg"></div>
+              <div
+                class="d-flex flex-column flex-md-row gap-3 container-fluid justify-content-evenly"
               >
-                Invia la tua richiesta
-              </button>
+                <button
+                  type="submit"
+                  class="btn fw-bold rounded-0 btn-richiesta col-md-5"
+                >
+                  Invia la tua richiesta
+                </button>
+                <button
+                  type="reset"
+                  class="btn fw-bold rounded-0 btn-reset col-md-5"
+                >
+                  Reset
+                </button>
+              </div>
             </form>
           </div>
         </section>
@@ -1088,16 +680,28 @@
 
             <!-- SOCIAL ICONS -->
             <div class="d-flex gap-3 footer-icons">
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-github"></i
               ></a>
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-linkedin"></i
               ></a>
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-instagram"></i
               ></a>
-              <a href="#" class="text-light fs-5"
+              <a
+                href="https://mail.google.com/"
+                target="_blank"
+                class="text-light fs-5"
                 ><i class="bi bi-envelope"></i
               ></a>
             </div>
@@ -1105,17 +709,48 @@
 
           <!-- CORSI -->
           <div class="col-6 col-md-2">
-            <h6 class="text-warning">Corsi</h6>
+            <h6 class="text-warning">I nostri Corsi</h6>
             <ul class="list-unstyled footer-links">
               <li>
-                <a href="#" class="text-light text-decoration-none">Frontend</a>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Full Stack Web Development</a
+                >
               </li>
               <li>
-                <a href="#" class="text-light text-decoration-none">Backend</a>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Java SpringBoot Backend</a
+                >
               </li>
               <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Full Stack</a
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Mobile App Developer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >AI & Machine Learning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Data Analyst</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./iNostriCorsi/iNostriCorsi.html"
+                  class="text-light text-decoration-none"
+                  >Cybersecurity</a
                 >
               </li>
             </ul>
@@ -1132,7 +767,7 @@
               </li>
               <li>
                 <a
-                  href="../chiSiamo/chiSiamo.html"
+                  href="./chiSiamo.html"
                   class="text-light text-decoration-none"
                   >Chi Siamo</a
                 >
@@ -1152,17 +787,36 @@
             <h6 class="text-warning">Contatti</h6>
 
             <p class="mb-1">
-              <i class="bi bi-geo-alt-fill text-warning me-2"></i>
-              Catania, Italia
+              <a
+                href="chiSiamo.html#campusroma"
+                class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"
+              >
+                Roma, Italia</a
+              >
+            </p>
+            <p class="mb-1">
+              <a
+                href="chiSiamo.html#campusmilano"
+                class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"
+                >Milano, Italia</a
+              >
+            </p>
+            <p class="mb-1">
+              <a
+                href="chiSiamo.html#campusnapoli"
+                class="bi bi-geo-alt-fill text-warning me-2 text-light text-decoration-none"
+              >
+                Napoli, Italia</a
+              >
             </p>
 
             <p class="mb-1">
-              <i class="bi bi-envelope-fill text-warning me-2"></i>
+              <a class="bi bi-envelope-fill text-warning me-2"></a>
               info@programmersuniversity.it
             </p>
 
             <p>
-              <i class="bi bi-clock-fill text-warning me-2"></i>
+              <a class="bi bi-clock-fill text-warning me-2"></a>
               Lun - Ven | 9:00 - 18:00
             </p>
           </div>
@@ -1174,12 +828,12 @@
           class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-light opacity-75"
         >
           <span>Code your future</span>
-          <span>© 2026 Programmers' University</span>
+          <span>Â© 2026 Programmers' University</span>
         </div>
       </div>
     </footer>
 
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="chiSiamo.js"></script>
+    <script src="./chiSiamo.js"></script>
   </body>
 </html>
