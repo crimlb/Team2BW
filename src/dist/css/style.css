@@ -11986,7 +11986,11 @@ body.loading #content {
 
 /* Regole pagina iNostriCorsi */
 .btn-hero-prof {
+<<<<<<< feature/news2
+  background-color: #0B0C15;
+=======
   background-color: #06060B;
+>>>>>>> main
   border: 2px solid #FFED00;
   color: #FFED00;
   align-content: center;
@@ -11994,18 +11998,30 @@ body.loading #content {
 
 .btn-hero-prof:hover {
   background-color: #FFED00;
+<<<<<<< feature/news2
+  color: #0B0C15;
+=======
   color: #06060B;
+>>>>>>> main
 }
 
 .btn-hero-campus {
   background-color: #FFED00;
   border: 2px solid #FFED00;
+<<<<<<< feature/news2
+  color: #0B0C15;
+=======
   color: #06060B;
+>>>>>>> main
   align-content: center;
 }
 
 .btn-hero-campus:hover {
+<<<<<<< feature/news2
+  background-color: #0B0C15;
+=======
   background-color: #06060B;
+>>>>>>> main
   color: #FFED00;
   border: 2px solid #FFED00;
 }
@@ -12019,14 +12035,22 @@ body.loading #content {
 }
 
 .btn-contatti {
+<<<<<<< feature/news2
+  background-color: #0B0C15;
+=======
   background-color: #06060B;
+>>>>>>> main
   border: 2px solid #FFED00;
   color: #FFED00;
 }
 
 .btn-contatti:hover {
   background-color: #FFED00;
+<<<<<<< feature/news2
+  color: #0B0C15;
+=======
   color: #06060B;
+>>>>>>> main
 }
 
 .dashboard-wrapper {
