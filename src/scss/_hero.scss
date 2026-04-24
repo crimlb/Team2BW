@@ -1,22 +1,40 @@
 .hero-image {
-    height: auto;
-    width: 50rem;
-    z-index: 2;
-}
-
-.contenitore{
-    width: 100%;
-    max-width: 100%;
-}
-
-.immagineHero2 {
-  width: 100%;
-  max-width: 520px;
   height: auto;
-  align-self: flex-end; /* la spinge in basso */
+  width: 50rem;
+  z-index: 2;
 }
 
-.hero-bg .col-lg-6:first-child {
-  display: flex;
-  align-items: flex-end;
+.contenitore {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.hero-wrapper {
+  position: relative; // fondamentale per l'overlay assoluto
+  overflow: hidden;
+
+  @media (max-width: 576px) {
+    overflow: visible;
+  }
+}
+
+.hero-bg {
+  background: url("../../assets/img/backgroundHero.webp") center/cover no-repeat;
+background-size: contain;
+ background-position: center;
+
+  @media (max-width: 992px) {
+        background-position: center;
+        background-size: contain;
+        text-align: right;
+  }
+
+  @media (max-width: 576px) {
+    background-size: contain;
+    background-position: center;
+    display: flex !important;
+    align-items: center !important;
+  }
+
 }
