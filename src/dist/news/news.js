@@ -9,7 +9,7 @@ const eventi = [
   },
   {
     id: 2,
-    titolo: "Seminar: AI Generativa e LLM — applicazioni pratiche nel 2025",
+    titolo: "Seminar: AI Generativa e LLM — applicazioni pratiche nel 2026",
     categoria: "Tecnologia",
     data: "09 maggio",
     orario: "Ore 10:30 – 12:30",
@@ -59,11 +59,11 @@ const eventi = [
 const articoli = [
   {
     id: 1,
-    titolo: "Perché React continua a dominare il frontend nel 2025",
+    titolo: "Perché React continua a dominare il frontend nel 2026",
     categoria: "Tecnologia",
     desc: "Un analisi dello stack tecnologico adottato dalle principali aziende tech italiane: React, Next.js e TypeScript rimangono le competenzepiù richieste dai recruiter.",
     autore: "Redazione Ateneo",
-    data: "02 maggio 2025",
+    data: "02 maggio 2026",
   },
   {
     id: 2,
@@ -71,16 +71,16 @@ const articoli = [
     categoria: "workshop",
     desc: "Dal laptop con Node.js installato alla gestione dei prerequisiti: tutto quello che devi sapere prima di partecipare agli eventipratici del mese",
     autore: "Ufficio Didattica",
-    data: "28 apr 2025",
+    data: "28 apr 2026",
   },
   {
     id: 3,
     titolo:
-      "Node.js 22 e le novità di ES2025 — cosa cambia per gli sviluppatori",
+      "Node.js 22 e le novità di ES2026 — cosa cambia per gli sviluppatori",
     categoria: "tecnologia",
     desc: "Le ultime release portano miglioramenti alle performance e nuove API native. Il nostro docente analizza l impatto pratico per chi inizia oggi.",
     autore: "Prof. Marchetti",
-    data: "25 apr 2025",
+    data: "25 apr 2026",
   },
   {
     id: 4,
@@ -88,7 +88,7 @@ const articoli = [
     categoria: "Ammissioni",
     desc: "Sono aperti i bandi per l accesso ai corsi magistrali in IngegneriaInformatica, Data Science e Intelligenza Artificiale. Documentazione sul portale studenti.",
     autore: "Segreteria",
-    data: "01 mag 2025",
+    data: "01 mag 2026",
   },
 ];
 
@@ -108,8 +108,9 @@ eventi.forEach((e) => {
             <span>${e.orario}</span>
             <span>${e.aula}</span>
         </div>
-        <button class="btn border border-warning rounded-0 mt-3 fw-bold text-warning" href="#">
-            Iscriviti al workshop
+        <button type="button" class="btn border border-warning rounded-0 mt-3 fw-bold text-warning" data-bs-toggle="modal"
+                data-bs-target="#exampleModalScrollable">
+            Iscriviti
         </button>
     </main>
 </article>`;
@@ -128,7 +129,6 @@ articoli.forEach((a) => {
     <div class="text-white">
         <span>${a.autore}</span>
         <span>${a.data}</span>
-        <a class="text-danger text-decoration-none" href="#">Leggi →</a>
     </div>
 </article>`;
 });
@@ -159,3 +159,70 @@ function filtraCategorie(categoria) {
     }
   });
 }
+
+const formNewsletter = document.querySelector("#newsletter");
+const email = document.querySelector("#emailNewsletter");
+
+const errBox = document.querySelector("#errBoxNewsletter");
+const OkBox = document.querySelector("#OkBoxNewsletter");
+
+function validaEmail(email) {
+  if (!email) {
+    return "L'email è obbligatoria";
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    return "Questa email non ha un formato valido!";
+  }
+  return null;
+}
+
+function mostraErrori(dati) {
+  const errori = [];
+
+  const errEmail = validaEmail(dati.email);
+  if (errEmail) {
+    errBox.innerHTML = `<span class="justify-content-center text-danger d-flex flex-fill border border-2 border-danger fw-bold p-3">${errEmail}</span>`;
+    errori.push(errEmail);
+  }
+
+  return errori;
+}
+
+function msgOk() {
+  OkBox.innerHTML = `
+    <span class="text-success d-flex text-center justify-content-center border border-2 border-success fw-bold p-3">
+      Messaggio inviato correttamente!
+    </span>
+  `;
+}
+
+function pulisciErrBox() {
+  errBox.innerHTML = "";
+}
+
+function pulisciMsgOk() {
+  OkBox.innerHTML = "";
+}
+
+formNewsletter.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  pulisciErrBox();
+  pulisciMsgOk();
+
+  const dati = {
+    email: formNewsletter
+      .querySelector("#email-newsletter")
+      .value.trim()
+      .toLowerCase(),
+  };
+
+  const errori = mostraErrori(dati);
+
+  if (errori.length > 0) {
+    return;
+  }
+
+  msgOk();
+  formNewsletter.reset();
+});

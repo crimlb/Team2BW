@@ -190,160 +190,13 @@
               >
                 Iscrizione
               </button>
-              <!-- MODALE REGISTRAZIONE -->
-              <div
-                class="modal fade"
-                id="exampleModalScrollable"
-                tabindex="-1"
-                aria-labelledby="exampleModalScrollableTitle"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-scrollable rounded">
-                  <div class="modal-content rounded-0">
-                    <div
-                      class="modal-header bg-warning border border-dark border-2 rounded-0"
-                    >
-                      <h2
-                        class="modal-title fs-5 fw-bold"
-                        id="exampleModalScrollableTitle"
-                      >
-                        Iscriviti ai nostri corsi
-                      </h2>
-                      <button
-                        type="button"
-                        class="btn-close btn-dark"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body bg-dark text-light">
-                      <div class="bd-example m-0 border-0">
-                        <div
-                          id="reg-error"
-                          class="alert alert-danger rounded-0 d-none py-2 small fw-bold mb-3"
-                        >
-                          Compila tutti i campi obbligatori e accetta i termini.
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="text"
-                            class="form-control rounded-0"
-                            id="reg-username"
-                            placeholder="*Nome Utente"
-                          />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="text"
-                            class="form-control rounded-0"
-                            id="reg-nome"
-                            placeholder="*Nome"
-                          />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="text"
-                            class="form-control rounded-0"
-                            id="reg-cognome"
-                            placeholder="*Cognome"
-                          />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="email"
-                            class="form-control rounded-0"
-                            id="reg-email"
-                            placeholder="example@email.it"
-                          />
-                        </div>
-                        <div class="input-group input-group-lg w-100 mb-3">
-                          <input
-                            type="password"
-                            class="form-control rounded-0"
-                            id="reg-password"
-                            placeholder="*Password"
-                          />
-                        </div>
-                        <select
-                          class="form-select form-select-lg mb-3 rounded-0"
-                          id="reg-corso"
-                          aria-label="Scelta corso"
-                        >
-                          <option value="">Cosa ti piacerebbe studiare?</option>
-                          <option value="1">Voglio iniziare da zero</option>
-                          <option value="2">
-                            Voglio diventare sviluppatore web
-                          </option>
-                          <option value="3">
-                            Voglio sviluppare app mobile
-                          </option>
-                          <option value="4">Voglio lavorare con l'IA</option>
-                          <option value="5">
-                            Voglio migliorare le mie competenze
-                          </option>
-                          <option value="6">
-                            Non sono sicuro, voglio orientarmi
-                          </option>
-                        </select>
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="reg-check-termini"
-                          />
-                          <a href=""
-                            >*Accetto i termini e le condizioni d’uso, dichiaro
-                            inoltre di essere maggiorenne e che i dati da me
-                            inseriti, validi per la fatturazione, sono veritieri
-                            e reali</a
-                          >
-                        </div>
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="reg-check-privacy"
-                          />
-                          <a href=""
-                            >*Ho preso visione dell'informativa privacy e
-                            acconsento al trattamento dei miei dati personali
-                            per le finalità ivi indicate</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-dark fw-bold rounded-0"
-                        data-bs-dismiss="modal"
-                      >
-                        Annulla
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-dark rounded-0"
-                        id="btn-registrati"
-                      >
-                        Registrati
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FINE MODALE REGISTRAZIONE -->
           </div>
         </div>
       </nav>
     </header>
 
     <!-- FINE NAVBAR -->
-    <section class="container-fluid" aria-label="News ed eventi universitari">
+    <main class="container-fluid" aria-label="News ed eventi universitari">
       <div class="d-flex flex-column mt-3 py-3">
         <h2 class="text-center text-warning fw-bold display-4">
           News &amp; Eventi <br />
@@ -384,7 +237,7 @@
         </div>
       </div>
 
-      <main class="container-fluid d-flex flex-column flex-lg-row gap-3">
+      <section class="container-fluid d-flex flex-column flex-md-row gap-3">
         <!-- COLONNA SINISTRA: Calendario eventi -->
         <section
           class="d-flex flex-column gap-5 col-md-7 col-lg-8 px-md-4 my-5"
@@ -397,7 +250,7 @@
 
         <!-- COLONNA DESTRA: Articoli in rilievo -->
         <aside
-          class="d-flex flex-column flex-lg-column-reverse gap-3 gap-md-1 gap-lg-3 col-md-5 col-lg-4 px-md-4 mb-md-5 justify-content-end"
+          class="d-flex flex-column flex-md-column-reverse gap-3 gap-md-1 gap-lg-3 col-md-5 col-lg-4 px-md-4 mb-md-5 justify-content-end"
         >
           <section class="d-flex flex-column gap-3" id="articoli">
             <p class="col-label fw-bold text-warning display fs-3 mt-5 mt-md-0">
@@ -409,9 +262,9 @@
 
           <!-- CTA Newsletter -->
           <section
-            class="d-flex flex-column my-5 my-lg-0 justify-content-center"
+            class="d-flex flex-column my-5 my-md-0 justify-content-center"
           >
-            <form class="text-center d-flex flex-column gap-3 my-5">
+            <form class="text-center d-flex flex-column gap-3 my-5" id="newsletter">
               <h3 class="display fs-1 text-warning fw-bolder">
                 Non perdere i prossimi eventi
               </h3>
@@ -423,18 +276,21 @@
                 type="email"
                 class="input-control p-3"
                 placeholder="la-tua@email.com"
+                id="email-newsletter"
               />
+              <div class="" id="errBoxNewsletter"></div>
+              <div class="" id="OkBoxNewsletter"></div>
               <button
+              type="submit"
                 class="btn rounded-0 border border-2 border-warning text-warning p-3"
-                href="#"
               >
                 Iscriviti
               </button>
             </form>
           </section>
         </aside>
-      </main>
-    </section>
+      </section>
+    </main>
     <!-- INIZIO FOOTER -->
 
     <footer
@@ -602,6 +458,155 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODALE REGISTRAZIONE -->
+              <div
+                class="modal fade"
+                id="exampleModalScrollable"
+                tabindex="-1"
+                aria-labelledby="exampleModalScrollableTitle"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-scrollable rounded">
+                  <div class="modal-content rounded-0">
+                    <div
+                      class="modal-header bg-warning border border-dark border-2 rounded-0"
+                    >
+                      <h2
+                        class="modal-title fs-5 fw-bold"
+                        id="exampleModalScrollableTitle"
+                      >
+                        Iscriviti ai nostri corsi
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close btn-dark"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                      <div class="bd-example m-0 border-0">
+                        <div
+                          id="reg-error"
+                          class="alert alert-danger rounded-0 d-none py-2 small fw-bold mb-3"
+                        >
+                          Compila tutti i campi obbligatori e accetta i termini.
+                        </div>
+                        <div class="input-group input-group-lg w-100 mb-3">
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="reg-username"
+                            placeholder="*Nome Utente"
+                          />
+                        </div>
+                        <div class="input-group input-group-lg w-100 mb-3">
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="reg-nome"
+                            placeholder="*Nome"
+                          />
+                        </div>
+                        <div class="input-group input-group-lg w-100 mb-3">
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="reg-cognome"
+                            placeholder="*Cognome"
+                          />
+                        </div>
+                        <div class="input-group input-group-lg w-100 mb-3">
+                          <input
+                            type="email"
+                            class="form-control rounded-0"
+                            id="reg-email"
+                            placeholder="example@email.it"
+                          />
+                        </div>
+                        <div class="input-group input-group-lg w-100 mb-3">
+                          <input
+                            type="password"
+                            class="form-control rounded-0"
+                            id="reg-password"
+                            placeholder="*Password"
+                          />
+                        </div>
+                        <select
+                          class="form-select form-select-lg mb-3 rounded-0"
+                          id="reg-corso"
+                          aria-label="Scelta corso"
+                        >
+                          <option value="">Cosa ti piacerebbe studiare?</option>
+                          <option value="1">Voglio iniziare da zero</option>
+                          <option value="2">
+                            Voglio diventare sviluppatore web
+                          </option>
+                          <option value="3">
+                            Voglio sviluppare app mobile
+                          </option>
+                          <option value="4">Voglio lavorare con l'IA</option>
+                          <option value="5">
+                            Voglio migliorare le mie competenze
+                          </option>
+                          <option value="6">
+                            Non sono sicuro, voglio orientarmi
+                          </option>
+                        </select>
+                        <div class="form-check mb-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="reg-check-termini"
+                          />
+                          <a href=""
+                            >*Accetto i termini e le condizioni d’uso, dichiaro
+                            inoltre di essere maggiorenne e che i dati da me
+                            inseriti, validi per la fatturazione, sono veritieri
+                            e reali</a
+                          >
+                        </div>
+                        <div class="form-check mb-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="reg-check-privacy"
+                          />
+                          <a href=""
+                            >*Ho preso visione dell'informativa privacy e
+                            acconsento al trattamento dei miei dati personali
+                            per le finalità ivi indicate</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="modal-footer bg-warning flex-wrap border border-dark border-2 rounded-0"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-dark fw-bold rounded-0"
+                        data-bs-dismiss="modal"
+                      >
+                        Annulla
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-dark rounded-0"
+                        id="btn-registrati"
+                      >
+                        Registrati
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FINE MODALE REGISTRAZIONE -->
+
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="./news.js"></script>
   </body>

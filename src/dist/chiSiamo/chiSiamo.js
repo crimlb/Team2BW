@@ -242,9 +242,9 @@ campus.forEach((c) => {
                           <h3 class="fw-bold text-dark m-auto">${prof.nome}</h3><br><br>
                           Corso in partenza il <span class="text-warning fw-bold bg-dark p-2 m-auto mt-3">${vc.data}</span>
                         </p>
-                        <button type="button" class="btn btn-dark text-warning mx-auto mt-5 mb-3">
+                        <a type="button" class="btn btn-dark text-warning mx-auto mt-5 mb-3" href="../iNostriCorsi/iNostriCorsi.html">
                           Vai alla pagina del Corso
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>`;
@@ -256,10 +256,10 @@ const carosello = document.getElementById("caroselloProfs");
 
 profs.forEach((p) => {
   carosello.innerHTML += `<div class="carousel-item" id="slideProf">
-            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-circle" alt="..." />
+            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-0 border border-3 border-warning" alt="..." />
             <div class="carousel-caption position-relative start-0">
                 <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
-                <p class="m-auto text-dark-gray">${p.nome}</p>
+                <p class="m-auto text-dark-gray text-warning fw-bold display-6 mb-3">${p.nome}</p>
                 <p class="m-auto text-dark-gray">${p.materia}</p>
             </div>
         </div>`;
