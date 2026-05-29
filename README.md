@@ -53,10 +53,14 @@ src/dist/index.html
 
 # Screenshots
 
+<img width="1518" height="755" alt="homePageDevAccademy1" src="https://github.com/user-attachments/assets/ee186e73-43a1-44e4-8dcb-4332823a64f5" />
+<img width="1526" height="757" alt="chiSiamoDevAccademy2" src="https://github.com/user-attachments/assets/d8f91c49-7314-49f8-9a20-5f6eec38a656" />
+<img width="1525" height="757" alt="corsiDevAccademy3" src="https://github.com/user-attachments/assets/0d57ba51-c7c2-4e32-a1aa-357f00b2ad3c" />
+<img width="1525" height="757" alt="newsDevAccademy4" src="https://github.com/user-attachments/assets/439ed546-045e-4c5a-90ba-0aceda6b93bb" />
+<img width="1531" height="756" alt="registrazioneDevAccademy5" src="https://github.com/user-attachments/assets/cceb21b9-2778-4d72-a0e0-068e8c95a866" />
+<img width="1526" height="756" alt="loginDevAccademy6" src="https://github.com/user-attachments/assets/db91cbf1-aa0f-4f7d-ad35-8619d27a7754" />
+<img width="1896" height="863" alt="dashboardStudente7" src="https://github.com/user-attachments/assets/1dcd7de6-535b-4513-9c1a-c995d520a2da" />
 
-![Homepage](screenshots/homepage.png)
-![Dashboard](screenshots/dashboard.png)
-![Login Modal](screenshots/login.png)
 
 
 # Autorizzazione e Licenza
