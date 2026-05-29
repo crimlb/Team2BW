@@ -35,7 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModalCenter'))
         ?? new bootstrap.Modal(document.getElementById('exampleModalCenter'));
       modal.hide();
+      if(window.location.pathname.split("/")[3] === '' || window.location.pathname.split("/")[3] === 'index.html'){
       setTimeout(() => { window.location.href = './dashboard/dashboard.html'; }, 350);
+      }else{
+setTimeout(() => { window.location.href = '../dashboard/dashboard.html'; }, 350);
+      }
     } else {
       errEl?.classList.remove('d-none');
     }
