@@ -67,8 +67,5 @@ src/dist/index.html
 # Autorizzazione e Licenza
 Questo progetto è stato realizzato a scopo didattico e di portfolio come progetto di gruppo.
 Non è destinato ad uso commerciale.
-<<<<<<< HEAD
-=======
 
 Il codice può essere consultato liberamente, ma non è autorizzata la distribuzione o il riutilizzo completo senza esplicito consenso degli autori del progetto.
->>>>>>> cfa5f2fbede3329215bbc9b880b23314e08065a2
