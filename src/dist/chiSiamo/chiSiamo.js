@@ -210,7 +210,7 @@ campus.forEach((c) => {
                 </h3>
               </header>
               <main class="p-3 text-center">
-                <img class="img-fluid mb-3" src="../../assets/img/campus_${c.nome}.png" alt=""/>
+                <img class="img-fluid mb-3" src="../assets/campus_${c.nome}.png" alt=""/>
                 <span class="text-white text-center">${c.indirizzo}</span>
               </main>
               <footer class="p-3 border-box">
