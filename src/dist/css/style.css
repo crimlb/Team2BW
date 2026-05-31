@@ -11886,7 +11886,7 @@ textarea.form-control-lg {
 }
 
 .hero-bg {
-  background: url("../../assets/img/backgroundHero.webp") center/cover no-repeat;
+  background: url("../assets/backgroundHero.webp") center/cover no-repeat;
   background-size: cover;
   background-position: center;
 }
