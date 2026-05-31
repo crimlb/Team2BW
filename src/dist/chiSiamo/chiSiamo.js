@@ -256,7 +256,7 @@ const carosello = document.getElementById("caroselloProfs");
 
 profs.forEach((p) => {
   carosello.innerHTML += `<div class="carousel-item" id="slideProf">
-            <img src="../../assets/img/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-0 border border-3 border-warning" alt="..." />
+            <img src="../assets/prof_square_${p.id}.png" class="m-auto mb-5 d-block w-50 rounded-0 border border-3 border-warning" alt="..." />
             <div class="carousel-caption position-relative start-0">
                 <h5 class="m-auto display fs-6 fw-bold col-8 text-light mb-3">${p.motto}</h5>
                 <p class="m-auto text-dark-gray text-warning fw-bold display-6 mb-3">${p.nome}</p>

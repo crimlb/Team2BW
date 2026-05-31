@@ -75,7 +75,7 @@ function primoCarosello() {
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < imgCarosello.length; j++) {
       sliderHTML += `
-      <img src="../assets/img/${imgCarosello[j]}" 
+      <img src="./assets/${imgCarosello[j]}" 
            alt="immagineCarosello"
            class="d-block sliderCardDimensione border border-1 border-warning" />
     `;
