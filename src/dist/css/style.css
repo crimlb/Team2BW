@@ -12149,7 +12149,7 @@ body.loading #content {
 }
 
 .hero-bg1 {
-  background: url("../../assets/img/pattern-bg-corsi-reduced-light.png") center/cover no-repeat;
+  background: url("../assets/pattern-bg-corsi-reduced-light.png") center/cover no-repeat;
   min-height: 100vh;
 }
 @media (max-width: 992px) {
